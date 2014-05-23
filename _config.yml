@@ -1,4 +1,4 @@
 name: Your New Jekyll Site
-markdown: redcarpet
+markdown: kramdown
 pygments: false
-baseurl: /redesign_jekyll
+
