@@ -1,0 +1,61 @@
+
+    <div class="container">
+	
+	  <div class="row">
+        <div class="col-md-2">MAYONE LOGO</div>
+        <div class="col-md-8">{{subhead}}</div>
+        <div class="col-md-2">MENU BUTTON</div>
+      </div>
+	  
+	  <div class="row">
+	  {{herotext}}
+	  </div>
+	  <div class="row">
+        <div class="col-md-1">&nbsp;</div>
+		<div class="col-md-5">{% include progbar.html %}</div>
+		<div class="col-md-5">{% include videoembed.html %}</div>
+        <div class="col-md-1">&nbsp;</div>
+      </div>
+	  
+	  <div class="row">
+           {% include socialmenu.html %}
+	   </div>
+	 
+	 <div class="row">
+        <div class="col-md-1">&nbsp;</div>
+		<div class="col-md-4">{{widget1left | markdownify}}</div>
+        <div class="col-md-2">&nbsp;</div>
+		<div class="col-md-4">{{widget1right | markdownify}}</div>
+        <div class="col-md-1">&nbsp;</div>
+      </div>
+	  
+	 <div class="row">
+        <div class="col-md-1">&nbsp;</div>
+		<div class="col-md-4">{{widget2left | markdownify}}</div>
+        <div class="col-md-2">&nbsp;</div>
+		<div class="col-md-4">{{widget2right | markdownify}}</div>
+        <div class="col-md-1">&nbsp;</div>
+      </div>
+	  
+	 <div class="row">
+        <div class="col-md-1">&nbsp;</div>
+		<div class="col-md-4">{{widget3left | markdownify}}</div>
+        <div class="col-md-2">&nbsp;</div>
+		<div class="col-md-4">{{widget3right | markdownify}}</div>
+        <div class="col-md-1">&nbsp;</div>
+      </div>
+	  
+	  <div class="row">
+		<div class="col-md-3">&nbsp;</div>
+        <div class="col-md-6">{{widget4 | markdownify}}</div>
+		<div class="col-md-3">&nbsp;</div>
+      </div>
+	  
+	</div>
+
+ </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
