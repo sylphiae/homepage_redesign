@@ -1,1 +1,0 @@
-A citizens' funded and crowd-sourced super PAC, to end all super PACs
