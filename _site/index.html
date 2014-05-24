@@ -24,6 +24,7 @@
 	
         <!-- Custom styles for this template -->
         <link href="/css/grid.css" rel="stylesheet">
+		<link href="/css/style.css" rel="stylesheet">
 		
 
 
@@ -60,30 +61,56 @@
 
 
 
-
-    <div class="container">
-	
-	  <div class="row">
-        <div class="col-md-2">MAYONE LOGO</div>
-        <div class="col-md-8">
+<!--Menu & Logo-->
+    <div class="container"> 
+		  <div class="menu-row row">
+        <div class="col-md-8">&nbsp;</div>
+        <div class="topmenu col-md-1">About Us</div>
+		<div class="topmenu col-md-1">FAQ</div>
+		<div class="topmenu col-md-1">Connect</div>
+		<div class="topmenu col-md-1">Team Pages</div>
+      </div>
+	  <div class="logo-row row">
+        <div class="logo col-md-3"><img src="images/logo.png"></div>
+        <div class="subhead col-md-9">
 
 A citizen-funded and crowdsourced super PAC, to end all super PACs.
 
 </div>
-        <div class="col-md-2">MENU BUTTON</div>
       </div>
+	</div>
 	  
-	  <div class="row">
-	  
-Help
-<span style="color:#FF2222; text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); }">U</span>.<span style="color:#2222FF; text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); }">S</span>.
-kickstart fundamental reform,<br>
+	  <!--Herotext Row-->
+	 	  <div class="herotext row">
+			
+Help us kick-start fundamental reform,<br>
 by reducing the influence of money in politics.
 
-	  </div>
-	  <div class="row">
-        <div class="col-md-1">&nbsp;</div>
-		<div class="col-md-5">            <div class="campaign-hero-donate-options animated fadeInDown">
+		  </div>
+		  
+	  <!--Slider & Hero Area-->		  
+<div id="slideshow">
+		  <img src="images/05-midwest.jpg" alt>
+<img src="images/02-decay1.jpg" alt>
+<img src="images/06-cement.jpg" alt>
+<img src="images/08-pollution.jpg" alt>
+<img src="images/12-bridge.jpg" alt>
+
+
+
+
+
+
+
+
+
+
+</div>
+	<div class="heroarea container">
+
+		<div class="row">
+			<div class="col-md-1">&nbsp;</div>
+			<div class="col-md-5">            <div class="campaign-hero-donate-options animated fadeInDown">
               <div id="super-cool-progress-bar" class="donation-progress-bar">
                 <span class="donation-progress-percent" id="super-cool-progress-bar-percent">Loading...</span>
                 <span class="donation-progress-funded">
@@ -112,10 +139,14 @@ by reducing the influence of money in politics.
                 </span>
               </div>
             </div></div>
-		<div class="col-md-5"><iframe src="//player.vimeo.com/video/93299391?title=0&amp;byline=0&amp;portrait=0" width="350" height="200" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-        <div class="col-md-1">&nbsp;</div>
-      </div>
-	  
+			<div class="col-md-5"><iframe src="//player.vimeo.com/video/93299391?title=0&amp;byline=0&amp;portrait=0" width="350" height="200" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+			<div class="col-md-1">&nbsp;</div>
+		  </div>
+	</div>
+
+	
+
+<div class="container">   	  
 	  <div class="row">
                      <CENTER>
             <div>
@@ -233,7 +264,19 @@ by reducing the influence of money in politics.
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$("#slideshow > img:gt(0)").hide();
 
+setInterval(function() { 
+  $('#slideshow > img:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);
+</script>
 
   </body>
 </html>
