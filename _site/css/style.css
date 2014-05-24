@@ -1,14 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Oswald:400,300,700);
 
-<<<<<<< HEAD
 @import url("css/fontello.css");
 @import url("css/fontello-codes.css");
 @import url("css/fontello-embedded.css");
 @import url("css/fontello-ie7-codes.css");
 @import url("css/fontello-ie7.css");
 
-=======
->>>>>>> 655fb3210568bc0b98df02204bef8eabc90e5ff4
 /*By default, grid.css, which is part of Twitter Bootstrap, decorates the divs and makes it obvious where the boundaries are.  This code resets borders and background colors to their defaults.*/
 
 [class*="col-"] {
@@ -27,12 +24,9 @@
 
 /*Bootstrapper only reaches 960px, so we need to wrap our rows in yet another div - one that reaches the full width of the page*/
 
-<<<<<<< HEAD
 body{
 	font-family: "Lato",  helvetica, arial, "sans serif";
 }
-=======
->>>>>>> 655fb3210568bc0b98df02204bef8eabc90e5ff4
 .full-width{
    width=100%;
 }
@@ -47,11 +41,7 @@ padding: 0px;
 .topmenu {
 	 font-family: "Oswald", arial, helvetica, "sans serif";
 	 color:white;
-<<<<<<< HEAD
 	 font-size: 15px;
-=======
-	 font-size: 16px;
->>>>>>> 655fb3210568bc0b98df02204bef8eabc90e5ff4
 	 background-color: #003366;
 	 text-align: center;
 	 padding: 0px;
@@ -110,21 +100,12 @@ max-height:80px;
     position: relative; 
 	height:500px;
 	z-index:-10;
-<<<<<<< HEAD
 	overflow:hidden;
-=======
->>>>>>> 655fb3210568bc0b98df02204bef8eabc90e5ff4
 }
 
 #slideshow > img { 
     position: absolute;
-<<<<<<< HEAD
     width: 100%; 
-=======
-	max-height:500px;	
-    width: 100%; 
-	overflow:hidden;
->>>>>>> 655fb3210568bc0b98df02204bef8eabc90e5ff4
 	z-index:-5;
 }
 
@@ -132,7 +113,6 @@ max-height:80px;
     position:absolute;
 	left:0;
     right:0;
-<<<<<<< HEAD
 	top:25px;
 	height:400px;
     margin-left:auto;
@@ -311,14 +291,5 @@ border: 3px solid white;
    background-color: #222222;
    color:yellow;
 }
-=======
-    margin-left:auto;
-    margin-right:auto;
-	background-color: rgba(0,0,0,0.5); /*dim the background*/
-	z-index:10;
-}
-
-  
->>>>>>> 655fb3210568bc0b98df02204bef8eabc90e5ff4
   
   
