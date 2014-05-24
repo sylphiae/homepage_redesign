@@ -1,0 +1,6 @@
+Still TODO:
+
+1) Make sure site reacts properly when in mobile mode at all resolutions. 
+2) Create Subpages
+3) Get icons for Social media Working. 
+4) Find a way to animate that background-image for the hero slider. 
