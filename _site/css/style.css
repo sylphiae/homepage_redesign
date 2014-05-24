@@ -1,11 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Oswald:400,300,700);
 
-@import url("css/fontello.css");
-@import url("css/fontello-codes.css");
-@import url("css/fontello-embedded.css");
-@import url("css/fontello-ie7-codes.css");
-@import url("css/fontello-ie7.css");
-
 /*By default, grid.css, which is part of Twitter Bootstrap, decorates the divs and makes it obvious where the boundaries are.  This code resets borders and background colors to their defaults.*/
 
 [class*="col-"] {
@@ -58,6 +52,7 @@ padding: 0px;
 .logo-row {
 background-color:white;
 padding-top:0px;
+margin-bottom:20px;
 max-height:80px;
 }
 
@@ -97,21 +92,19 @@ max-height:80px;
 /*Hero Area*/
 .hero-fw{
 background-image:url('../images/05-midwest.jpg');
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center center;
 }
 .heroarea {
-	left:0;
-	left:0;
-    right:0;
-	top:25px;
-	height:400px;
     margin-left:auto;
     margin-right:auto;
-	margin-top:auto;
-	margin-bottom:auto;
-	background-image:url('../images/05-midwest.jpg');
+	padding-top:50px;
+	padding-bottom:50px;
+
 }
 
-.video{
+.video {
 margin-top:40px;
 margin-bottom:40px;
 margin-left:20px;
@@ -138,6 +131,7 @@ border: 3px solid white;
    background-color: #FF0000;
    color: #ffff33;
    z-index:20;
+   text-decoration:none;
 }
 
 .checkpoint-text{
@@ -280,5 +274,73 @@ border: 3px solid white;
    background-color: #222222;
    color:yellow;
 }
-  
-  
+
+
+.widget1{
+background-image:url('../images/dark_capitol.jpg');
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center center;
+padding:40px;
+border-bottom:4px solid white;
+}  
+.widget2{
+background-image:url('../images/blue_franklin.jpg');
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center center;
+padding:40px;
+border-bottom:4px solid white;
+}  
+.widget3{
+background-image:url('../images/green_yorktown.jpg');
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center center;
+padding:40px;
+border-bottom:4px solid white;
+}  
+.widget4{
+background-image:url('../images/naval_battle.jpg');
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center center;
+padding:40px;
+border-bottom:4px solid white;
+}  
+
+.widgettext h1, h2, h3, h4, h5, h6 {
+   font-family: "Oswald", arial, helvetica, "sans serif";
+   color:#FFFF99;
+   text-align:center;
+   font-size:35px;
+   padding-bottom:10px;
+}
+
+.widgettext p {
+   font-family: "Lato", arial, helvetica, "sans serif";
+   color:white;
+   text-align:center;
+   font-size:25px;
+}
+
+.pac_disclaimer {
+   font-family: "Lato", arial, helvetica, "sans serif";
+   color:white;
+   text-align:center;
+   font-size:25px;
+   padding:10px;
+   border:2px solid white;
+   text-align:center;
+   font-variant:small-caps;
+}
+
+.footer{
+background-color: #333333;
+padding:40px;
+}
+
+.copyright{
+   font-family: "Lato", arial, helvetica, "sans serif";
+   color:white;
+}
