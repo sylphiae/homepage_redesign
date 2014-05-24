@@ -95,22 +95,11 @@ max-height:80px;
 }
 
 /*Hero Area*/
-#slideshow { 
-    margin: 0; 
-    position: relative; 
-	height:500px;
-	z-index:-10;
-	overflow:hidden;
+.hero-fw{
+background-image:url('../images/05-midwest.jpg');
 }
-
-#slideshow > img { 
-    position: absolute;
-    width: 100%; 
-	z-index:-5;
-}
-
 .heroarea {
-    position:absolute;
+	left:0;
 	left:0;
     right:0;
 	top:25px;
@@ -119,7 +108,7 @@ max-height:80px;
     margin-right:auto;
 	margin-top:auto;
 	margin-bottom:auto;
-	z-index:10;
+	background-image:url('../images/05-midwest.jpg');
 }
 
 .video{
