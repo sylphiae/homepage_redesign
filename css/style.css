@@ -1,0 +1,295 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Oswald:400,300,700);
+
+@import url("css/fontello.css");
+@import url("css/fontello-codes.css");
+@import url("css/fontello-embedded.css");
+@import url("css/fontello-ie7-codes.css");
+@import url("css/fontello-ie7.css");
+
+/*By default, grid.css, which is part of Twitter Bootstrap, decorates the divs and makes it obvious where the boundaries are.  This code resets borders and background colors to their defaults.*/
+
+[class*="col-"] {
+	 background-color: transparent;
+	 border: none;
+	 padding:0;
+	 margin:0;
+}
+
+[class*="row"] {
+	 background-color: transparent;
+	 border: none;
+	 padding:0;
+	 margin:0;
+}
+
+/*Bootstrapper only reaches 960px, so we need to wrap our rows in yet another div - one that reaches the full width of the page*/
+
+body{
+	font-family: "Lato",  helvetica, arial, "sans serif";
+}
+.full-width{
+   width=100%;
+}
+
+/*Top menu.*/
+
+.menu-row {
+background-color:white;
+margin: 0px;
+padding: 0px;
+}
+.topmenu {
+	 font-family: "Oswald", arial, helvetica, "sans serif";
+	 color:white;
+	 font-size: 15px;
+	 background-color: #003366;
+	 text-align: center;
+	 padding: 0px;
+	 padding-top:10px;
+	 padding-bottom:10px;
+}
+.topmenu:hover{
+     background-color: #006666;
+	 color:#ffff33;
+}
+
+/*Logo row*/
+
+.logo-row {
+background-color:white;
+padding-top:0px;
+max-height:80px;
+}
+
+.logo {
+	 margin:auto;
+}
+  
+.subhead {
+    /*Setting max height, height, and line-height to 80px vertically centers the text.*/
+     display:inline-block;
+	 max-height:80px;
+	 height:80px;
+	 line-height:80px; 
+	 vertical-align:middle;
+	/*There may be a better way.*/
+	 font-family: "Oswald", arial, helvetica, "sans serif";
+	 color:#999999;
+	 font-size: 22px;
+	 text-align: center;
+}
+/*Hero Text Row*/
+.herotext-row {
+	 background-color:black;
+}
+
+.herotext {
+	 font-family: "Oswald", arial, helvetica, "sans serif";
+     color:white;
+	 text-align:center;
+	 font-size:45px;
+	 line-height:45px;
+	 background-color:black;
+	 padding-top:20px;
+	 padding-bottom:25px;
+}
+
+/*Hero Area*/
+#slideshow { 
+    margin: 0; 
+    position: relative; 
+	height:500px;
+	z-index:-10;
+	overflow:hidden;
+}
+
+#slideshow > img { 
+    position: absolute;
+    width: 100%; 
+	z-index:-5;
+}
+
+.heroarea {
+    position:absolute;
+	left:0;
+    right:0;
+	top:25px;
+	height:400px;
+    margin-left:auto;
+    margin-right:auto;
+	margin-top:auto;
+	margin-bottom:auto;
+	z-index:10;
+}
+
+.video{
+margin-top:40px;
+margin-bottom:40px;
+margin-left:20px;
+margin-right:20px;
+height:300px;
+border: 3px solid white;
+}
+
+.pledgebutton{
+   background-color: #990000;
+   margin-left:auto;
+   margin-right:auto;
+   margin:10px 50px;
+   padding:10px 20px;
+   font-family: "Oswald", arial, helvetica, "sans serif";
+   text-align: center;
+   font-size:50px;
+   color:white;
+   border: 3px solid white;
+   z-index:20;
+}
+
+.pledgebutton:hover{
+   background-color: #FF0000;
+   color: #ffff33;
+   z-index:20;
+}
+
+.checkpoint-text{
+   font-family: "Lato", arial, helvetica, "sans serif";
+   color:white;
+   text-align:center;
+}
+#complete-total-raised {
+   font-family: "Lato", arial, helvetica, "sans serif";
+   color:white;
+   text-align:center;
+}
+
+.progress-container {
+	margin-top:30px;
+}
+
+.progbar {
+margin-top:40px;
+margin-bottom:40px;
+margin-left:20px;
+margin-right:20px;
+padding:30px;
+height:300px;
+background-color: rgba(0, 51, 102, 0.7); /*blue transparency*/
+border: 3px solid white;
+}
+
+/*Fancy Progress Bar Stuff*/
+
+.donation-progress-bar {
+	background: #838383;
+	border-radius: 26px;
+	width: 100%;
+	height: 26px;
+	padding: 0 25px;
+	position: relative;
+}
+
+.donation-progress-bar > span {
+	font-size: 13px;
+	text-transform: uppercase;
+	line-height: 26px;
+	color: #fff;
+	position: relative;
+	z-index: 2;
+	width: 33%;
+	float: left;
+}
+
+.donation-progress-bar.endless > span {
+	width: 50%;
+}
+
+.donation-progress-bar.endless em {
+	font-style: normal;
+}
+
+.donation-progress-bar .donation-progress-funded {
+	text-align: center;
+}
+
+.donation-progress-bar .donation-progress-togo,
+.donation-progress-bar.endless .donation-progress-funded {
+	text-align: right;
+}
+
+.donation-progress {
+	width: 200px;
+	height: 26px;
+	border-radius: 26px;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+
+	-webkit-background-size: 26px 26px;
+	-moz-background-size:    26px 26px;
+	-o-background-size:      26px 26px;
+	background-size:         26px 26px;
+
+	-webkit-animation: progress-bar-stripes 1s linear infinite;
+	-moz-animation:    progress-bar-stripes 1s linear infinite;
+	animation:         progress-bar-stripes 1s linear infinite;
+}
+.donation-progress {
+      background-color: #990000;
+    }
+
+.donation-progress.gone {
+	background-color: #57ad68;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+	from  { background-position: 26px 0; }
+	to    { background-position: 0 0; }
+}
+
+@-moz-keyframes progress-bar-stripes {
+	from  { background-position: 26px 0; }
+	to    { background-position: 0 0; }
+}
+
+@keyframes progress-bar-stripes {
+	from  { background-position: 26px 0; }
+	to    { background-position: 0 0; }
+}
+
+/*END Fancy Progress Bar Stuff*/
+
+/*Share Options*/
+.donation-share{
+   text-align:center;
+}
+.donation-share-text {
+   font-family: "Oswald", arial, helvetica, "sans serif";
+   color:white;
+   text-align:center;
+   font-size:28px;
+   font-style:italic;
+   
+}
+  
+.socialmenu{
+   background-color:black;
+}
+.sign-up {
+   font-family: "Lato", arial, helvetica, "sans serif";
+   color:white;
+   text-align:center;
+   font-size:16px;
+   padding:10px;
+   border: 1px solid white;
+   background-color:#000000;
+}
+.sign-up:hover {
+   background-color: #222222;
+   color:yellow;
+}
+  
+  

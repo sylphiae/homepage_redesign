@@ -9,7 +9,7 @@
 	
 		
 		    <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/redesign_jekyll/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,11 +19,12 @@
     <![endif]-->
 	
         <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/redesign_jekyll/css/syntax.css">
 
 	
         <!-- Custom styles for this template -->
-        <link href="/css/grid.css" rel="stylesheet">
+        <link href="/redesign_jekyll/css/grid.css" rel="stylesheet">
+		<link href="/redesign_jekyll/css/style.css" rel="stylesheet">
 		
 
 
@@ -60,30 +61,52 @@
 
 
 
-
-    <div class="container">
-	
-	  <div class="row">
-        <div class="col-md-2">MAYONE LOGO</div>
-        <div class="col-md-8">
+<!--Menu & Logo-->
+    <div class="container"> 
+		  <div class="menu-row row">
+        <div class="col-md-8">&nbsp;</div>
+        <div class="topmenu col-md-1">About Us</div>
+		<div class="topmenu col-md-1">FAQ</div>
+		<div class="topmenu col-md-1">Connect</div>
+		<div class="topmenu col-md-1">Team Pages</div>
+      </div>
+	  <div class="logo-row row">
+        <div class="logo col-md-3"><img src="images/logo.png"></div>
+        <div class="subhead col-md-9">
 
 A citizen-funded and crowdsourced super PAC, to end all super PACs.
 
 </div>
-        <div class="col-md-2">MENU BUTTON</div>
       </div>
+	</div>
 	  
-	  <div class="row">
-	  
-Help
-<span style="color:#FF2222; text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); }">U</span>.<span style="color:#2222FF; text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); }">S</span>.
-kickstart fundamental reform,<br>
+	  <!--Herotext Row-->
+	 	  <div class="herotext row">
+			
+Help us kick-start fundamental reform,<br>
 by reducing the influence of money in politics.
 
-	  </div>
-	  <div class="row">
-        <div class="col-md-1">&nbsp;</div>
-		<div class="col-md-5">            <div class="campaign-hero-donate-options animated fadeInDown">
+		  </div>
+		  
+	  <!--Slider & Hero Area-->		  
+<div id="slideshow">
+		  <img src="images/05-midwest.jpg" alt>
+<img src="images/02-decay1.jpg" alt>
+<img src="images/06-cement.jpg" alt>
+<img src="images/08-pollution.jpg" alt>
+<img src="images/12-bridge.jpg" alt>
+
+	<div class="heroarea container">
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="video"><iframe style="display:block;" src="//player.vimeo.com/video/93299391?title=0&amp;byline=0&amp;portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+			</div>
+			<div class="col-md-6">
+			    <div class="progbar">
+					<a href="//pledge.mayone.us/pledge"><div class="pledgebutton">PLEDGE NOW</div></a>
+				            <div class="progress-container">
+			<div class="checkpoint-text">PROGRESS TO NEXT CHECKPOINT</div>
               <div id="super-cool-progress-bar" class="donation-progress-bar">
                 <span class="donation-progress-percent" id="super-cool-progress-bar-percent">Loading...</span>
                 <span class="donation-progress-funded">
@@ -93,47 +116,52 @@ by reducing the influence of money in politics.
                 <span class="donation-progress-togo"    id="super-cool-progress-bar-togo"></span>
                 <div class="donation-progress" style="width: 0%" id="super-cool-progress-bar-bar"></div>
               </div>
+			 	  <div id="complete-total-raised"></div>
               <script src="/js/progress.js"></script>
-              <div class="donation-donate">
-                <a href="//pledge.mayone.us/pledge" class="button button-primary">Let's keep it going!</a>
-              </div>
-              <div class="donation-share">
-                <span class="donation-share-text">Spread the Word:</span>
-                <span class="donation-share-buttons">
-                  <a id="twitter_link" href="#" target="_blank" onclick="javascript:window.open(twitter_link_url,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">
-                    <i class="icon-twitter"></i>
-                  </a>
-                  <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.mayone.us%2F" target="_blank" onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.mayone.us%2F','','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">
-                    <i class="icon-facebook"></i>
-                  </a>
-                  <a id="gplus_link" href="#" target="_blank" onclick="javascript:window.open(gplus_link_url,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">
-                    <i class="icon-gplus"></i>
-                  </a>
-                </span>
-              </div>
-            </div></div>
-		<div class="col-md-5"><iframe src="//player.vimeo.com/video/93299391?title=0&amp;byline=0&amp;portrait=0" width="350" height="200" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-        <div class="col-md-1">&nbsp;</div>
-      </div>
-	  
-	  <div class="row">
-                     <CENTER>
-            <div>
+           </div>
+				</div>
+			</div>
+		  </div>
+		 <div class="shareoptions row">
+		          <div class="donation-share">
+	<span class="donation-share-text">Spread the Word:</span>
+	<span class="donation-share-buttons">
+	  <a id="twitter_link" href="#" target="_blank" onclick="javascript:window.open(twitter_link_url,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">
+		<i class="icon-twitter"></i>
+	  </a>
+	  <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.mayone.us%2F" target="_blank" onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.mayone.us%2F','','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">
+		<i class="icon-facebook"></i>
+	  </a>
+	  <a id="gplus_link" href="#" target="_blank" onclick="javascript:window.open(gplus_link_url,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">
+		<i class="icon-gplus"></i>
+	  </a>
+	</span>
+  </div>
+		  </div>
+	</div>
+
+	</div>
+
+  
+	  <div class="full-width socialmenu row">
+           
+
               <a href="/sign-up-to-our-mailing-list/" target="_blank">
-                <div class="col-md-4 sign-up">Sign up to our mailing list</div>
+                <div class="sign-up col-md-4">Sign up to our mailing list</div>
               </a>
               <a href="https://docs.google.com/forms/d/1LECXA6mNtMBbXe310GMob8whZ2ZkAsGePAQhTdASkFs/viewform"
                  target="_blank">
-                <div class="col-md-4 sign-up">Sign up to volunteer</div>
+                <div class="sign-up col-md-4">Sign up to volunteer</div>
               </a>
 			    <a href="https://docs.google.com/forms/d/1LECXA6mNtMBbXe310GMob8whZ2ZkAsGePAQhTdASkFs/viewform"
                  target="_blank">
-                <div class="col-md-4 sign-up">Form a Team</div>
+                <div class="sign-up col-md-4">Form a Team</div>
               </a>
-            </div>
-          </CENTER>
+
+
 	   </div>
-	 
+<div class="container">   	
+
 	 <div class="row">
         <div class="col-md-1">&nbsp;</div>
 		<div class="col-md-4">
@@ -233,7 +261,19 @@ by reducing the influence of money in politics.
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$("#slideshow > img:gt(0)").hide();
 
+setInterval(function() { 
+  $('#slideshow > img:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);
+</script>
 
   </body>
 </html>

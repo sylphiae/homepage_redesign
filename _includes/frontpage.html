@@ -1,26 +1,53 @@
+<!--Menu & Logo-->
+    <div class="container"> 
+		  <div class="menu-row row">
+        <div class="col-md-8">&nbsp;</div>
+        <div class="topmenu col-md-1">About Us</div>
+		<div class="topmenu col-md-1">FAQ</div>
+		<div class="topmenu col-md-1">Connect</div>
+		<div class="topmenu col-md-1">Team Pages</div>
+      </div>
+	  <div class="logo-row row">
+        <div class="logo col-md-3"><img src="images/logo.png"></div>
+        <div class="subhead col-md-9">{{subhead}}</div>
+      </div>
+	</div>
+	  
+	  <!--Herotext Row-->
+	 	  <div class="herotext row">
+			{{herotext}}
+		  </div>
+		  
+	  <!--Slider & Hero Area-->		  
+<div id="slideshow">
+		  {% include slider.html %}
 
-    <div class="container">
-	
-	  <div class="row">
-        <div class="col-md-2">MAYONE LOGO</div>
-        <div class="col-md-8">{{subhead}}</div>
-        <div class="col-md-2">MENU BUTTON</div>
-      </div>
-	  
-	  <div class="row">
-	  {{herotext}}
-	  </div>
-	  <div class="row">
-        <div class="col-md-1">&nbsp;</div>
-		<div class="col-md-5">{% include progbar.html %}</div>
-		<div class="col-md-5">{% include videoembed.html %}</div>
-        <div class="col-md-1">&nbsp;</div>
-      </div>
-	  
-	  <div class="row">
+	<div class="heroarea container">
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="video">{% include videoembed.html %}</div>
+			</div>
+			<div class="col-md-6">
+			    <div class="progbar">
+					<a href="//pledge.mayone.us/pledge"><div class="pledgebutton">PLEDGE NOW</div></a>
+				{% include progbar.html %}
+				</div>
+			</div>
+		  </div>
+		 <div class="shareoptions row">
+		        {% include shareoptions.html %}
+		  </div>
+	</div>
+
+	</div>
+
+  
+	  <div class="full-width socialmenu row">
            {% include socialmenu.html %}
 	   </div>
-	 
+<div class="container">   	
+
 	 <div class="row">
         <div class="col-md-1">&nbsp;</div>
 		<div class="col-md-4">{{widget1left | markdownify}}</div>
@@ -59,3 +86,4 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+{% include sliderjs.html %}
