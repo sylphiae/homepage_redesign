@@ -63,16 +63,20 @@
 <!--Menu & Logo-->
     <div class="full-width"> 
 		  <div class="menu-row row">
-        <div class="col-md-8">&nbsp;</div>
+        <div class="col-md-5">&nbsp;</div>
         <a href="/redesign_jekyll/about"><div class="topmenu col-md-1">About Us</div></A>
 		<a href="/redesign_jekyll/faq"><div class="topmenu col-md-1">FAQ</div></A>
+		<a href="/redesign_jekyll/ways"><div class="topmenu col-md-1">Ways to Help</div></A>
+		<a href="/redesign_jekyll/videos"><div class="topmenu col-md-1">Videos</div></A>
+		<a href="/redesign_jekyll/media"><div class="topmenu col-md-1">Media</div></A>
 		<a href="/redesign_jekyll/connect"><div class="topmenu col-md-1">Connect</div></A>
-		<div class="topmenu col-md-1">Team Pages</div>
+		<a href="/redesign_jekyll/mysuperpac"><div class="loggedout_hidden topmenu col-md-1">My SuperPAC</div></A>
+		<a href="/redesign_jekyll/login"><div class="loggedin_hidden topmenu col-md-1">Login</div></A>
       </div>
 	  </div>
 	  <div class="container">
 	  <div class="logo-row row">
-        <a href="/redesign_jekyll/"><div class="logo col-md-3"><img src="images/logo.png"></div></A>
+        <a href="/redesign_jekyll/"><div class="logo col-md-3"><img src="images/logo_mayday.png"></div></A>
         <div class="subhead col-md-9">
 
 A citizen-funded and crowdsourced super PAC, to end all super PACs.
@@ -95,22 +99,25 @@ by reducing the influence of money in politics.
 <div class="full-width underlay">
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
-window.mayOneSelectedImg = 0;
-window.setInterval(function() {
-  var imgs = document.getElementById("slideroption");
-  imgs.children[window.mayOneSelectedImg].className = "";
-  window.mayOneSelectedImg = (window.mayOneSelectedImg + 1) % 6;
-  imgs.children[window.mayOneSelectedImg].className = "active";
-}, 3000);
+  $( document ).ready(function() {
+    window.mayOneSelectedImg = 0;
+    window.setInterval(function() {
+      var imgs = $('[name="slider_slide"]');
+      imgs.removeClass("active");
+      window.mayOneSelectedImg = (window.mayOneSelectedImg + 1) % 5;
+      $(imgs[window.mayOneSelectedImg]).addClass("active");
+    }, 5000);  
+  });
 </script>
 
 <div class="slideroption">
-<img id="slide" src="images/05-midwest.jpg" class>
-<img id="slide" src="images/02-decay1.jpg" class>
-<img id="slide" src="images/06-cement.jpg" class>
-<img id="slide" src="images/08-pollution.jpg" class>
-<img id="slide" src="images/12-bridge.jpg" class>
+  <img name=slider_slide id="slide1" src="images/05-midwest.jpg" class="active">
+  <img name=slider_slide id="slide2" src="images/02-decay1.jpg">
+  <img name=slider_slide id="slide3" src="images/06-cement.jpg">
+  <img name=slider_slide id="slide4" src="images/08-pollution.jpg">
+  <img name=slider_slide id="slide5" src="images/12-bridge.jpg">
 </div>
+
 </div>
 		<div class="heroarea container">
 
@@ -151,33 +158,17 @@ window.setInterval(function() {
 	  <a id="gplus_link" href="#" target="_blank" onclick="javascript:window.open(gplus_link_url,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">
 		<i class="icon-gplus"></i>gp
 	  </a>
-	</span>
+	<form><span style="color:white;">Sign Up:</span> <input name="email" placeholder="E-mail Address" style="color:black; padding:2px; margin:2px;" type="text">&nbsp;<input style="color:black; padding:2px; margin:2px;" type="submit" value="Submit"></form></span>
   </div>
 			  </div>
 		</div>
 </div>
 
   
-	  <div class="full-width socialmenu row">
-           
-
-              <a href="/sign-up-to-our-mailing-list/" target="_blank">
-                <div class="sign-up col-md-4">Sign up to our mailing list</div>
-              </a>
-              <a href="https://docs.google.com/forms/d/1LECXA6mNtMBbXe310GMob8whZ2ZkAsGePAQhTdASkFs/viewform"
-                 target="_blank">
-                <div class="sign-up col-md-4">Sign up to volunteer</div>
-              </a>
-			    <a href="https://docs.google.com/forms/d/1LECXA6mNtMBbXe310GMob8whZ2ZkAsGePAQhTdASkFs/viewform"
-                 target="_blank">
-                <div class="sign-up col-md-4">Form a Team</div>
-              </a>
-
-
-	   </div>
-  	
+ 	
 
 	 <div class="widget1 row">
+	    <div class="halfcircle"><img src="images/halfcirc.png"></div>
         <div class="col-md-1">&nbsp;</div>
         <div class="widgettext col-md-4"><
 <h2 id="government-has-failed-us">Government has failed us.</h2>
@@ -187,7 +178,7 @@ window.setInterval(function() {
 <p>Politicians ignore this influence and spend endless time fundraising, from donors who expect big favors when they write big checks.</p>
 
 </div>
-		<div class="col-md-2">&nbsp;</div>
+		<div class="col-md-2"></div>
         <div class="widgettext col-md-4"><
 <h2 id="corruption-holds-our-republic-hostage">Corruption holds our Republic hostage.</h2>
 
@@ -202,6 +193,7 @@ window.setInterval(function() {
       </div>
 	  
 	 <div class="widget2 row">
+	 	    <div class="halfcircle"><img src="images/halfcirc.png"></div>
         <div class="col-md-1">&nbsp;</div>
         <div class="widgettext col-md-4"><
 <h2 id="a-super-pac-of-by-for-the-people">A super PAC of, by, for the People</h2>
@@ -211,7 +203,7 @@ window.setInterval(function() {
 <p>Already, we have raised over $1,000,000 from over 11,700 people who pledged an average of $86.</p>
 
 </div>
-		<div class="col-md-2">&nbsp;</div>
+		<div class="col-md-2"></div>
         <div class="widgettext col-md-4"><
 <h2 id="all-or-nothing">All Or Nothing</h2>
 
@@ -224,6 +216,7 @@ window.setInterval(function() {
       </div>
 	  
 	 <div class="widget3 row">
+	 	    <div class="halfcircle"><img src="images/halfcirc.png"></div>
         <div class="col-md-1">&nbsp;</div>
         <div class="widgettext col-md-4"><
 <h2 id="a-path-to-victory">A Path to Victory</h2>
@@ -235,7 +228,7 @@ window.setInterval(function() {
 <p>We’ll not only fight to get pro-reform candidates elected, but we will also make sure everyone knows that political corruption was the determining issue of the race.</p>
 
 </div>
-		<div class="col-md-2">&nbsp;</div>
+		<div class="col-md-2"></div>
         <div class="widgettext col-md-4"><
 <h2 id="restoring-the-republic">Restoring the Republic</h2>
 
@@ -252,6 +245,7 @@ window.setInterval(function() {
       </div>
 	  
 	  <div class="widget4 row">
+	  	    <div class="halfcircle"><img src="images/halfcirc.png"></div>
 		<div class="col-md-3">&nbsp;</div>
         <div class="widgettext col-md-6">
 <h1 id="mayday">MAYDAY</h1>

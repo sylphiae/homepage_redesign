@@ -46,6 +46,12 @@ padding: 0px;
      background-color: #006666;
 	 color:#ffff33;
 }
+.loggedout_hidden {
+     display:none;
+	 }
+.loggedin_hidden{
+     display:inline;
+	 }
 
 /*Logo row*/
 
@@ -112,6 +118,7 @@ position:relative;
 background-size:cover;
 background-repeat:no-repeat;
 background-position:center center;
+border-bottom:4px solid white;
 }
 .underlay {
  position: absolute;
@@ -145,7 +152,8 @@ border: 3px solid white;
 }
 
 .pledgebutton{
-   background-color: #990000;
+   background-color: #FF0000;
+     color: #ffff33;
    margin-left:auto;
    margin-right:auto;
    margin:10px 50px;
@@ -153,15 +161,14 @@ border: 3px solid white;
    font-family: "Oswald", arial, helvetica, "sans serif";
    text-align: center;
    font-size:50px;
-   color:white;
    border: 3px solid white;
    z-index:20;
 }
 
 .pledgebutton:hover{
-   background-color: #FF0000;
-   color: #ffff33;
    z-index:20;
+   box-shadow: 0px 0px 10px #fff;
+   text-shadow: 0px 0px 5px #fff;
    text-decoration:none;
 }
 
@@ -301,14 +308,33 @@ border: 3px solid white;
    padding:10px;
    border: 1px solid white;
    background-color:#000000;
+   height:50px;
 }
 .sign-up:hover {
    background-color: #222222;
    color:yellow;
 }
 
+.arrowdown{
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid rgba(255,255,255,0.8);
+}
+
+.halfcircle{
+    position:absolute;
+	top:0;
+    margin-left:50%;
+	left:-50px;
+	z-index:4;
+	height:50px;
+	width:100px;
+}
 
 .widget1{
+position:relative;
 background-image:url('../images/dark_capitol.jpg');
 background-size:cover;
 background-repeat:no-repeat;
@@ -317,6 +343,7 @@ padding:40px;
 border-bottom:4px solid white;
 }  
 .widget2{
+position:relative;
 background-image:url('../images/blue_franklin.jpg');
 background-size:cover;
 background-repeat:no-repeat;
@@ -325,6 +352,7 @@ padding:40px;
 border-bottom:4px solid white;
 }  
 .widget3{
+position:relative;
 background-image:url('../images/green_yorktown.jpg');
 background-size:cover;
 background-repeat:no-repeat;
@@ -333,6 +361,7 @@ padding:40px;
 border-bottom:4px solid white;
 }  
 .widget4{
+position:relative;
 background-image:url('../images/naval_battle.jpg');
 background-size:cover;
 background-repeat:no-repeat;
