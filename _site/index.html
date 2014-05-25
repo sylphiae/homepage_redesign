@@ -9,7 +9,7 @@
 	
 		
 		    <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/redesign_jekyll/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,17 +19,17 @@
     <![endif]-->
 	
         <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/redesign_jekyll/css/syntax.css">
 
 	
         <!-- Custom styles for this template -->
-        <link href="/css/grid.css" rel="stylesheet">
-		<link href="/css/style.css" rel="stylesheet">
+        <link href="/redesign_jekyll/css/grid.css" rel="stylesheet">
+		<link href="/redesign_jekyll/css/style.css" rel="stylesheet">
 		
 
 
      </head>
-  <body>
+  <body id="index">
     
 
 
@@ -61,16 +61,18 @@
 
 
 <!--Menu & Logo-->
-    <div class="container"> 
+    <div class="full-width"> 
 		  <div class="menu-row row">
         <div class="col-md-8">&nbsp;</div>
-        <div class="topmenu col-md-1">About Us</div>
-		<div class="topmenu col-md-1">FAQ</div>
-		<div class="topmenu col-md-1">Connect</div>
+        <a href="/about"><div class="topmenu col-md-1">About Us</div></A>
+		<a href="/faq"><div class="topmenu col-md-1">FAQ</div></A>
+		<a href="/connect"><div class="topmenu col-md-1">Connect</div></A>
 		<div class="topmenu col-md-1">Team Pages</div>
       </div>
+	  </div>
+	  <div class="container">
 	  <div class="logo-row row">
-        <div class="logo col-md-3"><img src="images/logo.png"></div>
+        <a href="/"><div class="logo col-md-3"><img src="../images/logo.png"></div></A>
         <div class="subhead col-md-9">
 
 A citizen-funded and crowdsourced super PAC, to end all super PACs.
@@ -272,10 +274,12 @@ window.setInterval(function() {
 	  
 
 	  <div class="footer row">
-		<div class="col-md-2">&nbsp;</div>
-        <div class="pac_disclaimer col-md-6">Paid for by Mayday PAC
-    <br>Not authorized by any candidate or candidate's committee
-    <br><a href="/">www.MayOne.us</a></div>
+		<div style="text-align:center;" class="col-md-8">
+			<div class="pac_disclaimer">Paid for by Mayday PAC
+			<br>Not authorized by any candidate or candidate's committee
+			<br><a href="/">www.MayOne.us</a>
+			</div>
+		</div>
 	<div class="col-md-1">&nbsp;</div>
 		<div class="col-md-2">  		  <a class="twitter" href="https://twitter.com/MayOneUS">tw
 					</a>

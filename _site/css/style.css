@@ -292,6 +292,7 @@ border: 3px solid white;
 .socialmenu{
    background-color:black;
 }
+
 .sign-up {
    font-family: "Lato", arial, helvetica, "sans serif";
    color:white;
@@ -356,13 +357,13 @@ border-bottom:4px solid white;
 }
 
 .pac_disclaimer {
+   display: inline-block;
    font-family: "Lato", arial, helvetica, "sans serif";
    color:white;
    text-align:center;
-   font-size:25px;
+   font-size:16px;
    padding:10px;
    border:2px solid white;
-   text-align:center;
    font-variant:small-caps;
 }
 
@@ -374,4 +375,62 @@ padding:40px;
 .copyright{
    font-family: "Lato", arial, helvetica, "sans serif";
    color:white;
+}
+
+/*Subpages*/
+
+.rally {
+	background-image:url('../images/sidebar_background.jpg');
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+
+#about .subpage-content img{
+    float:left;
+	width:150px;
+	border:solid white 1px;
+	margin:10px;
+}
+
+
+
+.subpage-content a{
+    color:yellow;
+}
+
+.subpage-content a:hover{
+    text-decoration:underline;
+}
+
+.subpage-content {
+	 font-family: "Lato", arial, helvetica, "sans serif";
+     color:white;
+	 font-size:16px;
+	 padding:20px;
+	 text-align:left;
+	 background: rgba(0,0,0,0.1);
+}
+
+.sidebar {
+	 font-family: "Lato", arial, helvetica, "sans serif";
+     color:white;
+	 font-size:14px;
+	 padding:20px;
+	 text-align:left;
+	 background: rgba(0,0,0,0.2);
+}
+
+.sidebar h1, h2, h3, h4, h5, h6 {
+	 font-family: "Oswald", arial, helvetica, "sans serif";
+     color:white;
+	 text-align:center;
+	 font-size:30px;
+}
+
+.sidebar a{
+    color:yellow;
+}
+.sidebar a:hover{
+    text-decoration:underline;
 }
