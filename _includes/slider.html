@@ -1,5 +1,18 @@
-<img src="images/05-midwest.jpg" alt>
-<img src="images/02-decay1.jpg" alt>
-<img src="images/06-cement.jpg" alt>
-<img src="images/08-pollution.jpg" alt>
-<img src="images/12-bridge.jpg" alt>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+window.mayOneSelectedImg = 0;
+window.setInterval(function() {
+  var imgs = document.getElementById("slideroption");
+  imgs.children[window.mayOneSelectedImg].className = "";
+  window.mayOneSelectedImg = (window.mayOneSelectedImg + 1) % 6;
+  imgs.children[window.mayOneSelectedImg].className = "active";
+}, 3000);
+</script>
+
+<div class="slideroption">
+<img id="slide" src="images/05-midwest.jpg" class>
+<img id="slide" src="images/02-decay1.jpg" class>
+<img id="slide" src="images/06-cement.jpg" class>
+<img id="slide" src="images/08-pollution.jpg" class>
+<img id="slide" src="images/12-bridge.jpg" class>
+</div>

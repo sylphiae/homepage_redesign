@@ -87,18 +87,39 @@ by reducing the influence of money in politics.
 
 		  </div>
 		  
-	  <!--Slider & Hero Area-->		  
+	  <!--Slider & Hero Area-->		 
+	  
 <div class="full-width hero-fw">	
-	<div class="heroarea container">
+<div class="full-width underlay">
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+window.mayOneSelectedImg = 0;
+window.setInterval(function() {
+  var imgs = document.getElementById("slideroption");
+  imgs.children[window.mayOneSelectedImg].className = "";
+  window.mayOneSelectedImg = (window.mayOneSelectedImg + 1) % 6;
+  imgs.children[window.mayOneSelectedImg].className = "active";
+}, 3000);
+</script>
 
-		<div class="row">
-			<div class="col-md-6">
-				<div class="video"><iframe src="//player.vimeo.com/video/93299391?title=0&amp;byline=0&amp;portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-			</div>
-			<div class="col-md-6">
-			    <div class="progbar">
-					<a style="text-decoration:none;" href="//pledge.mayone.us/pledge"><div class="pledgebutton">PLEDGE NOW</div></a>
-				            <div class="progress-container">
+<div class="slideroption">
+<img id="slide" src="images/05-midwest.jpg" class>
+<img id="slide" src="images/02-decay1.jpg" class>
+<img id="slide" src="images/06-cement.jpg" class>
+<img id="slide" src="images/08-pollution.jpg" class>
+<img id="slide" src="images/12-bridge.jpg" class>
+</div>
+</div>
+		<div class="heroarea container">
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="video"><iframe src="//player.vimeo.com/video/93299391?title=0&amp;byline=0&amp;portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+				</div>
+				<div class="col-md-6">
+					<div class="progbar">
+						<a style="text-decoration:none;" href="//pledge.mayone.us/pledge"><div class="pledgebutton">PLEDGE NOW</div></a>
+					            <div class="progress-container">
 			<div class="checkpoint-text">PROGRESS TO NEXT CHECKPOINT</div>
               <div id="super-cool-progress-bar" class="donation-progress-bar">
                 <span class="donation-progress-percent" id="super-cool-progress-bar-percent">Loading...</span>
@@ -112,11 +133,11 @@ by reducing the influence of money in politics.
 			 	  <div id="complete-total-raised"></div>
               <script src="/js/progress.js"></script>
            </div>
+					</div>
 				</div>
-			</div>
-		  </div>
-		 <div class="shareoptions row">
-		          <div class="donation-share">
+			  </div>
+			 <div class="shareoptions row">
+					  <div class="donation-share">
 	<span class="donation-share-text">Spread the Word:</span>
 	<span class="donation-share-buttons">
 	  <a id="twitter_link" href="#" target="_blank" onclick="javascript:window.open(twitter_link_url,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">
@@ -130,8 +151,8 @@ by reducing the influence of money in politics.
 	  </a>
 	</span>
   </div>
-		  </div>
-	</div>
+			  </div>
+		</div>
 </div>
 
   
