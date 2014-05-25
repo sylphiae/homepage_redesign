@@ -409,7 +409,7 @@ padding:40px;
 	 font-size:16px;
 	 padding:20px;
 	 text-align:left;
-	 background: rgba(0,0,0,0.1);
+	 background: rgba(0,0,0,0.2);
 }
 
 .sidebar {
@@ -419,6 +419,8 @@ padding:40px;
 	 padding:20px;
 	 text-align:left;
 	 background: rgba(0,0,0,0.2);
+	 border-left-style:2px solid gray;
+	 
 }
 
 .sidebar h1, h2, h3, h4, h5, h6 {
