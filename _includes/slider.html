@@ -3,18 +3,18 @@
   $( document ).ready(function() {
     window.mayOneSelectedImg = 0;
     window.setInterval(function() {
-      var imgs = document.getElementById("slideroption");
-      imgs.children[window.mayOneSelectedImg].className = "";
+      var imgs = $('[name="slider_slide"]');
+      imgs.removeClass("active");
       window.mayOneSelectedImg = (window.mayOneSelectedImg + 1) % 6;
-      imgs.children[window.mayOneSelectedImg].className = "active";
-    }, 3000);   
+      imgs[window.mayOneSelectedImg].addClass = "active";
+    }, 3000);  
   });
 </script>
 
 <div class="slideroption">
-  <img id="slide" src="images/05-midwest.jpg" class>
-  <img id="slide" src="images/02-decay1.jpg" class>
-  <img id="slide" src="images/06-cement.jpg" class>
-  <img id="slide" src="images/08-pollution.jpg" class>
-  <img id="slide" src="images/12-bridge.jpg" class>
+  <img name=slider_slide id="slide1" src="images/05-midwest.jpg" class>
+  <img name=slider_slide id="slide2" src="images/02-decay1.jpg" class>
+  <img name=slider_slide id="slide3" src="images/06-cement.jpg" class>
+  <img name=slider_slide id="slide4" src="images/08-pollution.jpg" class>
+  <img name=slider_slide id="slide5" src="images/12-bridge.jpg" class>
 </div>
