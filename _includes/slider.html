@@ -6,7 +6,7 @@
       var imgs = $('[name="slider_slide"]');
       imgs.removeClass("active");
       window.mayOneSelectedImg = (window.mayOneSelectedImg + 1) % 6;
-      imgs[window.mayOneSelectedImg].addClass = "active";
+      $(imgs[window.mayOneSelectedImg]).addClass("active");
     }, 3000);  
   });
 </script>
