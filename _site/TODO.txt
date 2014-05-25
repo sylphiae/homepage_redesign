@@ -1,6 +1,33 @@
-Still TODO:
+pushed really hard on pledge pages
 
-1) Make sure site reacts properly when in mobile mode at all resolutions. 
-2) Create Subpages
-3) Get icons for Social media Working. 
-4) Find a way to animate that background-image for the hero slider. 
+We will hit our next goal if you can get 5 people to do what you did. 
+
+Set up your pledge page. 
+
+Send it to five more people. 
+
+They will get a pre-populated link with info we got from their pledge.
+
+Create a pledge page.  
+
+
+Login concept
+
+About MayOne vs. Mayday Branding.
+
+Reband Consistantly as Mayday. 
+
+Merge Signup to mailing list & sign up to volunteer
+type e-mail in the text field. 
+
+are you logged in or not. 
+
+Login link, top right; else "My SuperPAC"; takes you to pledgepage. 
+
+Videos & Press
+
+Merge How we'll spend the money + FAQ
+
+More Ways to Help
+
+About FAQ Ways to Help Videos Media Connect MySuperPAC

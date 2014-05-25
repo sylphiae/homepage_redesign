@@ -310,6 +310,18 @@ border: 3px solid white;
    background-color:#000000;
    height:50px;
 }
+
+.sign-up-pledge{
+   font-family: "Oswald", arial, helvetica, "sans serif";
+   color:yellow;
+   text-align:center;
+   font-size:24px;
+   padding:6px;
+   border: 1px solid white;
+   background-color:#FF0000;
+   height:50px;
+}
+
 .sign-up:hover {
    background-color: #222222;
    color:yellow;
