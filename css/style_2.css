@@ -46,6 +46,12 @@ padding: 0px;
      background-color: #006666;
 	 color:#ffff33;
 }
+.loggedout_hidden {
+     display:none;
+	 }
+.loggedin_hidden{
+     display:inline;
+	 }
 
 /*Logo row*/
 
@@ -53,17 +59,20 @@ padding: 0px;
 background-color:white;
 padding-top:0px;
 margin-bottom:20px;
+max-height:80px;
 }
 
 .logo {
+	 margin:auto;
 }
   
 .subhead {
     /*Setting max height, height, and line-height to 80px vertically centers the text.*/
-    text-align: center;
-    position: relative;
-    top: 30px;
-	height:80px;
+     display:inline-block;
+	 max-height:80px;
+	 height:80px;
+	 line-height:80px; 
+	 vertical-align:middle;
 	/*There may be a better way.*/
 	 font-family: "Oswald", arial, helvetica, "sans serif";
 	 color:#999999;
@@ -465,60 +474,4 @@ padding:40px;
 }
 .sidebar a:hover{
     text-decoration:underline;
-}
-
-/*Responsive Tweaks*/
-
-.mobileonly {
-	display:none;
-}
-
-.mobilehidden{
-	display:inline;
-}
-
-@media (max-width: 1200px) {
-.pledgebutton{
-   margin:25px 20px;
-   padding:5px 10px;
-   font-family: "Oswald", arial, helvetica, "sans serif";
-   text-align: center;
-   font-size:40px;
-   border: 3px solid white;
-   z-index:20;
-}
-.donation-progress-bar{
-   padding:0 5px;
-}
-}
-
-@media (max-width: 992px) {
-.pledgebutton{
-    margin-left:auto;
-   margin-right:auto;
-   margin:10px 50px;
-   padding:10px 20px;
-   font-family: "Oswald", arial, helvetica, "sans serif";
-   text-align: center;
-   font-size:50px;
-   border: 3px solid white;
-   z-index:20;
-}
-.donation-progress-bar{
-   padding:0 25px;
-}
-}
-@media (max-width: 600px) {
-.pledgebutton{
-   margin:25px 20px;
-   padding:5px 10px;
-   font-family: "Oswald", arial, helvetica, "sans serif";
-   text-align: center;
-   font-size:40px;
-   border: 3px solid white;
-   z-index:20;
-}
-.donation-progress-bar{
-   padding:0 5px;
-}
 }
