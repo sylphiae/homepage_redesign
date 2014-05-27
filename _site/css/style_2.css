@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Oswald:400,300,700);
-
 /*By default, grid.css, which is part of Twitter Bootstrap, decorates the divs and makes it obvious where the boundaries are.  This code resets borders and background colors to their defaults.*/
 
 [class*="col-"] {
