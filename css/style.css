@@ -400,9 +400,17 @@
   text-decoration:underline;
 }
 
+#login_modal .modal-header {
+  color: black;
+}
 
 #login_modal #login_inputs i {
   font-size: 48pt;
+}
+
+#login_modal #login_inputs > div.login-service {
+  padding-right: 5px;
+  text-align: center;
 }
 
 /*Responsive Tweaks*/
