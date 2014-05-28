@@ -12,6 +12,7 @@ $(function() {
       return;
     }
 
+
     // else, we need to login.  Show the buttons to toggle the modal
     $('#login_topmenu').show();
     $('#mysuperpac_topmenu').hide();

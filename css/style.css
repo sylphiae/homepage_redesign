@@ -401,6 +401,10 @@
 }
 
 
+#login_modal #login_inputs i {
+  font-size: 48pt;
+}
+
 /*Responsive Tweaks*/
 
 .mobileonly {
