@@ -70,8 +70,8 @@
 }
 
 .pledgebutton{
-  background-color: #FF0000;
-  color: #ffff33;
+  background-color: #9e0b0f;
+  color: #ffffcc;
   margin-left:auto;
   margin-right:auto;
   margin:10px 50px;
@@ -216,7 +216,7 @@
   color:white;
 }
 .donation-share-text a:hover{
-  color:yellow;
+  color:#ffffcc;
   text-decoration:none;
 }
 
@@ -237,7 +237,7 @@
 
 .sign-up-pledge{
   font-family: "Oswald", arial, helvetica, "sans serif";
-  color:yellow;
+  color:#ffffcc;
   text-align:center;
   font-size:24px;
   padding:6px;
@@ -248,7 +248,7 @@
 
 .sign-up:hover {
   background-color: #222222;
-  color:yellow;
+  color:#ffffcc;
 }
 
 .arrowdown{
@@ -306,7 +306,7 @@
   border-bottom:4px solid white;
 }
 
-.widgettext h1, h2, h3, h4, h5, h6 {
+.widgettext h1, .widgettext h2, .widgettext h3, .widgettext h4, .widgettext h5, .widgettext h6 {
   font-family: "Oswald", arial, helvetica, "sans serif";
   color:#FFFF99;
   text-align:center;
@@ -318,7 +318,7 @@
   font-family: "Lato", arial, helvetica, "sans serif";
   color:white;
   text-align:center;
-  font-size:25px;
+  font-size:20px;
 }
 
 .pac_disclaimer {
@@ -337,6 +337,12 @@
   padding:40px;
 }
 
+.footer a{
+  color:#ffffcc;
+}
+
+
+
 .copyright{
   font-family: "Lato", arial, helvetica, "sans serif";
   color:white;
@@ -345,7 +351,7 @@
 /*Subpages*/
 
 .rally {
-  background-image:url('../images/sidebar_background.jpg');
+  background-image:url('../images/subpage_background.jpg');
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center center;
@@ -358,23 +364,37 @@
   margin:10px;
 }
 
-
-
 .subpage-content a{
-  color:yellow;
+  color:#003366;
 }
 
 .subpage-content a:hover{
   text-decoration:underline;
+  color:#003366;
 }
 
 .subpage-content {
    font-family: "Lato", arial, helvetica, "sans serif";
-   color:white;
+   color:black;
    font-size:16px;
    padding:20px;
    text-align:left;
-   background: rgba(0,0,0,0.5);
+}
+
+.subpage-content h1, 
+.subpage-content h2, 
+.subpage-content h3, 
+.subpage-content h4, 
+.subpage-content h5, 
+.subpage-content h6{
+  font-family: "Oswald", arial, helvetica, "sans serif";
+  color:#003366;
+  text-align:center;
+  font-size:30px;
+  text-align:left;
+  padding-bottom: 10px;
+  border-top: solid 1px #003366;
+  padding-top: 20px;
 }
 
 .sidebar {
@@ -383,10 +403,15 @@
    font-size:14px;
    padding:20px;
    text-align:left;
-   background: rgba(0,0,0,0.3);
+   background: rgba(0,51,102,0.8);
 }
 
-.sidebar h1, h2, h3, h4, h5, h6 {
+.sidebar h1, 
+.sidebar h2, 
+.sidebar h3, 
+.sidebar h4, 
+.sidebar h5, 
+.sidebar h6{
   font-family: "Oswald", arial, helvetica, "sans serif";
   color:white;
   text-align:center;
@@ -394,11 +419,13 @@
 }
 
 .sidebar a{
-  color:yellow;
+  color:#ffffcc;
 }
 .sidebar a:hover{
   text-decoration:underline;
 }
+
+/* This comment reserved for someone who knows what the heck #login_modal is */
 
 #login_modal .modal-header {
   color: black;
@@ -479,4 +506,21 @@
   .donation-progress-bar{
      padding:0 5px;
   }
+}
+
+/* Contact Form */
+
+.input-group, .input-group-lg {
+   display:block;
+   width:75%;
+   margin-left: 12%;
+   margin-right: 13%;
+}
+
+.input-group-btn{
+   display:block;
+   width:75%;
+   margin-left: 12%;
+   margin-right: 13%;
+   text-align:right;
 }

@@ -5,26 +5,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>MayOne.us - MaydayPAC in the Media</title>
         <meta name="viewport" content="width=device-width">
-		
+
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" id="googlefonts-css" type="text/css" media="all" href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Lato:400,700&amp;subset=latin" />
-        <link rel="stylesheet" href="/extern/frontend/stylesheets/style.css" />
-        <link rel="stylesheet" href="/extern/frontend/stylesheets/entypo-social.css" />
+        <link rel="stylesheet" href="/homepage_redesign/extern/frontend/stylesheets/style.css" />
+        <link rel="stylesheet" href="/homepage_redesign/extern/frontend/stylesheets/entypo-social.css" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-	
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-	
-        <!-- Custom styles for this template -->
-        <!-- <link href="/css/grid.css" rel="stylesheet"> -->
-		<link href="/css/style.css" rel="stylesheet">
-		
 
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/homepage_redesign/css/syntax.css">
+
+        <!-- Custom styles for this template -->
+        <!-- <link href="/homepage_redesign/css/grid.css" rel="stylesheet"> -->
+        <link href="/homepage_redesign/css/style.css" rel="stylesheet">
+
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
      </head>
   <body id="medi">
@@ -35,28 +37,76 @@
 
 
 <!--Menu & Logo-->
-<div class="full-width"> 
-	<div class="clearfix menu-row row">
-		<a href="../login"><div class="topmenu col-md-1">Login</div></A>
-		<a href="../mysuperpac"><div class="topmenu col-md-1">My SuperPAC</div></A>
-		<a href="../connect"><div class="topmenu col-md-1">Connect</div></A>
-		<a href="../media"><div class="topmenu col-md-1">Media</div></A>
-		<a href="../videos"><div class="topmenu col-md-1">Videos</div></A>
-		<a href="../ways"><div class="topmenu col-md-1">Ways to Help</div></A>
-		<a href="../faq"><div class="topmenu col-md-1">FAQ</div></A>
-		<a href="../about"><div class="topmenu col-md-1">About Us</div></A>
-	</div>
-</div>
-	<div class="container">
-		<div class="logo-row row">
-			<a href="../"><div class="logo col-md-3"><img src="../images/logo_mayday.png"></div></A>
-		<div class="subhead col-md-9">
+    <div class="full-width">
+      <div class="menu-row row">
+        <div class="col-md-4">&nbsp;</div>
+    <a href="#" id="login_topmenu" style="display:none;" >
+      <div class="topmenu col-md-1" data-toggle="modal" data-target="#login_modal">Login</div>
+    </a>
+	<!-- The header.html/indexheader.html is a workaround - when we go to production we can replace this stuff with absolute links. 
+	
+	In short the reason for the two files is that index.html resides at baseurl/ and so the relative path to FAQ is /faq. But the subpages are referred to by directory - baseurl/about has a relative path to FAQ at ../faq.  
+	
+	Long story short, this will work, but it's kludgy and we can create a unified system as soon as we have permalinks to create absolute paths. 
+
+	-->
+    <a href="../homepage_redesign/mysuperpac" id="mysuperpac_topmenu"><div class="topmenu col-md-1">My SuperPAC</div></A>
+    <a href="../homepage_redesign/contact"><div class="topmenu col-md-1">Contact</div></A>
+    <a href="../homepage_redesign/about"><div class="topmenu col-md-1">About Us</div></A>
+    <a href="../homepage_redesign/videos"><div class="topmenu col-md-1">Videos</div></A>
+    <a href="../homepage_redesign/media"><div class="topmenu col-md-1">Press</div></A>
+    <a href="../homepage_redesign/ways"><div class="topmenu col-md-1">Ways to Help</div></A>
+    <a href="../homepage_redesign/faq"><div class="topmenu col-md-1">FAQ</div></A>
+
+        </div>
+    </div>
+    <div class="container">
+    <div class="logo-row row">
+        <a href="../homepage_redesign/"><div class="logo col-md-3"><img src="../images/logo_mayday.png"></div></A>
+        <div class="subhead col-md-9">
 
 A citizen-funded super PAC, to end all super PACs.
 
 </div>
-	</div>
-</div>
+      </div>
+  </div>
+
+<!-- Bootstrap modal to show login links -->
+<div class="modal fade" id="login_modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Login to My SuperPAC</h4>
+      </div>
+      <div class="modal-body">
+        <p>Create an account or login with:</p>
+        <div id="login_inputs">
+          <div class="pull-left login-service">
+            <i class="fa fa-google"></i><br/>
+            <div class="btn btn-primary">Google</div>
+          </div>
+          <div class="pull-left login-service">
+            <i class="fa fa-facebook"></i><br/>
+            <div class="btn btn-primary">Facebook</div>
+          </div>
+          <div class="pull-left login-service">
+            <i class="fa fa-twitter"></i><br/>
+            <div class="btn btn-primary">Twitter</div>
+          </div>
+          <div class="pull-left login-service">
+            <i class="fa fa-yahoo"></i><br/>
+            <div class="btn btn-primary">Yahoo</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="/homepage_redesign/js/login_modal.js" type="text/javascript"></script>
   <!--Container for Head-->		 
       <div class="socialmenu row"><div class="sign-up col-md-4"><form>Sign Up: <input name="email" placeholder="E-mail Address" style="color:black;" type="text"><span style="color:black;"><input style="color:black;" type="submit" value="Submit"></span></form></div>
 <a href="http://pledge.mayone.us/pledge"><div class="sign-up-pledge col-md-4">PLEDGE NOW</div></a>
@@ -87,8 +137,6 @@ A citizen-funded super PAC, to end all super PACs.
   <li><a href="#a-hrefhttpswwwyoutubecomwatchvn4ursmtcjxw-targetblankwgbh-newsgreater-boston-lawrence-lessigs-new-approach-to-campaign-finance-reforma"><a href="https://www.youtube.com/watch?v=N4uRSMTCJxw" target="_blank">WGBH News/Greater Boston: Lawrence Lessig’s New Approach to Campaign Finance Reform</a></a></li>
 </ul>
 
-<hr />
-
 <h3 id="la-times-harvard-professors-super-pac-aims-to-end-power-of-super-pacshttpwwwlatimescomnationpoliticspoliticsnowla-pn-harvard-professor-super-pac-big-money-politics-20140523-storyhtml"><a href="http://www.latimes.com/nation/politics/politicsnow/la-pn-harvard-professor-super-pac-big-money-politics-20140523-story.html">LA Times: Harvard professor’s ‘super PAC’ aims to end power of ‘super PACs’</a></h3>
 <blockquote>
   <p>Is it possible to create a “super PAC” that would end the power of super PACs by drawing enough Americans into the system to limit the influence of big money in politics? And is it possible to get voters excited about a subject as dry as campaign finance?  Harvard law professor Lawrence Lessig is leading a crusade to answer both those questions with a yes.</p>
@@ -97,8 +145,6 @@ A citizen-funded super PAC, to end all super PACs.
 <blockquote>
   <p>If the Mayday PAC is able to take out five members of Congress this cycle “who are on the wrong side of this issue,” Lessig said, “then when 2016 comes around, magically a whole bunch of members of Congress would be on the right side of this issue, and we would have a narrower range of people that we would have to be going after, and we would have very good data</p>
 </blockquote>
-
-<hr />
 
 <h3 id="the-huffington-post-the-super-pac-to-end-all-super-pacs-gets-off-to-a-super-starthttpwwwhuffingtonpostcom20140515mayone-lawrence-lessign5333020html"><a href="http://www.huffingtonpost.com/2014/05/15/mayone-lawrence-lessig_n_5333020.html">The Huffington Post: The Super PAC To End All Super PACs Gets Off To A Super Start</a></h3>
 
@@ -113,8 +159,6 @@ A citizen-funded super PAC, to end all super PACs.
   <p>The irony is to get money out of politics, reformers must raise money of their own. 
   On that measure, Lessig’s new     organization has gotten off to a super start.</p>
 </blockquote>
-
-<hr />
 
 <h3 id="washington-post-opinions-matt-miller-a-money-bomb-for-2016httpwwwwashingtonpostcomopinionsmatt-miller-a-money-bomb-for-201620130529c01d0e88-c85c-11e2-8da7-d274bc611a47storyhtml"><a href="http://www.washingtonpost.com/opinions/matt-miller-a-money-bomb-for-2016/2013/05/29/c01d0e88-c85c-11e2-8da7-d274bc611a47_story.html">Washington Post Opinions: Matt Miller: “A ‘money bomb’ for 2016″</a></h3>
 
@@ -131,8 +175,6 @@ A citizen-funded super PAC, to end all super PACs.
   central issue in 2016. With a little luck, the Harvard law professor’s idea
   could help save the republic.</p>
 </blockquote>
-
-<hr />
 
 <h3 id="moyers--company-lawrence-lessig-has-a-moonshot-plan-to-halt-our-slide-toward-plutocracyhttpbillmoyerscom20140425lawrence-lessig-has-a-moonshot-plan-to-halt-our-slide-toward-plutocracy"><a href="http://billmoyers.com/2014/04/25/lawrence-lessig-has-a-moonshot-plan-to-halt-our-slide-toward-plutocracy/">Moyers &amp; Company: “Lawrence Lessig Has a ‘Moonshot’ Plan to Halt Our Slide Toward Plutocracy”</a></h3>
 
@@ -152,8 +194,6 @@ A citizen-funded super PAC, to end all super PACs.
   ambitious, collective, national effort “unlike anything they’ve seen before” —
   can “crack this cynicism” and usher in a more democratic system.</p>
 </blockquote>
-
-<hr />
 
 <h3 id="a-hrefhttptimecom84556lawrence-lessig-superpac-targetblanktime-campaign-finance-reformer-launches-super-pac-to-end-super-pacsa"><a href="http://time.com/84556/lawrence-lessig-superpac/" target="_blank">Time: Campaign Finance Reformer Launches Super PAC to End Super PACs</a></h3>
 
@@ -184,8 +224,6 @@ A citizen-funded super PAC, to end all super PACs.
   Lessig <a style="color: #0c97d2;" href="http://www.theatlantic.com/politics/archive/2014/04/campaign-finance-and-the-nihilist-politics-of-resignation/360437/">writes</a>.</p>
 </blockquote>
 
-<hr />
-
 <h3 id="a-hrefhttpthinkprogressorgelection201405013433006mayday-super-pac-launches-to-end-super-pacs-targetblankthinkprogress-anti-dark-money-activist-lawrence-lessig-launches-a-super-pac-to-end-super-pacsa"><a href="http://thinkprogress.org/election/2014/05/01/3433006/mayday-super-pac-launches-to-end-super-pacs/" target="_blank">ThinkProgress: Anti-Dark Money Activist Lawrence Lessig Launches A Super PAC To End Super PACs</a></h3>
 
 <blockquote>
@@ -195,8 +233,6 @@ A citizen-funded super PAC, to end all super PACs.
   $50,000 — 5 percent of its $1 million goal.</p>
 </blockquote>
 
-<hr />
-
 <h3 id="a-hrefhttpwwwpolicymiccomarticles88825there-s-a-new-super-pac-to-end-all-super-pacs-and-it-could-radically-change-politicsutmsourcepolicymictwtramputmmediummainamputmcampaignsocial-targetblankpolicymic-theres-a-new-super-pac-to-end-all-super-pacs--and-it-could-radically-change-politicsa"><a href="http://www.policymic.com/articles/88825/there-s-a-new-super-pac-to-end-all-super-pacs-and-it-could-radically-change-politics?utm_source=policymicTWTR&amp;utm_medium=main&amp;utm_campaign=social" target="_blank">PolicyMic: There’s a New “Super PAC to End All Super PACs” — And It Could Radically Change Politics</a></h3>
 
 <blockquote>
@@ -205,15 +241,11 @@ A citizen-funded super PAC, to end all super PACs.
   million.</p>
 </blockquote>
 
-<hr />
-
 <h3 id="a-hrefhttponmsnbccom1iospfzmsnbc-ronan-farrow-daily-5062014a"><a href="http://on.msnbc.com/1iospFz">MSNBC: Ronan Farrow Daily, 5/06/2014</a></h3>
 
 <p style="text-align:center"><a href="http://on.msnbc.com/1iospFz"><img class="alignleft size-full wp-image-10167" src="../images/msnbc.png" alt="msnbc" width="640" height="472" /></a></p>
 
 <div style="clear: both;"></div>
-
-<hr />
 
 <h3 id="a-hrefhttpwwwupworthycoma-brilliant-plan-to-give-billionaires-who-try-to-buy-us-elections-a-taste-of-their-own-medicinecfea-targetblankupworthynbspa-brilliant-plan-to-give-billionaires-who-try-to-buy-us-elections-a-taste-of-their-own-medicinea"><a href="http://www.upworthy.com/a-brilliant-plan-to-give-billionaires-who-try-to-buy-us-elections-a-taste-of-their-own-medicine?c=fea" target="_blank">Upworthy: A Brilliant Plan To Give Billionaires Who Try To Buy U.S. Elections A Taste Of Their Own Medicine</a></h3>
 
@@ -226,19 +258,13 @@ A citizen-funded super PAC, to end all super PACs.
   non-significant impact</em> upon public policy.”</p>
 </blockquote>
 
-<hr />
-
 <h3 id="a-hrefhttpwwwhuffingtonpostcom20140509n5295544html-targetblankhuffington-postnbspa-brilliant-plan-to-give-billionaires-who-try-to-buy-us-elections-a-taste-of-their-own-medicinea"><a href="http://www.huffingtonpost.com/2014/05/09/_n_5295544.html" target="_blank">Huffington Post: A Brilliant Plan To Give Billionaires Who Try To Buy U.S. Elections A Taste Of Their Own Medicine</a></h3>
-
-<hr />
 
 <h3 id="a-hrefhttpswwwyoutubecomwatchvn4ursmtcjxw-targetblankwgbh-newsgreater-boston-lawrence-lessigs-new-approach-to-campaign-finance-reforma"><a href="https://www.youtube.com/watch?v=N4uRSMTCJxw" target="_blank">WGBH News/Greater Boston: Lawrence Lessig’s New Approach to Campaign Finance Reform</a></h3>
 
 <div style="text-align:center;" class="center">
   <iframe style="display:block;" width="640" height="360" src="//www.youtube.com/embed/N4uRSMTCJxw" frameborder="0" allowfullscreen=""></iframe>
 </div>
-
-<hr />
 
 </div>
         <div class="sidebar col-md-4">  <h3>Direct Contributions</h3>
