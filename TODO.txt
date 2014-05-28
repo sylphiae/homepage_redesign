@@ -11,7 +11,7 @@ They will get a pre-populated link with info we got from their pledge.
 Create a pledge page.  
 
 
-Login concept
+Login concept (on it  -dl)
 
 About MayOne vs. Mayday Branding.
 
