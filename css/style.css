@@ -405,12 +405,14 @@
 }
 
 #login_modal #login_inputs {
-  height: 60pt;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 380px;
 }
 
 #login_modal #login_inputs i {
-  font-size: 48pt;
+  font-size: 55px;
 }
 
 #login_modal #login_inputs > div.login-service {
