@@ -31,7 +31,7 @@
 
 .hero-fw{
 position:relative;
-background-image:url('../images/05-midwest.jpg');
+background-image:url('/images/05-midwest.jpg');
 background-size:cover;
 background-repeat:no-repeat;
 background-position:center center;
