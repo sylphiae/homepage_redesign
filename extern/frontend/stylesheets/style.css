@@ -584,9 +584,6 @@ display:inline;
 
 /* This comment reserved for someone who knows what the heck #login_modal is */
 
-#login_modal {
-  width:250px;
-}
 #login_modal .modal-header {
   color: black;
 }
