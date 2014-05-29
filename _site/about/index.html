@@ -60,12 +60,12 @@
     </div>
     <div class="container">
     <div class="logo-row row">
-        <a href="../"><div class="logo col-md-3"><img src="../images/logo_mayday.png"></div></A>
-        <div class="subhead col-md-9">
+        <a href="../"><img src="../images/logo_mayday.png"></A>
+		<P class="subhead">
 
 A citizen-funded super PAC, to end all super PACs.
 
-</div>
+</P></div>
       </div>
   </div>
 
@@ -106,11 +106,6 @@ A citizen-funded super PAC, to end all super PACs.
 </div><!-- /.modal -->
 <script src="/js/login_modal.js" type="text/javascript"></script>
   <!--Container for Head-->		 
-      <div class="socialmenu row"><div class="sign-up col-md-4"><form>Sign Up: <input name="email" placeholder="E-mail Address" style="color:black;" type="text"><span style="color:black;"><input style="color:black;" type="submit" value="Submit"></span></form></div>
-<a href="http://pledge.mayone.us/pledge"><div class="sign-up-pledge col-md-4">PLEDGE NOW</div></a>
-<div class="sign-up col-md-4">Setup Your Pledge Page</div>
-</div>
- 	  
 	  <div class="herotext row">
 <p>About Us</p>
 
@@ -338,7 +333,29 @@ world.</p>
 	</P>
     <p>
       Direct donations are collected via <a href="http://democracy.com/">Democracy.com</a>. Direct contributions, unlike pledges, are not contingent upon reaching our goals and are collected immediately.</p>
-	  
+	  <hr />
+	<p>
+      	<a style="text-decoration:none;" href="//pledge.mayone.us/pledge"><div class="pledgebutton">PLEDGE NOW</div></a>
+		            <div class="progress-container">
+			<div class="checkpoint-text">PROGRESS TO NEXT CHECKPOINT</div>
+              <div id="super-cool-progress-bar" class="donation-progress-bar">
+                <span class="donation-progress-percent" id="super-cool-progress-bar-percent">Loading...</span>
+                <span class="donation-progress-funded">
+                  <span id="super-cool-progress-bar-funded"></span>
+                  <span class="hide-mobile">Raised</span>
+                </span>
+                <span class="donation-progress-togo"    id="super-cool-progress-bar-togo"></span>
+                <div class="donation-progress" style="width: 0%" id="super-cool-progress-bar-bar"></div>
+              </div>
+			 	  <div id="complete-total-raised"></div>
+              <script src="/js/progress.js"></script>
+           </div>
+		</p>
+	  <hr />
+	 <P>
+	 <form style="text-align: center;"><input name="email" placeholder="E-mail Address" style="color:black;" type="text"><span style="color:black;">&nbsp;<input class="btn btn-primary"  type="submit" value="Sign Up"></span></form>
+	 </P>
+	  <hr />
 	  <h3>Donation by Check</h3><p>Make checks payable to: Mayday PAC
     </p>
     <p style="padding-left:30px;">
@@ -360,7 +377,7 @@ world.</p>
 &lt;iframe src=&quot;https://pledge.mayone.us/embed.html&quot; width=&quot;260px&quot; height=&quot;260px&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; /&gt; &lt;/iframe&gt;
     </pre>
 	    <hr />
-  <h3>Credits</h3>
+  <div class="about-page-only"><h3>Credits</h3>
       <p>
         <strong>Site Design:</strong>
       </p>
@@ -416,22 +433,26 @@ world.</p>
         <strong>Software Tools Used:</strong>
       </p>
       <p style="padding-left:5px;margin:6px 0px;">
-        Built on <a href="http://www.github.org/">Github pages</a> using <a href="http://jekyllrb.org/">Jekyll</A>
+      	Code hosted by <a href="https://github.com">Github</a>
+      </p>
+      <p style="padding-left:5px;margin:6px 0px;">
+        Built on <a href="https://pages.github.com">Github Pages</a> using <a href="http://jekyllrb.org/">Jekyll</A>
       </p>
       <p style="padding-left:5px;margin:6px 0px;">
         Hosting by Github Pages and Google App Cloud
       </p>
-	  <p style="padding-left:5px;margin:6px 0px;">
+	<p style="padding-left:5px;margin:6px 0px;">
         Co-Location & Scaling by Cloudflare
       </p>
       <p style="padding-left:5px;margin:6px 0px;">
         E-commerce software by The Tech First Responders
       </p>
       <p style="padding-left:5px;margin:6px 0px;">
-        Payment Processing by <a href="http://stripe.com/">Stripe</a>
+        Payment Processing by <a href="https://stripe.com/">Stripe</a>
       </p>
-    <hr>
-    <p>
+	   <hr>
+	  </div>
+       <p>
       <a href="/privacy-policy">Our Privacy Policy</a>
     </p>
     <hr>
