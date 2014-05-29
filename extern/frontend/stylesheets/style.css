@@ -687,3 +687,8 @@ display:inline;
 .social-icon-scale {
   font-size: 1.4em !important;
 }
+
+.no-underline:hover {
+  text-decoration: none;
+}
+
