@@ -681,3 +681,8 @@ display:inline;
    margin-right: 13%;
    text-align:right;
 }
+/* Social icons */
+
+.social-icon-scale {
+  font-size: 1.4em !important;
+}
