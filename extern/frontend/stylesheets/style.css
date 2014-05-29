@@ -584,6 +584,12 @@ display:inline;
 
 /* This comment reserved for someone who knows what the heck #login_modal is */
 
+#login_modal {
+    /* new custom width */
+    width: 250px;
+    /* must be half of the width, minus scrollbar on the left (30px) */
+    margin-left: -125px;
+}
 #login_modal .modal-header {
   color: black;
 }
