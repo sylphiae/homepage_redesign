@@ -694,3 +694,14 @@ login_modal .modal-header {
   text-decoration: none;
 }
 
+/* Fixes for some problems */
+
+.login-topmenu {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.login-topmenu:hover {
+  cursor: pointer;
+  cursor: hand;
+}
