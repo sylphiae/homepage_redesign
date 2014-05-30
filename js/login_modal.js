@@ -1,5 +1,10 @@
 $(function() {
-  $.get('https://auth.mayone.us/v1/current_user?return_to=https://my.mayone.us/dashboard')  // TODO: template-ify the returnTo
+  $.ajax({
+    url: 'https://auth.mayone.us/v1/current_user?return_to=https://my.mayone.us/dashboard',
+    xhrFields: {
+      withCredentials: true
+    }
+  })  // TODO: template-ify the returnTo
   .fail(function() {
     $('#mysuperpac_topmenu').hide();
     $('#login_topmenu').hide();
