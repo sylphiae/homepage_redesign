@@ -696,12 +696,12 @@ login_modal .modal-header {
 
 /* Fixes for some problems */
 
-.login-topmenu {
+.topmenu_red {
   cursor: pointer;
   cursor: hand;
 }
 
-.login-topmenu:hover {
+.topmenu_red:hover {
   cursor: pointer;
   cursor: hand;
 }
