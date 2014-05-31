@@ -3,9 +3,12 @@
 
 VAGRANTFILE_API_VERSION = "2"
 
-# This development requires you have Vagrant and Virtualbox installed and that
+# This development setup only requires you have Vagrant[1] and Virtualbox[2] installed and that
 # teams, pledgeservice, and authservice are cloned in a sibling relationship
 # to this repo.
+#
+# [1] http://www.vagrantup.com/
+# [2] https://www.virtualbox.org/
 #
 # Run "vagrant up" and wait for the command to complete
 # Run "vagrant plugin install vagrant-exec"
