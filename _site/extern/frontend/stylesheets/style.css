@@ -347,7 +347,6 @@ width:66%;
 
 .sign-up {
   font-family: "Lato", arial, helvetica, "sans serif";
-  color:white;
   text-align:center;
   font-size:20px;
   padding:10px;
@@ -694,3 +693,14 @@ login_modal .modal-header {
   text-decoration: none;
 }
 
+/* Fixes for some problems */
+
+.topmenu_red {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.topmenu_red:hover {
+  cursor: pointer;
+  cursor: hand;
+}
