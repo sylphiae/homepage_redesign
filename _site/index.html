@@ -72,7 +72,7 @@
 	Long story short, this will work, but it's kludgy and we can create a unified system as soon as we have permalinks to create absolute paths. 
 
 	-->
-    <a href="/homepage_redesign/mysuperpac" id="mysuperpac_topmenu"><div class="topmenu_red col-md-1">My SuperPAC</div></A>
+    <a href="https://my.mayone.us/dashboard" id="mysuperpac_topmenu"><div class="topmenu_red col-md-1">My SuperPAC</div></A>
     <a href="/homepage_redesign/contact"><div class="topmenu col-md-1">Contact</div></A>
     <a href="/homepage_redesign/about"><div class="topmenu col-md-1">About Us</div></A>
     <a href="/homepage_redesign/videos"><div class="topmenu col-md-1">Videos</div></A>
@@ -176,7 +176,12 @@ by reducing the influence of money in politics.
 </div>
 
          <div class="sign-up row">
-		   	<form><span style="color:white;">Sign Up:</span> <input name="email" placeholder="E-mail Address" type="text">&nbsp;<input class="btn btn-primary" type="submit" value="Submit"></form>
+		   	<form action="http://pledge.mayone.us/r/subscribe" method="post">
+          <input type="hidden" name="redirect" value="/subscribe">
+          <span style="color:white;">Sign Up:</span> 
+          <input name="email" placeholder="E-mail Address" type="text">&nbsp;
+          <input class="btn btn-primary" type="submit" value="Subscribe">
+        </form>
 		 </div>
 		
 
