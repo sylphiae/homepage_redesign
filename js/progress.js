@@ -36,10 +36,10 @@ function totalRaisedCB(totalRaisedCents) {
   setText("complete-total-raised", complete_total_message);
 }
 
-var total_req = document.createElement('script');
-total_req.setAttribute("src",
-                       "https://pledge.mayone.us/total?callback=totalRaisedCB");
-document.head.appendChild(total_req);
+jQuery.getJSON('//pledge.mayone.us/r/total',
+  function(data) {
+    totalRaisedCB(data.totalCents);
+  });
 
 function ready(fn) {
   if (document.addEventListener) {
