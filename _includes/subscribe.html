@@ -1,0 +1,77 @@
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<script src="//fgnass.github.io/spin.js/spin.min.js"></script>
+<script>
+   var email = location.search.split('email=')[1] <!-- http://stackoverflow.com/questions/979975/how-to-get-the-value-from-url-parameter -->
+
+</script>
+<div id="content" class="row" ng-app="contactApp">
+    <div class="row" ng-controller="contactController">
+      <form >
+
+        <div class="row">
+          <div class="input-group input-group-lg">
+		        <label>Email (required)</label>
+            <input type="email" required name="email" class="form-control">
+          </div>
+        </div>
+
+        <div class="row">
+           <div class="input-group input-group-lg">
+		     <label>First Name</label>
+            <input type="text" required name="first_name" class="form-control">
+          </div>
+        </div>
+
+        <div class="row">
+           <div class="input-group input-group-lg">
+		     <label>Last Name</label>
+            <input type="text" required name="last_name" class="form-control">
+          </div>
+        </div>
+        
+        <div class="row">
+           <div class="input-group input-group-lg">
+		     <label>Zipcode</label>
+            <input type="text" required name="zipcode" class="form-control">
+          </div>
+        </div>
+        
+        <div class="row">
+           <div class="input-group input-group-lg">
+		     <label>Are You Able to Volunteer?</label>
+            <input type="checkbox" required name="volunteer" class="form-control" onclick="document.getElementById('skills_section').style.display = 'block';">
+          </div>
+        </div>
+        
+        <div id="skills_section" class="row" style="display:none">
+           <div class="input-group input-group-lg">
+		     <label>Do you have any specific skills that can help us with organizing? (Both technical and non-technical!)</label>
+            <input type="text" required name="skills" class="form-control">
+          </div>
+        </div>
+        
+        <div class="row">
+           <div class="input-group input-group-lg">
+		     <label>Would you like to also subscribe to the Rootstrikers Mailinglist?</label>
+            <input type="checkbox" required name="rootstrikers" class="form-control">
+          </div>
+        </div>
+        
+        <div ng-show="! ctrl.spinning" class="row">
+           <span class="input-group-btn">
+              <button id="submitButton" type="submit" class="btn btn-primary">Subscribe</button>
+            </span>
+        </div>
+
+        <div ng-show="ctrl.spinning" class="row">
+          <div id="spinButton" class="spacing" style="position:relative;"></div>
+        </div>
+
+        <div ng-show="ctrl.error" class="edd_errors row">
+          <p id="error"></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
