@@ -30,16 +30,18 @@ a:visited { color: #a0a; }
   position: relative;
   margin: 0 auto;
 }
-button.pledge {
+.pledge {
   background-color: #d53a38;
   border-radius: 5px;
   color: #FFF;
   font-weight: bold;
   text-align: center;
   border: none;
+  display: inline-block;
 }
-button.pledge:hover {
+.pledge:hover {
   background: #b73230;
+  text-decoration: none;
 }
 
 #hero {
@@ -57,7 +59,7 @@ button.pledge:hover {
   position: relative;
   padding: 15px 0 0;
 }
-#hero .social a span, #hero .social button span {
+#hero .social a span, #hero .social .pledge span {
   display: none;
 }
 #hero .social .facebook a {
@@ -216,11 +218,11 @@ button.pledge:hover {
   color: rgba(255,255,255,.5);
 }
 
-#hero button.pledge {
+#hero .pledge {
   width: 275px;
   height: 70px;
   font-size: 30px;
-  line-height: 60px;
+  line-height: 70px;
   float: left;
   margin-left: 30px;
 }
@@ -357,12 +359,13 @@ button.pledge:hover {
   font-weight: bold;
   margin: 0;
 }
-#mayday button.big {
+#mayday .pledge.big {
   font-size: 40px;
   position: relative;
   margin: 100px auto 50px;
-  height: 75px;
+  height: 80px;
   width: 420px;
+  line-height: 75px;
 }
 #mayday .please {
   color: #666;
@@ -390,7 +393,7 @@ button.pledge:hover {
   position: relative;
   overflow: hidden;
 }
-#mayday .social button {
+#mayday .social .pledge {
   width: 180px;
   height: 60px;
   line-height: 58px;
