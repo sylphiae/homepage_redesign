@@ -1,5 +1,5 @@
 $(function() {
-  $.get('https://auth.mayone.us/v1/current_user?return_to=https://mayone.us/homepage_redesign')  // TODO: template-ify the returnTo
+  $.get('https://auth.mayday.us/v1/current_user?return_to=https://mayday.us/homepage_redesign')  // TODO: template-ify the returnTo
   .fail(function() {
     $('#mysuperpac_topmenu').hide();
     $('#login_topmenu').hide();
