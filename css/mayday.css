@@ -54,6 +54,20 @@ a:visited { color: #a0a; }
 #hero .inner {
   width: 700px;
 }
+#hero #top_login {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font-size: 14px;
+}
+#hero #top_login, #hero #top_login a, #hero #top_login, #hero #top_login a:visited {
+  color: #527d91;
+  color: rgba(255,255,255,.33);
+}
+#hero #top_login, #hero #top_login a:hover,  {
+  color: #527d91;
+  color: rgba(255,255,255,.66);
+}
 #hero .social {
   width: 300px;
   margin: 0 auto;
