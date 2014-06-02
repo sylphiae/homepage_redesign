@@ -30,7 +30,7 @@ a:visited { color: #a0a; }
   position: relative;
   margin: 0 auto;
 }
-.pledge {
+.pledge, .pledge:visited {
   background-color: #d53a38;
   border-radius: 5px;
   color: #FFF;
