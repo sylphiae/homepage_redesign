@@ -344,12 +344,16 @@ a:visited { color: #a0a; }
   margin: 0;
 }
 #timeline .phase_one {
+  position: relative;
+  top: -30px;
   width: 320px;
   float: left;
   text-align: left;
   line-height: 2em;
 }
 #timeline .phase_two {
+  position: relative;
+  top: -30px;
   width: 320px;
   float: right;
   text-align: left;
@@ -369,6 +373,11 @@ a:visited { color: #a0a; }
 }
 #timeline .phase_two * {
   color: #fff;
+}
+#timeline .timeline_wrapup h3 {
+  clear: both;
+  padding-top: 50px;
+  font-size: 1.6em;
 }
 
 #mayday {
@@ -404,14 +413,14 @@ a:visited { color: #a0a; }
   line-height: 1em;
   color: #000;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 50px;
   postion: relative;
   margin: 0 auto;
   width: 700px;
 }
 #mayday .help {
   margin-top: 120px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   color: #000;
 }
