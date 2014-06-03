@@ -20,14 +20,14 @@ function setText(el, val) {
 
 // javascript is so awesome. this is how you write June 1st. Cause June is the
 // 5th month, indexed by zero. thanks javascript!
-var date_its_over = Date.UTC(2014,05,01,10,00,00,00);
+var date_its_over = Date.UTC(2014,05,06,10,00,00,00);
 var days_left = Math.floor((date_its_over - Date.now())/(1000*24*60*60));
 var days_left_message = '18 Days Early';
 
 function totalRaisedCB(totalRaisedCents) {
   var totalRaised = totalRaisedCents / 100;
-  // todo: this needs to change if we make it past 1million
-  var percent = Math.floor(totalRaised / 10000);
+  // todo: this needs to change when we make it past 2million
+  var percent = Math.floor((totalRaised - 1000000) / 10000);
   setText("super-cool-progress-bar-percent", '' + percent + '% Funded');
   setText("super-cool-progress-bar-funded", '$' + addCommas(totalRaised));
   document.getElementById("super-cool-progress-bar-bar").style.width='' + Math.min(100, percent) + '%';
