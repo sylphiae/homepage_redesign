@@ -19,6 +19,9 @@
 #header h3 a {
   color: #fff;
 }
+#header h3 a:hover {
+  text-decoration: none;
+}
 .topmenu_entire {
   text-align: center;
 }
