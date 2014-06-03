@@ -31,10 +31,10 @@ function totalRaisedCB(totalRaisedCents) {
   setText("raised", complete_total_message);
 }
 
-jQuery.getJSON('//pledge.mayone.us/r/total',
-  function(data) {
-  totalRaisedCB(data.totalCents);
-});
+jQuery.getJSON('https://pledge.mayday.us/r/total',
+               function(data) {
+                 totalRaisedCB(data.totalCents);
+               });
 
 function ready(fn) {
   if (document.addEventListener) {
