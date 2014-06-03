@@ -245,6 +245,12 @@ h1#page_title {
 
 /*END Fancy Progress Bar Stuff*/
 
+
+#subscribe label {
+  padding-top: 15px;
+}
+
+
 /*Share Options*/
 .donation-share{
   text-align:center;
