@@ -27,7 +27,7 @@ var days_left_message = '18 Days Early';
 function totalRaisedCB(totalRaisedCents) {
   var totalRaised = totalRaisedCents / 100;
   // todo: this needs to change when we make it past 2million
-  var percent = Math.floor(totalRaised / 20000);
+  var percent = Math.floor((totalRaised - 1000000) / 10000);
   setText("super-cool-progress-bar-percent", '' + percent + '% Funded');
   setText("super-cool-progress-bar-funded", '$' + addCommas(totalRaised));
   document.getElementById("super-cool-progress-bar-bar").style.width='' + Math.min(100, percent) + '%';
