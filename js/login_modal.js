@@ -1,13 +1,12 @@
 $(function() {
   $.ajax({
-    url: 'https://auth.mayone.us/v1/current_user?return_to=https://my.mayone.us/dashboard',
+    url: 'https://auth.mayday.us/v1/current_user?return_to=https://my.mayday.us/dashboard',
     xhrFields: {
       withCredentials: true
     }
   })  // TODO: template-ify the returnTo
   .fail(function() {
     $('#mysuperpac_topmenu').hide();
-    $('#login_topmenu').hide();
     throw new Error('Error reaching auth server');
   })
   .done(function(authCreds) {

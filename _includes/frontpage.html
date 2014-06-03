@@ -1,76 +1,66 @@
-{% include indexheader.html %}
-	  
-	  <!--Herotext Row-->
-	 	  <div class="herotext row">
-			{{herotext}}
-		  </div>
-		  
-	  <!--Slider & Hero Area-->		 
-	  
-<div class="full-width hero-fw">	
-	<div class="heroarea container">
-
-			<div class="row">
-				<div class="col-md-6">
-					<div class="video"><iframe src="//player.vimeo.com/video/93299391?title=0&amp;byline=0&amp;portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-				</div>
-				<div class="col-md-6">
-					<div class="progbar">
-						<a style="text-decoration:none;" href="//pledge.mayone.us/pledge"><div class="pledgebutton">PLEDGE NOW</div></a>
-					{% include progbar.html %}
-					</div>
-				</div>
-			  </div>
-			 <div class="shareoptions row">
-					{% include shareoptions.html %}
-			  </div>
-		</div>
+<div id="hero">
+  {% include indexheader.html %}
+  <div class="inner">
+  <div class="social">
+    <div class="twitter"><a href="https://twitter.com/home?status=Money%20has%20corrupted%20our%20democracy.%20Can%20we%20fix%20it?%20Act%20now,%20join%20%23MAYDAYUS%20--%20let's%20try%20something%20new:%20MAYDAY.US" title="Share on Twitter"><span>Share on Twitter</span></a></div>
+    <div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us" title="Share on Facebook"><span>Share on Facebook</span></a></div>
+    <div class="email"><form action="https://pledge.mayday.us/r/subscribe" method="post"><input type="hidden" name="redirect" value="https://mayday.us/subscribe/"><input name="email" type="text" placeholder="Get email alerts..." /><button  type="submit" value="Subscribe" title="Submit Email"><span>Submit Email</span></button></div>
+  </div>
+  <h1>MAYDAY<span>.US</span></h1>
+  <h2>An experiment to reclaim our democracy.</h2>
+  <div class="counter">
+    {% include counter.html %}
+  </div>
+  <a class="pledge" href="https://pledge.mayday.us/pledge">Pledge Now</a>
+  <div class="countdown">
+      <div class="seconds"><h3>31</h3><h4>Seconds</h4></div>
+      <div class="minutes"><h3>31</h3><h4>Minutes</h4></div>
+      <div class="hours"><h3>31</h3><h4>Hours</h4></div>
+      <div class="days"><h3>31</h3><h4>Days</h4></div>
+  </div>
+  </div>
 </div>
 
-         <div class="sign-up row">
-		   	<form><span style="color:white;">Sign Up:</span> <input name="email" placeholder="E-mail Address" type="text">&nbsp;<input class="btn btn-primary" type="submit" value="Submit"></form>
-		 </div>
-		
+<div id="intro">
+  <div class="inner">
+  <h1>{{subhead}}</h1>
+  <div class="video"><iframe src="//player.vimeo.com/video/93299391?title=0&amp;byline=0&amp;portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+  </div>
+</div>
 
-  
- 	
+<div id="timeline">
+  <div class="inner">
+    <div class="timing">{{timeline | markdownify}}</div>
+    <a class="pledge" href="https://pledge.mayday.us/pledge">Pledge Now</a>
+  </div>
+  <div class="arrow"></div>
+  <div class="inner">
+    <div class="phase_one">
+      {{phase_one | markdownify}}
+    </div>
+    <div class="phase_two">
+      {{phase_two | markdownify}}
+    </div>
+    <div class="timeline_wrapup">
+      {{timeline_wrapup | markdownify}}
+    </div>
+  </div>
+</div>
 
-	 <div class="widget1 row">
-	    <div class="halfcircle"><img src="images/bracketdown.png"></div>
-        <div class="col-md-1">&nbsp;</div>
-        <div class="widgettext col-md-4"><{{widget1left | markdownify}}</div>
-		<div class="col-md-2"></div>
-        <div class="widgettext col-md-4"><{{widget1right | markdownify}}</div>
-        <div class="col-md-1">&nbsp;</div>
-      </div>
-	  
-	 <div class="widget2 row">
-	 	    <div class="halfcircle"><img src="images/bracketdown.png"></div>
-        <div class="col-md-1">&nbsp;</div>
-        <div class="widgettext col-md-4"><{{widget2left | markdownify}}</div>
-		<div class="col-md-2"></div>
-        <div class="widgettext col-md-4"><{{widget2right | markdownify}}</div>
-        <div class="col-md-1">&nbsp;</div>
-      </div>
-	  
-	 <div class="widget3 row">
-	 	    <div class="halfcircle"><img src="images/bracketdown.png"></div>
-        <div class="col-md-1">&nbsp;</div>
-        <div class="widgettext col-md-4"><{{widget3left | markdownify}}</div>
-		<div class="col-md-2"></div>
-        <div class="widgettext col-md-4"><{{widget3right | markdownify}}</div>
-        <div class="col-md-1">&nbsp;</div>
-      </div>
-	  
-	  <div class="widget4 row">
-	  	    <div class="halfcircle"><img src="images/bracketdown.png"></div>
-		<div class="col-md-3">&nbsp;</div>
-        <div class="widgettext col-md-6">{{widget4 | markdownify}}</div>
-		<div class="col-md-3">&nbsp;</div>
-      </div>
+<div id="mayday">
+  <div class="inner">
+    {{mayday | html}}
+  <div class="social">
+    <a class="pledge" href="https://pledge.mayday.us/pledge">Pledge Now</a>
+    <div class="twitter"><a href="https://twitter.com/home?status=Money%20has%20corrupted%20our%20democracy.%20Can%20we%20fix%20it?%20Act%20now,%20join%20%23MAYDAYUS%20--%20let's%20try%20something%20new:%20MAYDAY.US" title="Share on Twitter"><span>Share on Twitter</span></a></div>
+    <div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us" title="Share on Facebook"><span>Share on Facebook</span></a></div>
+  </div>
+  </div>
+</div>
+
 	  
 
-{% include footer.html %}
+{% include footer_new.html %}
   <!-- /container -->
 
 

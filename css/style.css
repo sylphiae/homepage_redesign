@@ -1,17 +1,55 @@
+/* Header */
+
+#header {
+  background: #204659 url('../images/header_short.jpg') no-repeat center top;
+  padding-bottom: 15px;
+}
+#header h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3.5em;
+  margin: 0;
+  padding: 0 0 0;
+  height: 158px;
+  line-height: 158px;
+}
+#header h3 span {
+  font-weight: normal;
+}
+#header h3 a {
+  color: #fff;
+}
+#header h3 a:hover {
+  text-decoration: none;
+}
+.topmenu_entire {
+  text-align: center;
+}
+.topmenu_entire a {
+  font-weight: bold;
+  display: inline-block;
+  color: #fff;
+  color: rgba(255,255,255,.8);
+  padding: 0 1px 1px;
+  margin: 10px 10px 0;
+  font-size: 1.1em;
+  border-bottom: 2px solid rgba(255,255,255,.33);;
+}
+.topmenu_entire a:hover {
+  text-decoration: none;
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
 /*Hero Text Row*/
-.herotext-row {
-  background-color:black;
+h1#page_title {
+  font-size: 2em;
+  margin: 10px 0 30px;
+  padding: 0;
 }
 
 .herotext {
-  font-family: "Oswald", arial, helvetica, "sans serif";
-  color:white;
-  text-align:center;
-  font-size:45px;
-  line-height:45px;
-  background-color:black;
-  padding-top:20px;
-  padding-bottom:20px;
+  padding: 20px 0 0 20px;
 }
 
 /*Hero Area*/
@@ -76,7 +114,6 @@
   margin-right:auto;
   margin:10px 50px;
   padding:10px 20px;
-  font-family: "Oswald", arial, helvetica, "sans serif";
   text-align: center;
   font-size:50px;
   border: 3px solid white;
@@ -91,18 +128,25 @@
 }
 
 .checkpoint-text{
-  font-family: "Lato", arial, helvetica, "sans serif";
+  color: #666;
+  padding-bottom: 5px;
+  text-align:center;
+}
+#super-cool-progress-bar-togo {
+  display: none;
+}
+#complete-total-raised {
   color:white;
   text-align:center;
 }
-#complete-total-raised {
-  font-family: "Lato", arial, helvetica, "sans serif";
-  color:white;
-  text-align:center;
+#super-cool-progress-bar-funded {
+  text-align: right;
 }
 
 .progress-container {
   margin-top:30px;
+  position: relative;
+  top: 10px;
 }
 
 .progbar {
@@ -134,7 +178,7 @@
   color: #fff;
   position: relative;
   z-index: 2;
-  width: 33%;
+  width: 50%;
   float: left;
 }
 
@@ -201,13 +245,18 @@
 
 /*END Fancy Progress Bar Stuff*/
 
+
+#subscribe label {
+  padding-top: 15px;
+}
+
+
 /*Share Options*/
 .donation-share{
   text-align:center;
 }
 
 .donation-share-text {
-  font-family: "Oswald", arial, helvetica, "sans serif";
   color:white;
   text-align:center;
   font-size:28px;
@@ -226,7 +275,6 @@
 }
 
 .sign-up {
-  font-family: "Lato", arial, helvetica, "sans serif";
   color:white;
   text-align:center;
   font-size:16px;
@@ -237,7 +285,6 @@
 }
 
 .sign-up-pledge{
-  font-family: "Oswald", arial, helvetica, "sans serif";
   color:#ffffcc;
   text-align:center;
   font-size:24px;
@@ -308,7 +355,6 @@
 }
 
 .widgettext h1, .widgettext h2, .widgettext h3, .widgettext h4, .widgettext h5, .widgettext h6 {
-  font-family: "Oswald", arial, helvetica, "sans serif";
   color:#FFFF99;
   text-align:center;
   font-size:35px;
@@ -316,7 +362,6 @@
 }
 
 .widgettext p {
-  font-family: "Lato", arial, helvetica, "sans serif";
   color:white;
   text-align:center;
   font-size:20px;
@@ -324,7 +369,6 @@
 
 .pac_disclaimer {
   display: inline-block;
-  font-family: "Lato", arial, helvetica, "sans serif";
   color:white;
   text-align:center;
   font-size:16px;
@@ -339,30 +383,24 @@
 }
 
 .footer a{
-  color:#ffffcc;
+  color:#fff;
 }
 
 
 
 .copyright{
-  font-family: "Lato", arial, helvetica, "sans serif";
   color:white;
 }
 
 /*Subpages*/
 
-.rally {
-  background-image:url('../images/subpage_background.jpg');
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-position:center center;
-}
 
 #about .subpage-content img{
   float:left;
   width:150px;
-  border:solid white 1px;
-  margin:10px;
+  border:solid #ccc 2px;
+  padding: 2px;
+  margin: 5px 15px 15px 0;
 }
 
 .subpage-content a{
@@ -375,11 +413,11 @@
 }
 
 .subpage-content {
-   font-family: "Lato", arial, helvetica, "sans serif";
    color:black;
-   font-size:16px;
-   padding:20px;
+   font-size:14px;
+   padding:30px 30px 50px;
    text-align:left;
+   line-height: 1.61em;
 }
 
 .subpage-content h1, 
@@ -388,23 +426,24 @@
 .subpage-content h4, 
 .subpage-content h5, 
 .subpage-content h6{
-  font-family: "Oswald", arial, helvetica, "sans serif";
-  color:#003366;
-  text-align:center;
-  font-size:30px;
-  text-align:left;
-  padding-bottom: 10px;
-  border-top: solid 1px #003366;
-  padding-top: 20px;
+  padding: 1em 0 .5em;
+  margin: 0;
+  line-height: 1.4em;
+}
+.subpage-content h2 {
+  font-size: 1.3em;
+}
+.subpage-content h1 {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .sidebar {
-   font-family: "Lato", arial, helvetica, "sans serif";
-   color:white;
    font-size:14px;
-   padding:20px;
+   padding: 10px 40px 40px;
+   margin-top: 40px;
    text-align:left;
-   background: rgba(0,51,102,0.8);
+   background: #EEE;
 }
 
 .sidebar .hide-mobile,
@@ -413,26 +452,46 @@ display:none;
 }
 
 .sidebar .btn-primary {
-   position:relative; 
-   top:-1px; 
-   padding:3px 5px; 
+   padding: 5px 10px;
    margin-left:3px;
+  background: #005983;
+  font-size: .8em;
+  border: none;
+  position: relative;
+  top: -2px;
 }
 
 #about .sidebar .about-page-only{
 display:inline;
 }
 
-.sidebar  .pledgebutton {
-    margin:10px 20px;
-    padding:5px 10px;
-    font-family: "Oswald", arial, helvetica, "sans serif";
-    text-align: center;
-    font-size:40px;
-    border: 3px solid white;
-    z-index:20;
-  }
+.sidebar .pledge {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  font-size: 1.5em;
+  display: block;
+}
+.pledge, .pledge:visited {
+  background-color: #d53a38;
+  border-radius: 5px;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  display: inline-block;
+}
+.pledge:hover {
+  background: #b73230;
+  text-decoration: none;
+  color: #fff;
+}
 
+.sidebar .block {
+  padding-top: 30px;
+}
 
 .sidebar h1, 
 .sidebar h2, 
@@ -440,17 +499,11 @@ display:inline;
 .sidebar h4, 
 .sidebar h5, 
 .sidebar h6{
-  font-family: "Oswald", arial, helvetica, "sans serif";
-  color:white;
-  text-align:center;
-  font-size:30px;
-}
-
-.sidebar a{
-  color:#ffffcc;
-}
-.sidebar a:hover{
-  text-decoration:underline;
+  text-align: center;
+  padding-bottom: 10px;
+  color: #555;
+  border-bottom: 2px solid #555;
+  margin-bottom: 30px;
 }
 
 /* This comment reserved for someone who knows what the heck #login_modal is */
@@ -494,7 +547,6 @@ display:inline;
   .pledgebutton{
     margin:25px 20px;
     padding:5px 10px;
-    font-family: "Oswald", arial, helvetica, "sans serif";
     text-align: center;
     font-size:40px;
     border: 3px solid white;
@@ -506,33 +558,19 @@ display:inline;
 }
 
 @media (max-width: 992px) {
-  .pledgebutton{
-      margin-left:auto;
-     margin-right:auto;
-     margin:10px 50px;
-     padding:10px 20px;
-     font-family: "Oswald", arial, helvetica, "sans serif";
-     text-align: center;
-     font-size:50px;
-     border: 3px solid white;
-     z-index:20;
-  }
   .donation-progress-bar{
      padding:0 25px;
   }
+  .sidebar .pledge {
+    width: 400px;
+  }
 }
 @media (max-width: 600px) {
-  .pledgebutton{
-     margin:25px 20px;
-     padding:5px 10px;
-     font-family: "Oswald", arial, helvetica, "sans serif";
-     text-align: center;
-     font-size:40px;
-     border: 3px solid white;
-     z-index:20;
-  }
   .donation-progress-bar{
      padding:0 5px;
+  }
+  .sidebar .pledge {
+    width: 100%;
   }
 }
 

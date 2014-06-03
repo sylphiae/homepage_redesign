@@ -35,7 +35,7 @@
         var target = document.getElementById('spinButton');
         var spinner = new Spinner(spin_opts).spin(target);
         $scope.ctrl.error = false;
-        $http.post('//pledge.mayone.us/contact.do', {
+        $http.post('//pledge.mayday.us/contact.do', {
           name: $scope.ctrl.name,
           email: $scope.ctrl.email,
           subject: $scope.ctrl.subject,
@@ -106,7 +106,6 @@
       <div ng-show="ctrl.submitted" class="row">
         <div class="col-md-12">
           <p>Thank you for your message.  We will respond as soon as we can.</p>
-          <p>You are also welcome to explore <a href="//mayone.us/connect">our other ways to connect</a>.</p>
         </div>
       </div>
 
