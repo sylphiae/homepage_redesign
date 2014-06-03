@@ -446,17 +446,28 @@ display:none;
 }
 
 .sidebar .btn-primary {
-   position:relative; 
-   top:-1px; 
-   padding:3px 5px; 
+   padding: 5px 10px;
    margin-left:3px;
+  background: #005983;
+  font-size: .8em;
+  border: none;
+  position: relative;
+  top: -2px;
 }
 
 #about .sidebar .about-page-only{
 display:inline;
 }
 
-
+.sidebar .pledge {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  font-size: 1.5em;
+  display: block;
+}
 .pledge, .pledge:visited {
   background-color: #d53a38;
   border-radius: 5px;
@@ -470,15 +481,6 @@ display:inline;
   background: #b73230;
   text-decoration: none;
   color: #fff;
-}
-.sidebar .pledge {
-  width: 300px;
-  margin: 0 auto;
-  position: relative;
-  height: 60px;
-  line-height: 60px;
-  font-size: 1.5em;
-  display: block;
 }
 
 .sidebar .block {
@@ -550,31 +552,19 @@ display:inline;
 }
 
 @media (max-width: 992px) {
-  .pledgebutton{
-      margin-left:auto;
-     margin-right:auto;
-     margin:10px 50px;
-     padding:10px 20px;
-     text-align: center;
-     font-size:50px;
-     border: 3px solid white;
-     z-index:20;
-  }
   .donation-progress-bar{
      padding:0 25px;
   }
+  .sidebar .pledge {
+    width: 400px;
+  }
 }
 @media (max-width: 600px) {
-  .pledgebutton{
-     margin:25px 20px;
-     padding:5px 10px;
-     text-align: center;
-     font-size:40px;
-     border: 3px solid white;
-     z-index:20;
-  }
   .donation-progress-bar{
      padding:0 5px;
+  }
+  .sidebar .pledge {
+    width: 100%;
   }
 }
 
