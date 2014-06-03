@@ -1,6 +1,6 @@
 $(function() {
   $.ajax({
-    url: 'https://auth.mayone.us/v1/current_user?return_to=https://my.mayone.us/dashboard',
+    url: 'https://auth.mayday.us/v1/current_user?return_to=https://my.mayday.us/dashboard',
     xhrFields: {
       withCredentials: true
     }

@@ -3,7 +3,7 @@ Homepage Redesign
 
 ### What's this?
 We're redesigning the homepage for [MayOne PAC](mayone.us)
-See what we've done here: mayone.us/homepage_redesign
+See what we've done [here](redesign.mayday.us)
 
 ### How can I help?
 Send over a PR!

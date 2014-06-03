@@ -36,7 +36,7 @@ function totalRaisedCB(totalRaisedCents) {
 
 var total_req = document.createElement('script');
 total_req.setAttribute("src",
-                       "https://pledge.mayone.us/total?callback=totalRaisedCB");
+                       "https://pledge.mayday.us/total?callback=totalRaisedCB");
 document.head.appendChild(total_req);
 
 function ready(fn) {
@@ -53,11 +53,11 @@ function ready(fn) {
 var twitter_link_url = (
   "https://twitter.com/intent/tweet?text=Only+" +
     days_left_message.replace(" ", "+") +
-    "+to+support+MayOne.us%3A+Mayday+for+the+Republic+https%3A%2F%2Fmayone.us%2F");
+    "+to+support+MayDay.us%3A+Mayday+for+the+Republic+https%3A%2F%2Fmayday.us%2F");
 var gplus_link_url = (
-  "https://plus.google.com/share?url=https://mayone.us&content=Only+" +
+  "https://plus.google.com/share?url=https://mayday.us&content=Only+" +
     days_left_message.replace(" ", "+") +
-    "+to+support+MayOne.us%3A+Mayday+for+the+Republic+https%3A%2F%2Fmayone.us%2F");
+    "+to+support+MayDay.us%3A+Mayday+for+the+Republic+https%3A%2F%2Fmayday.us%2F");
 
 ready(function() {
   document.getElementById('twitter_link').href = twitter_link_url;

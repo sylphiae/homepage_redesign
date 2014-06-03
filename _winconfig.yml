@@ -1,8 +1,8 @@
 # Site settings
-title: MayOne.US
+title: MayDay.US
 email: info@mayone.us
-description: "MayOne.US - SuperPAC to end all SuperPACs. Join our effort to win a Congress committed to reforming the influence of money in Politics."
-baseurl: 
+description: "MayDay.US - SuperPAC to end all SuperPACs. Join our effort to win a Congress committed to reforming the influence of money in Politics."
+baseurl:
 
 # Build settings
 markdown: kramdown
