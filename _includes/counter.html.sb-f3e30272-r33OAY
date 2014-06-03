@@ -32,7 +32,7 @@
   <h5>Total Goal</h5>
   <h4>$5m</h4>
   </div>
-  <h5>Stage Two</h5>
+  <h5>Phase Two</h5>
   <h4><span id="raised">Loading...</span></h4>
 </div>
 <script src="{{site.baseurl}}/js/mayday_progress.js"></script>
