@@ -633,6 +633,10 @@ login_modal .modal-header {
 }
 
 @media (max-width: 992px) {
+  .tablethidden{
+    display: none !important;
+  }
+
   .pledgebutton{
       margin-left:auto;
      margin-right:auto;
