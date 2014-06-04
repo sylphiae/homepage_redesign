@@ -29,7 +29,7 @@ function totalRaisedCB(totalRaisedCents) {
   var alreadyBanked = 1000000;
   var progress = totalRaised-alreadyBanked;
   // todo: this needs to change when we make it past 2million
-  var percent = Math.floor(progress / 10000);
+  var percent = Math.floor(progress / 100);
   setText("super-cool-progress-bar-percent", '' + percent + '% Funded');
   setText("super-cool-progress-bar-funded", '$' + addCommas(progress));
   document.getElementById("super-cool-progress-bar-bar").style.width='' + Math.min(100, percent) + '%';
