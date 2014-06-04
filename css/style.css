@@ -595,6 +595,32 @@ display:inline;
 
 /* Contact Form */
 
+
+#subscribe .checkbox input {
+  box-shadow: none;
+  width: auto;
+  position: relative;
+  top: -10px;
+}
+#skills_section input {
+  width: 100%;
+  display: block;
+}
+
+#subscribe #content form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+#subscribe #content #submitButton {
+  border-radius: 5px;
+  padding: 15px 40px;
+  background-color: #d53a38;
+  border: none;
+  margin-top: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .input-group, .input-group-lg {
    display:block;
    width:75%;
@@ -607,5 +633,5 @@ display:inline;
    width:75%;
    margin-left: 12%;
    margin-right: 13%;
-   text-align:right;
+   text-align: center;
 }
