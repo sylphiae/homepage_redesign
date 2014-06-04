@@ -25,11 +25,12 @@ var days_left = Math.floor((date_its_over - Date.now())/(1000*24*60*60));
 var days_left_message = '18 Days Early';
 
 function totalRaisedCB(totalRaisedCents) {
+  var GOAL = 5000000;
   var totalRaised = totalRaisedCents / 100;
   var alreadyBanked = 1000000;
   var progress = totalRaised-alreadyBanked;
   // todo: this needs to change when we make it past 2million
-  var percent = Math.floor(progress / 100);
+  var percent = Math.floor(progress * 100/ goal);
   setText("super-cool-progress-bar-percent", '' + percent + '% Funded');
   setText("super-cool-progress-bar-funded", '$' + addCommas(progress));
   document.getElementById("super-cool-progress-bar-bar").style.width='' + Math.min(100, percent) + '%';
