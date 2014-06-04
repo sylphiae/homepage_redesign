@@ -72,5 +72,5 @@
 <script>
    var email = location.search.split('email=')[1]; // http://stackoverflow.com/questions/979975/how-to-get-the-value-from-url-parameter
    var email_input = document.getElementById("email_input");
-   email_input.value=encodeURIComponent(email);
+   email_input.value=decodeURIComponent(email);
 </script>
