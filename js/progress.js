@@ -52,17 +52,3 @@ function ready(fn) {
     });
   }
 }
-
-var twitter_link_url = (
-  "https://twitter.com/intent/tweet?text=Only+" +
-    days_left_message.replace(" ", "+") +
-    "+to+support+MayDay.us%3A+Mayday+for+the+Republic+https%3A%2F%2Fmayday.us%2F");
-var gplus_link_url = (
-  "https://plus.google.com/share?url=https://mayday.us&content=Only+" +
-    days_left_message.replace(" ", "+") +
-    "+to+support+MayDay.us%3A+Mayday+for+the+Republic+https%3A%2F%2Fmayday.us%2F");
-
-ready(function() {
-  document.getElementById('twitter_link').href = twitter_link_url;
-  document.getElementById('gplus_link').href = gplus_link_url;
-});
