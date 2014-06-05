@@ -1,4 +1,5 @@
-var deadline = new Date(Date.UTC(2014,06,04,04,00,00,00)).getTime();
+// July 5th at 05:00 UTC is July 4th at midnight, Eastern Daylight Time
+var deadline = new Date(Date.UTC(2014,06,05,05,00,00,00)).getTime();
 
 var days;
 var hours;
