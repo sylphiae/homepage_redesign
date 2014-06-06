@@ -24,9 +24,9 @@ var date_its_over = Date.UTC(2014,05,06,10,00,00,00);
 var days_left = Math.floor((date_its_over - Date.now())/(1000*24*60*60));
 var days_left_message = '18 Days Early';
 
-function totalRaisedCB(totalRaisedCents) {
+function totalRaisedCB(data) {
   var GOAL = 5000000;
-  var totalRaised = totalRaisedCents / 100;
+  var totalRaised = data.totalCents / 100;
   var alreadyBanked = 1000000;
   var progress = totalRaised-alreadyBanked;
   // todo: this needs to change when we make it past 2million
@@ -37,10 +37,7 @@ function totalRaisedCB(totalRaisedCents) {
   setText("super-cool-progress-bar-togo", days_left_message);
 }
 
-var total_req = document.createElement('script');
-total_req.setAttribute("src",
-                       "https://pledge.mayday.us/r/total?callback=totalRaisedCB");
-document.head.appendChild(total_req);
+jQuery.getJSON('https://pledge.mayday.us/r/total', totalRaisedCB);
 
 function ready(fn) {
   if (document.addEventListener) {
