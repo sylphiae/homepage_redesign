@@ -39,7 +39,7 @@ function totalRaisedCB(totalRaisedCents) {
 
 var total_req = document.createElement('script');
 total_req.setAttribute("src",
-                       "https://pledge.mayday.us/total?callback=totalRaisedCB");
+                       "https://pledge.mayday.us/r/total?callback=totalRaisedCB");
 document.head.appendChild(total_req);
 
 function ready(fn) {
