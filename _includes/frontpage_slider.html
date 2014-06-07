@@ -3,8 +3,7 @@
   <div class="campaign-hero-slider">
     <ul class="slides">
       {% for photo in page.slide_photos %}
-      <li class="campaign-hero-slider-item">
-        <div class="campaign-hero-slider-info"></div>
+      <li class="campaign-hero-slider-item {%if forloop.index == 1 %}current{% endif %}">
         <img src="{{photo}}" />
       </li>
       {% endfor %}

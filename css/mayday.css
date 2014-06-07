@@ -54,9 +54,11 @@ a:visited { color: #a0a; }
   height: 700px;
   width: 100%;
 }
+
 #hero .inner {
   width: 700px;
 }
+
 #hero #top_login {
   position: absolute;
   right: 25px;
@@ -280,6 +282,15 @@ a:visited { color: #a0a; }
   font-size: 14px;
   margin: 0;
   padding: 0;
+}
+
+/* SLIDER OPTION */
+#hero .campaign-hero-slider-item {
+  display:none;
+}
+
+#hero .campaign-hero-slider-item.current {
+  display:block;
 }
 
 #intro {
