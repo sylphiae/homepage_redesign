@@ -1,24 +1,30 @@
 <div id="hero">
   {% include indexheader.html %}
+  <div class="campaign-hero-slider">
+    <ul class="slides">
+      {% for photo in page.slide_photos %}
+      <li class="campaign-hero-slider-item">
+        <div class="campaign-hero-slider-info"></div>
+        <img src="{{photo}}" />
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
   <div class="inner">
   <div class="social">
     <div class="twitter"><a href="https://twitter.com/home?status=Money%20has%20corrupted%20our%20democracy.%20Can%20we%20fix%20it?%20Act%20now,%20join%20%23MAYDAYUS%20--%20let's%20try%20something%20new:%20https://MAYDAY.US" title="Share on Twitter"><span>Share on Twitter</span></a></div>
     <div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us?1" title="Share on Facebook"><span>Share on Facebook</span></a></div>
-    <div class="email"><form action="https://mayday.us/subscribe" method="get"><input name="email" type="text" placeholder="Enter your email to join the fight..." /><button  type="submit" value="Subscribe" title="Submit Email"><span>Submit Email</span></button></div>
+    <div class="email"><form action="https://mayday.us/subscribe" method="get"><input name="email" type="text" placeholder="Enter your email to join the fight..." /><button  type="submit" value="Subscribe" title="Submit Email" onSubmit="_gaq.push(['_trackEvent', 'Form', 'Submit', 'Front Page Email']);"><span>Submit Email</span></button></div>
   </div>
   <h1>MAYDAY<span>.US</span></h1>
-  <h2>An experiment to reclaim our democracy.</h2>
+  <h2>
+    Help U.S. kickstart fundamental reform, <br/>
+    by reducing the influence of money in politics.
+  </h2>
   <div class="counter">
     {% include counter.html %}
   </div>
-  <a class="pledge" href="https://pledge.mayday.us/pledge" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Top Pledge Button Homepage']);">Pledge Now</a>
-  <div class="countdown">
-      <div class="seconds"><h3 id="seconds_display"><span style="color: #578; color: rgba(255,255,255,.2);">##</span></h3><h4>Seconds</h4></div>
-      <div class="minutes"><h3 id="minutes_display"><span style="color: #578; color: rgba(255,255,255,.2);">##</span></h3><h4>Minutes</h4></div>
-      <div class="hours"><h3 id="hours_display"><span style="color: #578; color: rgba(255,255,255,.2);">##</span></h3><h4>Hours</h4></div>
-      <div class="days"><h3 id="days_display"><span style="color: #578; color: rgba(255,255,255,.2);">##</span></h3><h4>Days</h4></div>
-  </div>
-  <script src="{{site.baseurl}}/js/countdown.js"></script>
+  <a class="pledge" href="https://pledge.mayday.us/pledge" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Top Pledge Button Homepage']);">Pledge Now</a>  
   </div>
 </div>
 
