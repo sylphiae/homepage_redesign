@@ -287,10 +287,18 @@ a:visited { color: #a0a; }
 /* SLIDER OPTION */
 #hero .campaign-hero-slider-item {
   display:none;
+  position: absolute;
+  top: 120px;
+  height: 530px;
+  width:100%;
 }
 
 #hero .campaign-hero-slider-item.current {
   display:block;
+}
+
+#hero .campaign-hero-slider-item img {
+  width:100%;
 }
 
 #intro {
