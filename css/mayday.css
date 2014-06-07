@@ -51,8 +51,6 @@ a:visited { color: #a0a; }
 }
   
 #hero {
-  background: url('../images/full_header.jpg') no-repeat top center #0c151a;
-  background-size: cover;
   height: 700px;
   width: 100%;
 }
