@@ -45,7 +45,7 @@ a:visited { color: #a0a; }
   color: #fff;
 }
 
-#hero.stormflag {
+.stormflag {
   background: url('../images/full_header.jpg') no-repeat top center #0c151a;
   background-size: cover;
 }
