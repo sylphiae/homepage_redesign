@@ -64,7 +64,18 @@
   </div>
 </div>
 
-	  
+<script>
+  $( document ).ready(function() {
+    window.mayOneSelectedImg = 0;
+    window.setInterval(function() {
+      var imgs = $(".campaign-hero-slider-item");
+      $(imgs).removeClass('current');
+      imgs[window.mayOneSelectedImg].addClass("current");
+      window.mayOneSelectedImg = (window.mayOneSelectedImg + 1) % 6;
+    }, 3000);  
+  });
+</script>
+
 
 {% include footer_new.html %}
   <!-- /container -->
