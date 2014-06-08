@@ -343,9 +343,6 @@ a:visited { color: #a0a; }
     font-size:60px;
   }
   
-  .campaign-hero-slider-item img {
-    min-width:700px;
-  }
 }
 
 @media (max-width: 800px) {
@@ -359,10 +356,19 @@ a:visited { color: #a0a; }
   } 
   
   html, body {
-    min-width:700px;
+    min-width:800px;
   }  
   
+  .campaign-hero-slider-item img {
+    min-width:800px;
+  }
+    
 }
+
+@media (max-width: 800px) {
+  #hero .social {
+    padding-top: 50px;
+  }
 
 #intro {
   padding: 70px 0 100px;
