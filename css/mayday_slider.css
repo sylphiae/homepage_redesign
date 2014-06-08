@@ -376,28 +376,6 @@ a:visited { color: #a0a; }
   
 }
 
-@media (max-width: 600px) {
-  #hero {
-    height: 300px;
-  }
-}
-
-@media (max-width: 450px) {
-  #hero .social  {
-    padding-top:50px;
-  }
-  
-  .campaign-hero-slider-item img {
-    height:200px;
-  }
-  
-  #hero .social .email {
-    float:left;
-    width:200px;
-    margin-left:10px;
-  }
-  
-}
 
 #intro {
   padding: 70px 0 100px;
