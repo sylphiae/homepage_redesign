@@ -332,6 +332,12 @@ a:visited { color: #a0a; }
   }
 }
 
+@media (max-width: 1050px) {
+  #hero .campaign-hero-slider-item {
+    overflow:hidden;
+  }
+}
+
 @media (max-width: 900px) {
   #hero .counter .thermometer {
     margin:5px 0;
