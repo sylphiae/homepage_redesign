@@ -335,13 +335,16 @@ a:visited { color: #a0a; }
   
   html, body {
     min-width:700px;
-  }
-  
+  }  
 }
 
 @media (max-width: 850px) {
   #hero h1  {
     font-size:60px;
+  }
+  
+  .campaign-hero-slider-item img {
+    min-width:700px;
   }
 }
 
@@ -354,6 +357,11 @@ a:visited { color: #a0a; }
   #hero {
     height: 400px;
   } 
+  
+  html, body {
+    min-width:700px;
+  }  
+  
 }
 
 #intro {
