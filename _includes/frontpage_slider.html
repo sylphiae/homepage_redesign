@@ -71,8 +71,9 @@
       var imgs = $(".campaign-hero-slider-item");
       var oldIndex = window.mayOneSelectedImg;
       window.mayOneSelectedImg = (window.mayOneSelectedImg + 1) % 5;
+      $(imgs[window.mayOneSelectedImg]).fadeIn(400);      
       $(imgs[window.mayOneSelectedImg]).addClass("current");
-      $(imgs[oldIndex]).fadeOut(400);      
+      $(imgs[oldIndex]).fadeOut(400); 
       $(imgs[oldIndex]).removeClass("current");
     }, 3000);
   });

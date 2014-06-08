@@ -302,10 +302,67 @@ a:visited { color: #a0a; }
   width:100%;
 }
 
-@media (max-width: 800px) {
+
+@media (max-width: 1250px) {
+  #hero .counter {
+    padding-bottom:20px;
+  }
+}
+
+@media (max-width: 1150px) {
+  #hero .counter {
+    padding-top:0px;
+  }
+}
+
+@media (max-width: 1050px) {
   #hero h2 {
     display:none;
   }
+}
+
+@media (max-width: 900px) {
+  #hero .counter .thermometer {
+    margin:5px 0;
+  }
+  
+  html, body {
+    min-width:0px;
+  }
+  
+}
+
+@media (max-width: 850px) {
+  #hero h1  {
+    font-size:60px;
+  }
+}
+
+@media (max-width: 800px) {
+  #hero .inner, #hero h1, #hero .counter  {
+    margin:0 auto;
+    text-align:center;
+  }
+  
+}
+
+@media (max-width: 700px) {
+  #hero .counter {
+    display:none;
+  }
+  
+  #hero .inner {
+    width: auto;
+  }
+    
+  #hero .counter .phase_two_details  {
+    float:none;
+  }
+  
+  #hero .inner .social {
+    margin: 0 10px;
+  }
+  
 }
 
 #intro {
