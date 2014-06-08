@@ -332,7 +332,7 @@ a:visited { color: #a0a; }
   }
 }
 
-@media (max-width: 1050px) {
+@media (min-width: 1500px) {
   #hero .campaign-hero-slider-item {
     overflow:hidden;
   }
