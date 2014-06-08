@@ -64,15 +64,16 @@
   </div>
 </div>
 
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <script>
   $( document ).ready(function() {
     window.mayOneSelectedImg = 0;
     window.setInterval(function() {
       var imgs = $(".campaign-hero-slider-item");
       $(imgs).removeClass('current');
-      window.mayOneSelectedImg = (window.mayOneSelectedImg + 1) % 6;
-      $(imgs[window.mayOneSelectedImg]).addClass("current");
-    }, 3000);  
+      window.mayOneSelectedImg = (window.mayOneSelectedImg + 1) % 5;
+      $(imgs[window.mayOneSelectedImg]).addClass("current", 500);
+    }, 3000);
   });
 </script>
 
