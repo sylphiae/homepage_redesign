@@ -70,8 +70,8 @@
     window.setInterval(function() {
       var imgs = $(".campaign-hero-slider-item");
       $(imgs).removeClass('current');
-      imgs[window.mayOneSelectedImg].addClass("current");
       window.mayOneSelectedImg = (window.mayOneSelectedImg + 1) % 6;
+      $(imgs[window.mayOneSelectedImg]).addClass("current");
     }, 3000);  
   });
 </script>
