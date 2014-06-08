@@ -302,6 +302,9 @@ a:visited { color: #a0a; }
   width:100%;
 }
 
+#top_login {
+  z-index:5000;
+}
 
 @media (max-width: 1250px) {
   #hero .counter {
@@ -318,6 +321,10 @@ a:visited { color: #a0a; }
 @media (max-width: 1050px) {
   #hero h2 {
     display:none;
+  }
+  
+  #hero {
+    height: 500px;
   }
 }
 
@@ -344,6 +351,10 @@ a:visited { color: #a0a; }
     text-align:center;
   }
   
+  #hero {
+    height: 400px;
+  }
+  
 }
 
 @media (max-width: 700px) {
@@ -363,6 +374,22 @@ a:visited { color: #a0a; }
     margin: 0 10px;
   }
   
+}
+
+@media (max-width: 600px) {
+  #hero {
+    height: 300px;
+  }
+}
+
+@media (max-width: 450px) {
+  #hero .social  {
+    padding-top:50px;
+  }
+  
+  .campaign-hero-slider-item img {
+    height:200px;
+  }
 }
 
 #intro {
