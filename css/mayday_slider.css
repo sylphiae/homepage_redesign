@@ -292,6 +292,7 @@ a:visited { color: #a0a; }
   top: 120px;
   height: 530px;
   width:100%;
+  overflow:hidden;
 }
 
 #hero .campaign-hero-slider-item.current {
