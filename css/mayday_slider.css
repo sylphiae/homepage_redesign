@@ -302,6 +302,10 @@ a:visited { color: #a0a; }
   width:100%;
 }
 
+#hero .slides {
+  margin-bottom:0;
+}
+
 #top_login {
   z-index:5000;
 }
@@ -370,6 +374,7 @@ a:visited { color: #a0a; }
     padding-top: 50px;
   }
 }
+
 
 #intro {
   padding: 70px 0 100px;
