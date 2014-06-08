@@ -45,15 +45,20 @@ a:visited { color: #a0a; }
   color: #fff;
 }
 
-#hero {
+.stormflag {
   background: url('../images/full_header.jpg') no-repeat top center #0c151a;
   background-size: cover;
+}
+  
+#hero {
   height: 700px;
   width: 100%;
 }
+
 #hero .inner {
   width: 700px;
 }
+
 #hero #top_login {
   position: absolute;
   right: 25px;
@@ -69,7 +74,7 @@ a:visited { color: #a0a; }
   color: rgba(255,255,255,.66);
 }
 #hero .social {
-  width: 300px;
+  width: 380px;
   margin: 0 auto;
   position: relative;
   padding: 15px 0 0;
@@ -97,15 +102,16 @@ a:visited { color: #a0a; }
   position: relative;
 }
 #hero .social .email input {
-  width: 173px;
-  border: 2px solid #8bafbf;
+  width: 255px;
+  border: 2px solid #d7e1e6;
   border-radius: 5px;
   background: transparent;
   font: inherit;
   height: 45px;
   line-height: 40px;
-  color: #fff;
+  color: #d7e1e6;
   padding: 0 10px;
+  background: rgba(255,255,255,.1);
 }
 #hero .social .email button {
   position: absolute;
@@ -121,18 +127,18 @@ a:visited { color: #a0a; }
 }
 
 #hero .social .email input::-webkit-input-placeholder {
-    color:    #8bafbf;
+    color:    #d7e1e6;
 }
 #hero .social .email input:-moz-placeholder {
-    color:    #8bafbf;
+    color:    #d7e1e6;
     opacity:  1;
 }
 #hero .social .email input::-moz-placeholder {
-    color:    #8bafbf;
+    color:    #d7e1e6;
     opacity:  1;
 }
 #hero .social .email input:-ms-input-placeholder {
-    color:    #8bafbf;
+    color:    #d7e1e6;
 }
 
 #hero h1 {
@@ -254,20 +260,9 @@ a:visited { color: #a0a; }
   height: 70px;
   font-size: 30px;
   line-height: 70px;
-  float: left;
+  float: none;
   margin-left: 30px;
 }
-
-
-#hero .pledge {
-  margin: 0 auto;
-  position: relative;
-  float: none;
-}
-#hero .countdown {
-  display: none;
-}
-
 
 #hero .countdown div {
   text-align: center;
@@ -287,6 +282,23 @@ a:visited { color: #a0a; }
   font-size: 14px;
   margin: 0;
   padding: 0;
+}
+
+/* SLIDER OPTION */
+#hero .campaign-hero-slider-item {
+  display:none;
+  position: absolute;
+  top: 120px;
+  height: 530px;
+  width:100%;
+}
+
+#hero .campaign-hero-slider-item.current {
+  display:block;
+}
+
+#hero .campaign-hero-slider-item img {
+  width:100%;
 }
 
 #intro {

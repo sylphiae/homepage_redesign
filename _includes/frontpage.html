@@ -1,37 +1,34 @@
-<div id="hero">
+<div id="hero" class="stormflag">
   {% include indexheader.html %}
   <div class="inner">
   <div class="social">
-    <div class="twitter"><a href="https://twitter.com/home?status=Money%20has%20corrupted%20our%20democracy.%20Can%20we%20fix%20it?%20Act%20now,%20join%20%23MAYDAYUS%20--%20let's%20try%20something%20new:%20MAYDAY.US" title="Share on Twitter"><span>Share on Twitter</span></a></div>
-    <div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us" title="Share on Facebook"><span>Share on Facebook</span></a></div>
-    <div class="email"><form action="https://pledge.mayday.us/r/subscribe" method="post"><input type="hidden" name="redirect" value="https://mayday.us/subscribe/"><input name="email" type="text" placeholder="Get email alerts..." /><button  type="submit" value="Subscribe" title="Submit Email"><span>Submit Email</span></button></div>
+    <div class="twitter"><a href="https://twitter.com/home?status=Money%20has%20corrupted%20our%20democracy.%20Can%20we%20fix%20it?%20Act%20now,%20join%20%23MAYDAYUS%20--%20let's%20try%20something%20new:%20https://MAYDAY.US" title="Share on Twitter"><span>Share on Twitter</span></a></div>
+    <div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us?1" title="Share on Facebook"><span>Share on Facebook</span></a></div>
+    <div class="email"><form action="https://mayday.us/subscribe" method="get"><input name="email" type="text" placeholder="Enter your email to join the fight..." /><button  type="submit" value="Subscribe" title="Submit Email" onSubmit="_gaq.push(['_trackEvent', 'Form', 'Submit', 'Front Page Email']);"><span>Submit Email</span></button></div>
   </div>
   <h1>MAYDAY<span>.US</span></h1>
-  <h2>An experiment to reclaim our democracy.</h2>
+  <h2>
+    Help U.S. kickstart fundamental reform, <br/>
+    by reducing the influence of money in politics.
+  </h2>
   <div class="counter">
     {% include counter.html %}
   </div>
-  <a class="pledge" href="https://pledge.mayday.us/pledge">Pledge Now</a>
-  <div class="countdown">
-      <div class="seconds"><h3>31</h3><h4>Seconds</h4></div>
-      <div class="minutes"><h3>31</h3><h4>Minutes</h4></div>
-      <div class="hours"><h3>31</h3><h4>Hours</h4></div>
-      <div class="days"><h3>31</h3><h4>Days</h4></div>
-  </div>
+  <a class="pledge" href="https://pledge.mayday.us/pledge" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Top Pledge Button Homepage']);">Pledge Now</a>  
   </div>
 </div>
 
 <div id="intro">
   <div class="inner">
   <h1>{{subhead}}</h1>
-  <div class="video"><iframe src="//player.vimeo.com/video/93299391?title=0&amp;byline=0&amp;portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+  <div class="video"><iframe width="640" height="360" src="//www.youtube.com/embed/CXXJfRdF3yU" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
   </div>
 </div>
 
 <div id="timeline">
   <div class="inner">
     <div class="timing">{{timeline | markdownify}}</div>
-    <a class="pledge" href="https://pledge.mayday.us/pledge">Pledge Now</a>
+    <a class="pledge" href="https://pledge.mayday.us/pledge" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Second Pledge Button Homepage']);">Pledge Now</a>
   </div>
   <div class="arrow"></div>
   <div class="inner">
@@ -51,8 +48,8 @@
   <div class="inner">
     {{mayday | html}}
   <div class="social">
-    <a class="pledge" href="https://pledge.mayday.us/pledge">Pledge Now</a>
-    <div class="twitter"><a href="https://twitter.com/home?status=Money%20has%20corrupted%20our%20democracy.%20Can%20we%20fix%20it?%20Act%20now,%20join%20%23MAYDAYUS%20--%20let's%20try%20something%20new:%20MAYDAY.US" title="Share on Twitter"><span>Share on Twitter</span></a></div>
+    <a class="pledge" href="https://pledge.mayday.us/pledge" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Last Small Pledge Button Homepage']);">Pledge Now</a>
+    <div class="twitter"><a href="https://twitter.com/home?status=Money%20has%20corrupted%20our%20democracy.%20Can%20we%20fix%20it?%20Act%20now,%20join%20%23MAYDAYUS%20--%20let's%20try%20something%20new:%20https://MAYDAY.US" title="Share on Twitter"><span>Share on Twitter</span></a></div>
     <div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us" title="Share on Facebook"><span>Share on Facebook</span></a></div>
   </div>
   </div>

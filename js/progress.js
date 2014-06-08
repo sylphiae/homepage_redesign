@@ -20,24 +20,24 @@ function setText(el, val) {
 
 // javascript is so awesome. this is how you write June 1st. Cause June is the
 // 5th month, indexed by zero. thanks javascript!
-var date_its_over = Date.UTC(2014,05,01,10,00,00,00);
+var date_its_over = Date.UTC(2014,05,06,10,00,00,00);
 var days_left = Math.floor((date_its_over - Date.now())/(1000*24*60*60));
 var days_left_message = '18 Days Early';
 
-function totalRaisedCB(totalRaisedCents) {
-  var totalRaised = totalRaisedCents / 100;
-  // todo: this needs to change if we make it past 1million
-  var percent = Math.floor(totalRaised / 10000);
+function totalRaisedCB(data) {
+  var GOAL = 5000000;
+  var totalRaised = Math.round(data.totalCents / 100);
+  var alreadyBanked = 1000000;
+  var progress = totalRaised-alreadyBanked;
+  // todo: this needs to change when we make it past 2million
+  var percent = Math.floor(progress * 100/ GOAL);
   setText("super-cool-progress-bar-percent", '' + percent + '% Funded');
-  setText("super-cool-progress-bar-funded", '$' + addCommas(totalRaised));
+  setText("super-cool-progress-bar-funded", '$' + addCommas(progress));
   document.getElementById("super-cool-progress-bar-bar").style.width='' + Math.min(100, percent) + '%';
   setText("super-cool-progress-bar-togo", days_left_message);
 }
 
-var total_req = document.createElement('script');
-total_req.setAttribute("src",
-                       "https://pledge.mayday.us/total?callback=totalRaisedCB");
-document.head.appendChild(total_req);
+jQuery.getJSON('https://pledge.mayday.us/r/total', totalRaisedCB);
 
 function ready(fn) {
   if (document.addEventListener) {
@@ -49,17 +49,3 @@ function ready(fn) {
     });
   }
 }
-
-var twitter_link_url = (
-  "https://twitter.com/intent/tweet?text=Only+" +
-    days_left_message.replace(" ", "+") +
-    "+to+support+MayDay.us%3A+Mayday+for+the+Republic+https%3A%2F%2Fmayday.us%2F");
-var gplus_link_url = (
-  "https://plus.google.com/share?url=https://mayday.us&content=Only+" +
-    days_left_message.replace(" ", "+") +
-    "+to+support+MayDay.us%3A+Mayday+for+the+Republic+https%3A%2F%2Fmayday.us%2F");
-
-ready(function() {
-  document.getElementById('twitter_link').href = twitter_link_url;
-  document.getElementById('gplus_link').href = gplus_link_url;
-});
