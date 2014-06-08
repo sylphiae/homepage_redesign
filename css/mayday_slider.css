@@ -390,6 +390,13 @@ a:visited { color: #a0a; }
   .campaign-hero-slider-item img {
     height:200px;
   }
+  
+  #hero .social .email {
+    float:left;
+    width:200px;
+    margin-left:10px;
+  }
+  
 }
 
 #intro {
