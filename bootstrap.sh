@@ -1,10 +1,12 @@
 #!/bin/bash
 
+echo "set grub-pc/install_devices /dev/sda" | debconf-communicate
+apt-get -y update
+apt-get -y -qq upgrade
+sudo apt-get -y install ruby1.9.3 build-essential unzip python-software-properties git
+sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo apt-get update
-sudo apt-get install ruby1.9.3 build-essential unzip python-software-properties git -y
-sudo add-apt-repository ppa:chris-lea/node.js -y
-sudo apt-get update
-sudo apt-get install nodejs -y
+sudo apt-get -y install nodejs
 sudo gem install jekyll sass
 sudo npm install -g grunt
 
