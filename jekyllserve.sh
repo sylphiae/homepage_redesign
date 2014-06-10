@@ -4,7 +4,7 @@ sudo jekyll serve --watch --detach -b ''
 echo "Rebuilding script active: Hit Control-C to break."
 while :
 	do
-	sleep 30	
+	sleep 15
 	sudo jekyll build -q --config _winconfig.yml
 	echo "rebuilding"
 	done
