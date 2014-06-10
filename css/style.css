@@ -269,6 +269,9 @@ h1#page_title {
   padding-top: 15px;
 }
 
+#rootstrikersCheckbox {
+  margin-top:-10px;
+}
 
 /*Share Options*/
 .donation-share{
