@@ -79,14 +79,16 @@
       return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
   }
 
-   var email = getParameterByName('email'); 
-   var source_val = getParameterByName('source'); 
-   var email_input = document.getElementById("email_input");
-   var source_input = document.getElementById("sourceElement");
-   email_input.value=email;
-   source_val = source_val || null;
-   if (source_val) {
-     source_input.value = source_val;
-   }
-   
+$( document ).ready( function() {
+  var email = getParameterByName('email'); 
+  var source_val = getParameterByName('source'); 
+  var email_input = document.getElementById("email_input");
+  var source_input = document.getElementById("sourceElement");
+  email_input.value=email;
+  source_val = source_val || null;
+  if (source_val) {
+    source_input.value = source_val;
+  };
+});
+
 </script>
