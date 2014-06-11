@@ -27,11 +27,15 @@
     <div class="twitter"><a href="https://twitter.com/home?status=Money%20has%20corrupted%20our%20democracy.%20Can%20we%20fix%20it?%20Act%20now,%20join%20%23MAYDAYUS%20--%20let's%20try%20something%20new:%20https://MAYDAY.US" title="Share on Twitter"><span>Share on Twitter</span></a></div>
     <div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us?1" title="Share on Facebook"><span>Share on Facebook</span></a></div>
     <div class="email">
-      <form action="https://mayday.us/subscribe" method="get">
-        <input name="email" type="text" placeholder="Enter your email to join the fight..." />
-        <button  type="submit" value="subscribe" title="Submit Email" onSubmit="_gaq.push(['_trackEvent', 'Form', 'Submit', 'Front Page Email']);">
-        </button>
-      </form>
+      <div class="email">
+        <form action="https://pledge.mayday.us/r/subscribe" method="post">
+          <input type="hidden" name="redirect" value="https://mayday.us/subscribe/" />
+          <input type="hidden" name="source" value="landing" />
+          <input name="email" type="text" placeholder="Enter your email to join the fight..." />
+          <button  type="submit" value="subscribe" title="Submit Email" onSubmit="_gaq.push(['_trackEvent', 'Form', 'Submit', 'Front Page Email']);">
+          </button>
+        </form>
+      </div>        
     </div>
   </div>
 </div>
