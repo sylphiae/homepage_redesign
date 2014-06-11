@@ -93,22 +93,22 @@ a:visited { color: #a0a; }
   padding-top: 10px;
 }
 
-.social {
+#socialBar .social {
   width: 380px;
   margin: 0 auto;
   padding: 15px 0 0;
 }
- .social a span, #hero .social button span {
+#socialBar .social a span, #hero .social button span {
   display: none;
 }
- .social .facebook a {
+#socialBar .social .facebook a {
   background: url('../images/social_facebook.png') no-repeat center center;
   width: 46px;
   height: 45px;
   display: inline-block;
   float: left;
 }
- .social .twitter a {
+#socialBar .social .twitter a {
   background: url('../images/social_twitter.png') no-repeat center center;
   width: 46px;
   height: 45px;
@@ -116,11 +116,11 @@ a:visited { color: #a0a; }
   float: left;
   margin-right: 15px;
 }
- .social .email {
+#socialBar .social .email {
   float: right;
   position: relative;
 }
- .social .email input {
+#socialBar .social .email input {
   width: 255px;
   border: 2px solid #b0cad7;
   border-radius: 5px;
@@ -132,7 +132,7 @@ a:visited { color: #a0a; }
   padding: 0 10px;
   background: rgba(255,255,255,.1);
 }
- .social .email button {
+#socialBar .social .email button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -145,18 +145,18 @@ a:visited { color: #a0a; }
   border-radius: 4px;
 }
 
- .social .email input::-webkit-input-placeholder {
+#socialBar .social .email input::-webkit-input-placeholder {
     color:    #b0cad7;
 }
- .social .email input:-moz-placeholder {
-    color:    #b0cad7;
-    opacity:  1;
-}
- .social .email input::-moz-placeholder {
+#socialBar .social .email input:-moz-placeholder {
     color:    #b0cad7;
     opacity:  1;
 }
-.social .email input:-ms-input-placeholder {
+#socialBar .social .email input::-moz-placeholder {
+    color:    #b0cad7;
+    opacity:  1;
+}
+#socialBar .social .email input:-ms-input-placeholder {
     color:    #b0cad7;
 }
 
@@ -460,6 +460,8 @@ a:visited { color: #a0a; }
   height: 75px;
   width: 330px;
   line-height: 70px;
+  background-color:#A41919;
+  
 }
 #timeline .arrow {
   background: url('../images/timeline.png') no-repeat center center;
@@ -530,6 +532,8 @@ a:visited { color: #a0a; }
   height: 80px;
   width: 420px;
   line-height: 75px;
+  background-color:#A41919;
+  
 }
 #mayday .please {
   color: #666;
@@ -563,6 +567,8 @@ a:visited { color: #a0a; }
   line-height: 58px;
   font-size: 16px;
   float: left;
+  background-color:#A41919;
+  
 }
 #mayday .social .twitter a, #mayday .social .facebook a {
   width: 175px;
