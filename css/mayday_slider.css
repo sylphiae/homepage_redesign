@@ -257,7 +257,7 @@ a:visited { color: #a0a; }
   margin: 10px 0 0;
 }
 #hero .counter .phase_two_details {
-  width: 510px;
+  width: 100%;
   clear: right;
   float: right;
   text-align: left;
@@ -270,7 +270,7 @@ a:visited { color: #a0a; }
   float: right;
   text-align: right;
   color: #91a4ab;
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.8);
 }
 
 #hero .pledge {
