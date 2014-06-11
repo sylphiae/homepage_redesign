@@ -31,7 +31,7 @@ a:visited { color: #a0a; }
   margin: 0 auto;
 }
 .pledge, .pledge:visited {
-  background-color: #d53a38;
+  background-color: #3CB92A;
   border-radius: 5px;
   color: #FFF;
   font-weight: bold;
@@ -51,9 +51,8 @@ a:visited { color: #a0a; }
 }
   
 #hero {
-  height: 700px;
+  height: 530px;
   width: 100%;
-  background-color: #005983;    
 }
 
 #hero .inner {
@@ -74,23 +73,24 @@ a:visited { color: #a0a; }
   color: #527d91;
   color: rgba(255,255,255,.66);
 }
-#hero .social {
+
+.social {
   width: 380px;
   margin: 0 auto;
   position: relative;
   padding: 15px 0 0;
 }
-#hero .social a span, #hero .social button span {
+ .social a span, #hero .social button span {
   display: none;
 }
-#hero .social .facebook a {
+ .social .facebook a {
   background: url('../images/social_facebook.png') no-repeat center center;
   width: 46px;
   height: 45px;
   display: inline-block;
   float: left;
 }
-#hero .social .twitter a {
+ .social .twitter a {
   background: url('../images/social_twitter.png') no-repeat center center;
   width: 46px;
   height: 45px;
@@ -98,11 +98,11 @@ a:visited { color: #a0a; }
   float: left;
   margin-right: 15px;
 }
-#hero .social .email {
+ .social .email {
   float: right;
   position: relative;
 }
-#hero .social .email input {
+ .social .email input {
   width: 255px;
   border: 2px solid #b0cad7;
   border-radius: 5px;
@@ -114,7 +114,7 @@ a:visited { color: #a0a; }
   padding: 0 10px;
   background: rgba(255,255,255,.1);
 }
-#hero .social .email button {
+ .social .email button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -127,24 +127,24 @@ a:visited { color: #a0a; }
   border-radius: 4px;
 }
 
-#hero .social .email input::-webkit-input-placeholder {
+ .social .email input::-webkit-input-placeholder {
     color:    #b0cad7;
 }
-#hero .social .email input:-moz-placeholder {
-    color:    #b0cad7;
-    opacity:  1;
-}
-#hero .social .email input::-moz-placeholder {
+ .social .email input:-moz-placeholder {
     color:    #b0cad7;
     opacity:  1;
 }
-#hero .social .email input:-ms-input-placeholder {
+ .social .email input::-moz-placeholder {
+    color:    #b0cad7;
+    opacity:  1;
+}
+.social .email input:-ms-input-placeholder {
     color:    #b0cad7;
 }
 
 #hero h1 {
   margin: 0;
-  padding: 110px 0 0;
+  padding: 0 0;
   text-align: center;
   color: #fff;
   font-weight: bold;
@@ -289,7 +289,6 @@ a:visited { color: #a0a; }
 #hero .campaign-hero-slider-item {
   display:none;
   position: absolute;
-  top: 120px;
   height: 530px;
   width:100%;
 }
