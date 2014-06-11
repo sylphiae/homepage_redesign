@@ -51,6 +51,8 @@
           </div>
         </div>
 
+        <input type="hidden" name="source" id="sourceElement">subscribe</input>
+
         <div ng-show="! ctrl.spinning" class="row">
            <span class="input-group-btn">
               <button id="submitButton" type="submit" class="btn btn-primary">Subscribe</button>
@@ -70,7 +72,21 @@
     </div>
 </div>
 <script>
-   var email = location.search.split('email=')[1]; // http://stackoverflow.com/questions/979975/how-to-get-the-value-from-url-parameter
+  function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+      return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+   var email = getParameterByName('email'); 
+   var source_val = getParameterByName('source'); 
    var email_input = document.getElementById("email_input");
-   email_input.value=decodeURIComponent(email);
+   var source_input = document.getElementById("sourceElement");
+   email_input.value=email;
+   source_val = source_val || null;
+   if (source_val) {
+     source_input.value = source_val;
+   }
+   
 </script>
