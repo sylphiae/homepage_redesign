@@ -1,8 +1,8 @@
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 <script src="//fgnass.github.io/spin.js/spin.min.js"></script>
 
-<div id="content" class="row" ng-app="contactApp">
-    <div class="row" ng-controller="contactController">
+<div id="content" class="row">
+    <div class="row">
       <form action='https://pledge.mayday.us/r/subscribe' method='post'>
 
         <div class="row">
@@ -71,6 +71,7 @@
 
     </div>
 </div>
+
 <script>
   function getParameterByName(name) {
       name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -79,5 +80,16 @@
       return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
   }
 
+$( document ).ready( function() {
+  var email = getParameterByName('email'); 
+  var source_val = getParameterByName('source'); 
+  var email_input = document.getElementById("email_input");
+  var source_input = document.getElementById("sourceElement");
+  email_input.value=email;
+  source_val = source_val || null;
+  if (source_val) {
+    source_input.value = source_val;
+  }
+});
 
 </script>
