@@ -34,10 +34,11 @@ a:visited { color: #a0a; }
 .inner {
   position: relative;
   margin: 0 auto;
+  padding-top:40px;
 }
 
 .pledge, .pledge:visited {
-  background-color: #3CB92A;
+  background-color: rgba(0, 89, 131, 0.79);
   border-radius: 5px;
   color: #FFF;
   font-weight: bold;
@@ -46,7 +47,7 @@ a:visited { color: #a0a; }
   display: inline-block;
 }
 .pledge:hover {
-  background: #3CBF2A;
+  background: rgba(0, 89, 131, 1);
   text-decoration: none;
   color: #fff;
 }
@@ -88,7 +89,8 @@ a:visited { color: #a0a; }
 #socialBar {
   height:100px;
   width:100%;
-  background-color:#005983;
+  background-color:#A41919;
+  padding-top: 10px;
 }
 
 .social {
