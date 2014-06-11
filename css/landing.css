@@ -84,8 +84,35 @@ a:visited { color: #a0a; }
   color: #999;
 }
 
+body#landing #hero {
+  height: 600px;
+  color: #fff;
+  padding: 30px;
+  margin-top: -20px;
+}
 
-
-
-
-
+body#landing #hero h1{
+  font-size: 50px;
+}
+body#landing div.email{
+  margin-top: 170px;
+}
+body#landing div.email input {
+  width: 255px;
+  border: 2px solid #d7e1e6;
+  border-radius: 5px;
+  background: transparent;
+  font: inherit;
+  height: 50px;
+  line-height:30px;
+  color: #d7e1e6;
+  padding: 0 10px;
+  background: rgba(255,255,255,.1);
+}
+body#landing div.email button {
+font-size: 26px;
+}
+#footer{
+  margin-top: 20px;
+  
+}
