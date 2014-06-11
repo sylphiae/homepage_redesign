@@ -9,7 +9,16 @@ cssid: landing
     by reducing the influence of money in politics.</h1>
 
 
--    <div class="email"><form action="https://pledge.mayday.us/r/subscribe" method="post"><input type="hidden" name="redirect" value="https://mayday.us/subscribe/"><input name="email" type="text" placeholder="Get email alerts..." /><button  type="submit" value="landing" title="Submit Email"><span>Sign the petition</span></button></div>
+-    <div class="email">
+      <form action="https://pledge.mayday.us/r/subscribe" method="post">
+        <input type="hidden" name="redirect" value="https://mayday.us/subscribe/" />
+        <input type="hidden" name="source" value="landing" />
+        <input name="email" type="text" placeholder="Get email alerts..." />
+        <button  type="submit" value="landing" title="Submit Email">
+          <span>Sign the petition</span>
+        </button>
+      </form>
+    </div>
 
 {% include footer_new.html %}
 

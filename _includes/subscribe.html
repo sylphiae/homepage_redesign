@@ -1,8 +1,8 @@
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 <script src="//fgnass.github.io/spin.js/spin.min.js"></script>
 
-<div id="content" class="row" ng-app="contactApp">
-    <div class="row" ng-controller="contactController">
+<div id="content" class="row">
+    <div class="row">
       <form action='https://pledge.mayday.us/r/subscribe' method='post'>
 
         <div class="row">
@@ -51,6 +51,8 @@
           </div>
         </div>
 
+        <input type="hidden" name="source" id="sourceElement" value="subscribe"/>
+
         <div ng-show="! ctrl.spinning" class="row">
            <span class="input-group-btn">
               <button id="submitButton" type="submit" class="btn btn-primary">Subscribe</button>
@@ -69,8 +71,25 @@
 
     </div>
 </div>
+
 <script>
-   var email = location.search.split('email=')[1]; // http://stackoverflow.com/questions/979975/how-to-get-the-value-from-url-parameter
-   var email_input = document.getElementById("email_input");
-   email_input.value=decodeURIComponent(email);
+  function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+      return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+$( document ).ready( function() {
+  var email = getParameterByName('email'); 
+  var source_val = getParameterByName('source'); 
+  var email_input = document.getElementById("email_input");
+  var source_input = document.getElementById("sourceElement");
+  email_input.value=email;
+  source_val = source_val || null;
+  if (source_val) {
+    source_input.value = source_val;
+  }
+});
+
 </script>
