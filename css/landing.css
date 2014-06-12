@@ -102,16 +102,18 @@ body#landing div.email{
 }
 body#landing div.email input {
   width: 255px;
-  border: 2px solid #d7e1e6;
+  //border: 2px solid #d7e1e6;
+  border: 3px solid  #666;
   border-radius: 5px;
   background: transparent;
   font: inherit;
   height: 50px;
   line-height:30px;
-  color: #d7e1e6;
+  //color: #d7e1e6;
+  color: #666;
   font-size: 12px;
   padding: 0 10px;
-  background: rgba(255,255,255,.1);
+  background: rgba(255,255,255,.7);
 }
 body#landing div.email button {
 font-size: 26px;
@@ -122,7 +124,7 @@ font-size: 26px;
 }
 .jumbotron{
   //opacity:0.5;
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255,255,255,0.9);
   padding: 15px 60px;
   color: #666;
   font-size: 20px;

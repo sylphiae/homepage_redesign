@@ -11,20 +11,21 @@ cssid: landing
 	    <div class=" jumbotron col-md-8 col-md-offset-2">
 	    	<p>Big money has taken Congress hostage. Washington must respect the will of the people.</p>
 
-			<p>ADD YOUR NAME to support MAYDAY.US and tell Congress to quit their addiction to big money and special interests.</p>
+			<p><strong>ADD YOUR EMAIL to support MAYDAY.US and tell Congress to quit their addiction to big money and special interests.</strong></p>
+			<div class="email">
+		      <form action="https://pledge.mayday.us/r/subscribe" method="post" onsubmit="ga('send', 'event', 'Form', 'Submit', 'Email Petition LP 1');">
+		        <input type="hidden" name="redirect" value="https://pledge.mayday.us/pledge" />
+		        <input type="hidden" name="source" value="landing" />
+		        <input name="email" type="text" placeholder="Get email alerts..." />
+		        <button  type="submit" class="pledge btn" value="landing" title="Submit Email">
+		          <span>Sign the Petition</span>
+		        </button>
+		      </form>
+		    </div>
 	    </div>
 		</div>
 	</div>
-	<div class="email">
-      <form action="https://pledge.mayday.us/r/subscribe" method="post" onsubmit="ga('send', 'event', 'Form', 'Submit', 'Email Petition LP 1');">
-        <input type="hidden" name="redirect" value="https://pledge.mayday.us/pledge" />
-        <input type="hidden" name="source" value="landing" />
-        <input name="email" type="text" placeholder="Get email alerts..." />
-        <button  type="submit" class="pledge btn" value="landing" title="Submit Email">
-          <span>Sign the Petition</span>
-        </button>
-      </form>
-    </div>
+
 </div>
 {% include footer_new.html %}
 
