@@ -1,25 +1,30 @@
 <div id="hero">
-  {% include indexheader.html %}  
+  {% include indexheader.html %}
   <div class="inner">
-  <h1>MAYDAY<span>.US</span></h1>
-  <h2>
-    Help U.S. kickstart fundamental reform, <br/>
-    by reducing the influence of money in politics.
-  </h2>
-  <div class="counter">
-    <div class="thermometer active">
-      <div class="label" id="progressLeftLabel">Loading...</div>
-      <div class="progress_bar" style="width: 11%" id="progress_bar"></div>
-    </div>
-    <div class="phase_two_details">
-      <div class="goal">
-        <h4>Goal: $5m</h4>
+    <h1>MAYDAY<span>.US</span></h1>
+    <h2>
+      Help U.S. kickstart* fundamental reform, <br/>
+      by reducing the influence of money in politics.
+    </h2>
+    <div class="counter">
+      <div class="thermometer active">
+        <div class="label" id="progressLeftLabel">Loading...</div>
+        <div class="progress_bar" style="width: 11%" id="progress_bar"></div>
       </div>
-      <h4><span id="raised">Loading...</span></h4>
+      <div class="phase_two_details">
+        <div class="goal">
+          <h4>Goal: $5m</h4>
+        </div>
+        <h4><span id="raised">Loading...</span></h4>
+      </div>
+      <script src="{{site.baseurl}}/js/mayday_progress5000.js"></script>
     </div>
-    <script src="{{site.baseurl}}/js/mayday_progress5000.js"></script>
-  </div>
-  <a class="pledge" href="https://pledge.mayday.us/pledge" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Top Pledge Button Homepage']);">Pledge Now</a>  
+    <a class="pledge" href="https://pledge.mayday.us/pledge" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Top Pledge Button Homepage']);">
+      Pledge Now
+      <div id="kickstart-explanation">
+        *We keep your money only if we meet our goal
+      </div>
+    </a>
   </div>
 </div>
 <div id="socialBar">
@@ -35,7 +40,7 @@
           <button  type="submit" value="subscribe" title="Submit Email" onSubmit="_gaq.push(['_trackEvent', 'Form', 'Submit', 'Front Page Email']);">
           </button>
         </form>
-      </div>        
+      </div>
     </div>
   </div>
 </div>
@@ -84,9 +89,9 @@
       var imgs = $(".campaign-hero-slider-item");
       var oldIndex = window.mayOneSelectedImg;
       window.mayOneSelectedImg = (window.mayOneSelectedImg + 1) % 5;
-      $(imgs[window.mayOneSelectedImg]).fadeIn(400);      
+      $(imgs[window.mayOneSelectedImg]).fadeIn(400);
       $(imgs[window.mayOneSelectedImg]).addClass("current");
-      $(imgs[oldIndex]).fadeOut(400); 
+      $(imgs[oldIndex]).fadeOut(400);
       $(imgs[oldIndex]).removeClass("current");
     }, 5000);
   });*/
