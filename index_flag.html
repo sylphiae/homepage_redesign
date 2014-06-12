@@ -1,15 +1,8 @@
 ---
-layout: mayday_slider
+layout: mayday
 title: MAYDAY.US - A Crowdfunded, Kickstarted SuperPAC to end all SuperPACs
 omit_title_suffix: true
 cssid: index
-
-slide_photos:
-- /wp-content/uploads/2014/04/05-midwest.jpg
-- /wp-content/uploads/2014/04/02-decay1.jpg
-- /wp-content/uploads/2014/04/06-cement.jpg
-- /wp-content/uploads/2014/04/08-pollution.jpg
-- /wp-content/uploads/2014/04/12-bridge.jpg
 ---
 
 {% capture subhead %}
@@ -79,7 +72,7 @@ Now, we've set an even more ambitious goal. Starting June 4, we're aiming to rai
 <h2>Mayday, Mayday, Mayday!</h2>
 <h3>We have called MAYDAY on this democracy.</h3>
 
-<a class="pledge big" href="https://pledge.mayday.us/pledge">Will you Answer?</a>
+<a class="pledge big" href="https://pledge.mayday.us/pledge" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Will you answer Button Homepage']);">Will you Answer?</a>
 
 <p class="please">Please pledge if you can.<br />Please share this site with everyone you can.<br />And please know this:<p>
 
@@ -89,4 +82,4 @@ Now, we've set an even more ambitious goal. Starting June 4, we're aiming to rai
 
 {% endcapture %}
 
-{% include frontpage_slider.html %}
+{% include frontpage.html %}
