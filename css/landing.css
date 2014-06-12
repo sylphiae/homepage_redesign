@@ -85,17 +85,20 @@ a:visited { color: #a0a; }
 }
 
 body#landing #hero {
-  height: 600px;
+  height: 700px;
   color: #fff;
   padding: 30px;
   margin-top: -20px;
 }
 
 body#landing #hero h1{
+  color: #fff;
   font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 60px;
 }
 body#landing div.email{
-  margin-top: 170px;
+  margin-top: 50px;
 }
 body#landing div.email input {
   width: 255px;
@@ -106,6 +109,7 @@ body#landing div.email input {
   height: 50px;
   line-height:30px;
   color: #d7e1e6;
+  font-size: 12px;
   padding: 0 10px;
   background: rgba(255,255,255,.1);
 }
@@ -115,4 +119,14 @@ font-size: 26px;
 #footer{
   margin-top: 20px;
   
+}
+.jumbotron{
+  //opacity:0.5;
+  background-color: rgba(255,255,255,0.7);
+  padding: 15px 60px;
+  color: #666;
+  font-size: 20px;
+}
+.tell-congress{
+  font-size: 60px;
 }

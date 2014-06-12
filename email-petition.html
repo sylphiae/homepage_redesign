@@ -5,10 +5,19 @@ omit_title_suffix: true
 cssid: landing
 ---
 <div id="hero" class="stormflag">
-	<h1>Tell congress to get the influence<br/> of big money out of politics</h1>
+	<h1><span class="tell-congress">Tell Congress</span><br/> to get the influence of big money out of politics</h1>
+	<div class="row">
+		<div class="container">
+	    <div class=" jumbotron col-md-8 col-md-offset-2">
+	    	<p>Big money has taken Congress hostage. Washington must respect the will of the people.</p>
+
+			<p>ADD YOUR NAME to support MAYDAY.US and tell Congress to quit their addiction to big money and special interests.</p>
+	    </div>
+		</div>
+	</div>
 	<div class="email">
-      <form action="https://pledge.mayday.us/r/subscribe" method="post">
-        <input type="hidden" name="redirect" value="https://mayday.us/subscribe/" />
+      <form action="https://pledge.mayday.us/r/subscribe" method="post" onsubmit="ga('send', 'event', 'Form', 'Submit', 'Email Petition LP 1');">
+        <input type="hidden" name="redirect" value="https://pledge.mayday.us/pledge" />
         <input type="hidden" name="source" value="landing" />
         <input name="email" type="text" placeholder="Get email alerts..." />
         <button  type="submit" class="pledge btn" value="landing" title="Submit Email">
