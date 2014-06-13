@@ -394,7 +394,6 @@ a:visited { color: #a0a; }
   }
 }
 
-
 #intro {
   padding: 70px 0 100px;
 }
@@ -426,8 +425,8 @@ a:visited { color: #a0a; }
   #intro .video, #intro .video iframe {
     width: 480px;
     height: 270px;
-  } 
-  
+  }
+
   #intro h1 {
     font-size:20px;
   }
@@ -437,7 +436,7 @@ a:visited { color: #a0a; }
   #intro .video, #intro .video iframe {
     width: 320px;
     height: 180px;
-  } 
+  }
 }
 #timeline {
   background: #005983;
@@ -541,12 +540,17 @@ a:visited { color: #a0a; }
 #mayday .pledge.big {
   font-size: 40px;
   position: relative;
-  margin: 100px auto 50px;
   height: 80px;
-  width: 420px;
+  margin: 100px auto 50px;
   line-height: 75px;
   background-color:#A41919;
-
+  padding: 0px 45px;
+}
+@media (max-width: 480px) {
+  #mayday .pledge.big {
+    font-size: 25px;
+    padding: 0px 25px;
+  }
 }
 #mayday .please {
   color: #666;
