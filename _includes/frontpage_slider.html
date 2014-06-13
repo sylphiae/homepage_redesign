@@ -48,10 +48,8 @@
 </div>
 
 <div id="intro" class="container-fluid">
-  <div class="inner col-sm-6 col-sm-offset-3">
   <h1>{{subhead}}</h1>
   <div class="video"><iframe width="640" height="360" src="//www.youtube.com/embed/unD3mXo5Kt0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-  </div>
 </div>
 
 <div id="timeline" class="container-fluid">
@@ -73,14 +71,19 @@
   </div>
 </div>
 
-<div id="mayday" class="container-fluid">
-  <div class="inner row col-sm-8 col-sm-offset-2">
-    {{mayday | html}}
-  <div class="social row col-sm-9 center-block">
-    <a class="pledge" href="https://pledge.mayday.us/pledge" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Last Small Pledge Button Homepage']);">Pledge Now</a>
-    <div class="twitter"><a href="https://twitter.com/home?status=Money%20has%20corrupted%20our%20democracy.%20Can%20we%20fix%20it?%20Act%20now,%20join%20%23MAYDAYUS%20--%20let's%20try%20something%20new:%20https://MAYDAY.US" title="Share on Twitter"><span>Share on Twitter</span></a></div>
-    <div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us" title="Share on Facebook"><span>Share on Facebook</span></a></div>
-  </div>
+  <div id="mayday" class="container-fluid">
+    <div class="inner row col-sm-9 center-block">
+      {{mayday | html}}
+      <div class="social col-sm-4">
+        <a class="pledge" href="https://pledge.mayday.us/pledge" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Last Small Pledge Button Homepage']);">Pledge Now</a>
+      </div>
+      <div class="social col-sm-4">
+        <div class="twitter"><a href="https://twitter.com/home?status=Money%20has%20corrupted%20our%20democracy.%20Can%20we%20fix%20it?%20Act%20now,%20join%20%23MAYDAYUS%20--%20let's%20try%20something%20new:%20https://MAYDAY.US" title="Share on Twitter"><span>Share on Twitter</span></a></div>
+      </div>
+      <div class="social col-sm-4">
+        <div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us" title="Share on Facebook"><span>Share on Facebook</span></a></div>
+      </div>
+    </div>
   </div>
 </div>
 
