@@ -1,4 +1,4 @@
-<div id="hero">
+<div id="hero" class="container-fluid">
   {% include indexheader.html %}
   <div class="inner">
     <h1>MAYDAY<span>.US</span></h1>
@@ -6,18 +6,20 @@
       Help U.S. kickstart* fundamental reform, <br/>
       by reducing the influence of money in politics.
     </h2>
-    <div class="counter">
-      <div class="thermometer active">
-        <div class="label" id="progressLeftLabel">Loading...</div>
-        <div class="progress_bar" style="width: 11%" id="progress_bar"></div>
-      </div>
-      <div class="phase_two_details">
-        <div class="goal">
-          <h4>Goal: $5m</h4>
+    <div class="row">
+      <div class="counter col-sm-6 col-sm-offset-3">
+        <div class="thermometer active">
+          <div class="label" id="progressLeftLabel">Loading...</div>
+          <div class="progress_bar" style="width: 11%" id="progress_bar"></div>
         </div>
-        <h4><span id="raised">Loading...</span></h4>
+        <div class="phase_two_details">
+          <div class="goal">
+            <h4>Goal: $5m</h4>
+          </div>
+          <h4><span id="raised">Loading...</span></h4>
+        </div>
+        <script src="{{site.baseurl}}/js/mayday_progress5000.js"></script>
       </div>
-      <script src="{{site.baseurl}}/js/mayday_progress5000.js"></script>
     </div>
     <a class="pledge" href="https://pledge.mayday.us/pledge" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Top Pledge Button Homepage']);">
       Pledge Now
@@ -27,7 +29,7 @@
     </a>
   </div>
 </div>
-<div id="socialBar">
+<div id="socialBar" class="container-fluid">
   <div class="social">
     <div class="twitter"><a href="https://twitter.com/home?status=Money%20has%20corrupted%20our%20democracy.%20Can%20we%20fix%20it?%20Act%20now,%20join%20%23MAYDAYUS%20--%20let's%20try%20something%20new:%20https://MAYDAY.US" title="Share on Twitter"><span>Share on Twitter</span></a></div>
     <div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us?1" title="Share on Facebook"><span>Share on Facebook</span></a></div>
@@ -45,20 +47,20 @@
   </div>
 </div>
 
-<div id="intro">
-  <div class="inner">
+<div id="intro" class="container-fluid">
+  <div class="inner col-sm-6 col-sm-offset-3">
   <h1>{{subhead}}</h1>
   <div class="video"><iframe width="640" height="360" src="//www.youtube.com/embed/unD3mXo5Kt0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
   </div>
 </div>
 
-<div id="timeline">
-  <div class="inner">
+<div id="timeline" class="container-fluid">
+  <div class="inner row col-sm-8 col-sm-offset-2">
     <div class="timing">{{timeline | markdownify}}</div>
     <a class="pledge" href="https://pledge.mayday.us/pledge" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Second Pledge Button Homepage']);">Pledge Now</a>
   </div>
-  <div class="arrow"></div>
-  <div class="inner">
+  <div class="arrow row"></div>
+  <div class="inner row col-sm-8 col-sm-offset-2">
     <div class="phase_one">
       {{phase_one | markdownify}}
     </div>
@@ -71,10 +73,10 @@
   </div>
 </div>
 
-<div id="mayday">
-  <div class="inner">
+<div id="mayday" class="container-fluid">
+  <div class="inner row col-sm-8 col-sm-offset-2">
     {{mayday | html}}
-  <div class="social">
+  <div class="social row col-sm-9 center-block">
     <a class="pledge" href="https://pledge.mayday.us/pledge" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Last Small Pledge Button Homepage']);">Pledge Now</a>
     <div class="twitter"><a href="https://twitter.com/home?status=Money%20has%20corrupted%20our%20democracy.%20Can%20we%20fix%20it?%20Act%20now,%20join%20%23MAYDAYUS%20--%20let's%20try%20something%20new:%20https://MAYDAY.US" title="Share on Twitter"><span>Share on Twitter</span></a></div>
     <div class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us" title="Share on Facebook"><span>Share on Facebook</span></a></div>
