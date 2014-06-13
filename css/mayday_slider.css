@@ -272,21 +272,19 @@ a:visited { color: #a0a; }
 }
 
 #hero .pledge {
-  width: 275px;
   height: 70px;
   font-size: 30px;
   line-height: 70px;
   float: none;
   margin-left: 30px;
+  padding: 0 45px;
 }
 
 #hero #kickstart-explanation {
   color: white;
   font-size: 15px;
+  font-weight: bold;
   position: relative;
-  left: -79px;
-  top: -23px;
-  width: 427px;
   height: 25px;
 }
 
@@ -390,6 +388,18 @@ a:visited { color: #a0a; }
 @media (max-width: 800px) {
   #hero .social {
     padding-top: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  #socialBar .social .email input {
+    width: auto;
+  }
+}
+
+@media (max-width: 370px) {
+  #hero h1 {
+    font-size: 50px;
   }
 }
 
