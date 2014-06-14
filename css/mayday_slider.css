@@ -609,6 +609,13 @@ a:visited { color: #a0a; }
 #mayday .social .twitter a:hover, #mayday .social .facebook a:hover {
   text-decoration: none;
 }
+@media (max-width: 830px) {
+  #mayday .social {
+    clear: both;
+    width: 100%;
+    margin: 10px auto;
+  }
+}
 #footer {
 }
 #footer .footer_nav {
