@@ -405,6 +405,9 @@ a:visited { color: #a0a; }
   #hero h1 {
     font-size: 50px;
   }
+  #hero .counter .phase_two_details h4, #hero .pledge {
+    font-size: 25px;
+  }
 }
 
 #intro {
