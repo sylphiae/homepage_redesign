@@ -67,6 +67,9 @@ h1#page_title {
   opacity: 1;
 }
 
+.shareImage {
+  margin-bottom:20px;
+}
 
 .hero-fw{
   position:relative;
