@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" />
     <link rel="stylesheet" href="{{ site.baseurl}}/css/sidebar.css " />
 
-  <meta property="og:image" content="https://mayday.us/images/share_preview.jpg"/>
-  <meta property="og:title" content="MAYDAY: Democracy needs an upgrade. Act now."/>
-  <meta property="og:description" content="Money has corrupted politics. We’re kickstarting a political experiment big enough to win a Congress committed to fundamental reform -- Join us!"/>
+  <meta property="og:url" content="https://mayday.us{{ page.url }}"/>
+  <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}
+https://mayday.us/images/share_preview.jpg{% endif %}"/>
+  <meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% else %}MAYDAY: Democracy needs an upgrade. Act now.{% endif %}"/>
+  <meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% else %}Money has corrupted politics. We’re kickstarting a political experiment big enough to win a Congress committed to fundamental reform -- Join us!{% endif %}"/>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
