@@ -91,6 +91,7 @@ a:visited { color: #a0a; }
 }
 
 #socialBar .social {
+  width: 380px;
   margin: 0 auto;
   padding: 15px 0 0;
 }
@@ -392,6 +393,9 @@ a:visited { color: #a0a; }
 }
 
 @media (max-width: 400px) {
+  #socialBar .social {
+    width: auto;
+  }
   #socialBar .social .email input {
     width: auto;
   }
@@ -400,6 +404,9 @@ a:visited { color: #a0a; }
 @media (max-width: 370px) {
   #hero h1 {
     font-size: 50px;
+  }
+  #hero .counter .phase_two_details h4, #hero .pledge {
+    font-size: 25px;
   }
 }
 
@@ -604,6 +611,13 @@ a:visited { color: #a0a; }
 }
 #mayday .social .twitter a:hover, #mayday .social .facebook a:hover {
   text-decoration: none;
+}
+@media (max-width: 830px) {
+  #mayday .social {
+    clear: both;
+    width: 100%;
+    margin: 10px auto;
+  }
 }
 #footer {
 }
