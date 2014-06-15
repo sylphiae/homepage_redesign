@@ -76,11 +76,11 @@ a:visited { color: #a0a; }
 }
 #hero #top_login, #hero #top_login a, #hero #top_login, #hero #top_login a:visited {
   color: #527d91;
-  color: rgba(0,0,0,.33);
+  color: rgba(0,0,0,.45);
 }
 #hero #top_login, #hero #top_login a:hover,  {
   color: #527d91;
-  color: rgba(0,0,0,.66);
+  color: rgba(0,0,0,.75);
 }
 
 #socialBar {
