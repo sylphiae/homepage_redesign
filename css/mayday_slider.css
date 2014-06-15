@@ -392,12 +392,6 @@ a:visited { color: #a0a; }
   }
 }
 
-@media (max-width: 420px) {
-#hero .counter .phase_two_details h4 {
-  font-size: 24px;
-  }
-}
-
 @media (max-width: 400px) {
   #socialBar .social {
     width: auto;
