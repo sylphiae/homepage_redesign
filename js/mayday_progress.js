@@ -27,6 +27,8 @@ function totalRaisedCB(totalRaisedCents) {
   }
   setText("raised", '$' + addCommas(totalRaised));
   document.getElementById("progress_bar").style.width='' + Math.min(100, percent) + '%';
+  document.getElementById("progressLeftLabel").innerHTML = percent + '% FUNDED';  
+  
   var totalRaisedRounded = Math.round(totalRaised);
   var complete_total_message = '$' + addCommas(totalRaisedRounded);
   setText("raised", complete_total_message);
