@@ -13,10 +13,10 @@ cssid: landing
 
 			<p><strong>ADD YOUR EMAIL to support MAYDAY.US and tell Congress to quit their addiction to big money and special interests.</strong></p>
 			<div class="email">
-		      <form action="https://pledge.mayday.us/r/subscribe" method="post" onsubmit="ga('send', 'event', 'Form', 'Submit', 'Email Petition LP 1');">
+		      <form action="https://pledge.mayday.us/r/subscribe" method="post" onsubmit="var label = 'Email Petition LP 1 ' + $('#emailInputID').val(); ga('send', 'event', 'Form', 'Submit', label);">
 		        <input type="hidden" name="redirect" value="https://pledge.mayday.us/pledge" />
 		        <input type="hidden" name="source" value="landing" />
-		        <input name="email" type="text" placeholder="Add Your Email..." />
+		        <input name="email" id="emailInputID" type="text" placeholder="Add Your Email..." />
 		        <button  type="submit" class="pledge btn" value="landing" title="Submit Email">
 		          <span>Sign the Petition</span>
 		        </button>
