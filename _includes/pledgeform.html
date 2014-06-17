@@ -22,32 +22,6 @@
       document.cookie = ("last_team_key={{team.key()}};" +
                          "expires=" + date.toGMTString() +
                          ";domain=.mayday.us;path=/");
-
-      var reload = function() {
-        $.getJSON("{{pledge_root_url}}/r/total",
-                  {"team": "{{team.key()}}"})
-        .done(function(data) {
-          $("#team_total_dollars").text("$" + addCommas(
-              Math.round(data["teamTotalCents"]/100)));
-          $("#team_total_pledges").text("" + data["teamPledges"]);
-          var total_dollars = Math.floor(data["totalCents"]/100);
-          total_dollars = total_dollars - ALREADY_BANKED;
-          var progress = Math.floor((total_dollars * 100) / GOAL_DOLLARS);
-          $("#total_dollars").text("$" + addCommas(total_dollars));
-          $("#goal_dollars").text("$" + addCommas(GOAL_DOLLARS));
-          $("#progressbar-bar").width(progress + "%");
-          $("#progressbar-bar").attr("aria-valuenow", "" + progress);
-          $("#progressbar-text").text(progress + "% Complete");
-        })
-        .fail(function() {
-          $("#team_total_dollars").text("-");
-          $("#team_total_pledges").text("-");
-          $("#total_dollars").text("ERROR LOADING");
-          $("#goal_dollars").text("");
-        });
-      };
-      reload();
-      setInterval(reload, 15000);
     });
   </script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
