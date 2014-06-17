@@ -1,0 +1,37 @@
+<div class="blackbackground">
+  <div class="prelead">{{ prelead | markdownify }}</div>
+  <div class="lead">{{ lead | markdownify }}</div>
+  <div class="sublead">{{ sublead | markdownify }}</div><div><img src="../images/downarrow.png"></div>
+</div>
+
+
+<div class="video-fullwidth">
+  <div class="video-container">
+    <div class="video-embed">{{ videoembed }}</div>
+  </div>
+</div>
+
+<div class="greybg">
+<div class="celeb-header">{{ celebheader | markdownify }}</div>
+<div class="celebs">
+  <div class="celeb-widget-video">{{ celebwidgetvideo1 }}</div>
+  <div class="celeb-widget-video">{{ celebwidgettweet1 }}</div>
+</div>
+
+  <div class="text">{{ text1 | markdownify }}</div>
+  <div class="text">{{ text2 | markdownify }}</div>
+  <img src="../images/bwr.png" width="100%" height="22px">
+</div>
+<div class="whitebg">
+  <div class="text">{{ text3 | markdownify }}</div>
+</div>
+<div class="cta">{{ call }}</div>
+
+
+{% include footer_new.html %}
+  <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
