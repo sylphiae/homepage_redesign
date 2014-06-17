@@ -132,3 +132,10 @@ font-size: 26px;
 .tell-congress{
   font-size: 60px;
 }
+#emailValidationMessage{
+	color: #F00;
+	font-size: 15px;
+}
+.btn:focus{
+	color: #fff;
+}
