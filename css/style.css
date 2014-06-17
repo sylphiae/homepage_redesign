@@ -693,42 +693,42 @@ display:inline;
 }
 
 
-.pledgepage #pledgecol-sidebar .panel {
+#pledgecol-sidebar .panel {
   margin: 40px 0;
   border: 1px solid #5990a9;
   border-radius: 0;
 }
-.pledgepage #pledgecol-sidebar .panel .panel-heading {
+#pledgecol-sidebar .panel .panel-heading {
   background: #d9e6ec;
 }
-.pledgepage #pledgecol-sidebar .panel .panel-heading h3 {
+#pledgecol-sidebar .panel .panel-heading h3 {
   color: #005982;
   text-transform: uppercase;
   font-size: 20px;
   text-align: center;
   padding: 10px 0;
 }
-.pledgepage #pledgecol-sidebar .panel .control-label {
+#pledgecol-sidebar .panel .control-label {
   text-align: center;
   text-transform: uppercase;
   color: #888;
   font-weight: 700;  
 }
 
-.pledgepage #pledgecol-sidebar .panel .panel-body h6 {
+#pledgecol-sidebar .panel .panel-body h6 {
   margin-bottom: 0;
 }
-.pledgepage #pledgecol-sidebar .panel .panel-body h5.amount {
+#pledgecol-sidebar .panel .panel-body h5.amount {
   font-size: 45px;
   margin-top: 0;
   color: #000000;
 }
-.pledgepage #pledgecol-sidebar .panel .panel-body h5.pledges {
+#pledgecol-sidebar .panel .panel-body h5.pledges {
   font-size: 36px;
   margin-top: 0;
 }
 
-.pledgepage #pledgecol-sidebar form button {
+#pledgecol-sidebar form button {
   margin-top: 0px;
   height: 63px;
   width: 100%;
@@ -739,6 +739,6 @@ display:inline;
   transition: background 0.15s;  
 }
 
-.pledgepage #pledgecol-sidebar form button:hover {
+#pledgecol-sidebar form button:hover {
   background: #db6365;
 }
