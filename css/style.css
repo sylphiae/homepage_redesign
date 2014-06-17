@@ -691,3 +691,54 @@ display:inline;
    -webkit-box-shadow: inset 0 0 10px #FFFF99;
    box-shadow:         inset 0 0 10px #FFFF99;
 }
+
+
+.pledgepage #pledgecol-sidebar .panel {
+  margin: 40px 0;
+  border: 1px solid #5990a9;
+  border-radius: 0;
+}
+.pledgepage #pledgecol-sidebar .panel .panel-heading {
+  background: #d9e6ec;
+}
+.pledgepage #pledgecol-sidebar .panel .panel-heading h3 {
+  color: #005982;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 0;
+}
+.pledgepage #pledgecol-sidebar .panel .control-label {
+  text-align: center;
+  text-transform: uppercase;
+  color: #888;
+  font-weight: 700;  
+}
+
+.pledgepage #pledgecol-sidebar .panel .panel-body h6 {
+  margin-bottom: 0;
+}
+.pledgepage #pledgecol-sidebar .panel .panel-body h5.amount {
+  font-size: 45px;
+  margin-top: 0;
+  color: #000000;
+}
+.pledgepage #pledgecol-sidebar .panel .panel-body h5.pledges {
+  font-size: 36px;
+  margin-top: 0;
+}
+
+.pledgepage #pledgecol-sidebar form button {
+  margin-top: 0px;
+  height: 63px;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 700;
+  background: #d2393c;
+  color: #fff;  
+  transition: background 0.15s;  
+}
+
+.pledgepage #pledgecol-sidebar form button:hover {
+  background: #db6365;
+}
