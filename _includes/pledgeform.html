@@ -1,0 +1,67 @@
+<script src="//fgnass.github.io/spin.js/spin.min.js"></script>
+  
+  <script>
+    function addCommas(nStr) {
+      nStr += '';
+      x = nStr.split('.');
+      x1 = x[0];
+      x2 = x.length > 1 ? '.' + x[1] : '';
+      var rgx = /(\d+)(\d{3})/;
+      while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+      }
+      return x1 + x2;
+    }
+    var ALREADY_BANKED = 1000000;
+    var GOAL_DOLLARS = 5000000;
+    $(function() {
+      var date = new Date();
+      date.setTime(date.getTime()+(24*60*60*1000));
+      document.cookie = ("last_team_key={{team.key()}};" +
+                         "expires=" + date.toGMTString() +
+                         ";domain=.mayday.us;path=/");
+    });
+  </script>
+  <script src="/js/pledge.js?5"></script>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+<div id="pledgecol-sidebar" >
+  <div class="pledgepage panel panel-default" >
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        Pledge now
+      </h3><!-- ./panel-title !-->
+    </div><!-- ./panel-heading !-->
+    <div class="panel-body">
+      <form id="pledgeForm" role="form" method="POST" action="javascript:;">
+        <div class="form-group col-sm-12"><label class="control-label">Email</label><input type="email" required placeholder="smith@example.com" class="form-control input-lg" id="email_input" /></div>
+        <div class="form-group col-sm-12"><label class="control-label">Phone Number <span class="label label-default">Optional</span></label><input type="tel" placeholder="(212) 867-5309" class="form-control input-lg" id="phone_input" /></div>
+        <div class="form-group col-sm-12"><label class="control-label">Occupation</label><input type="text" required placeholder="Gardener, Railroad Worker, etc"  class="form-control input-lg" id="occupation_input"/></div>
+        <div class="form-group col-sm-12"><label class="control-label">Employer</label><input type="text" required placeholder="Nintendo, UPS, Self, etc" class="form-control input-lg" id="employer_input" /></div>
+        <div class="form-group col-sm-12">
+          <label class="control-label">Who to Fund?</label>
+          <select  class="form-control input-lg" id="targeting_input">
+            <option>Whatever Helps</option>
+            <option>Democrats Only</option>
+            <option>Republicans Only</option>
+          </select>
+        </div>
+        <div class="form-group col-sm-12">
+          <label class="control-label">How Much to Fund ($)?</label>
+          <input type="number" required min="1" placeholder="25, 50, 5000" class="form-control input-lg" id="amount_input">
+        </div>
+        <div id="donation-type" class="form-group col-sm-12">
+          <div class="checkbox"><label><input type="checkbox" id="directDonate_input"> I want my donation to be used to support MAYDAY.US, even if the goal has not been met by July 4th.</label></div>
+          <div class="checkbox"><label><input type="checkbox" id="emailSignupInput" checked> Want to know how we're using the money? Sign up for emails from us.</label></div>
+        </div>
+        <div id="formError" class="alert alert-danger" style="display:none">
+        </div>
+        <div class="form-group col-sm-12">
+          <button id="pledgeButton" class="btn">
+            <div style="display:none" class="spinner"></div>
+            <span class='pledgeText'>Pledge Now</span>
+          </button>
+        </div>
+      </form>
+    </div><!-- ./panel-body !-->
+  </div>
+</div>
