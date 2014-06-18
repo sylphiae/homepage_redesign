@@ -1,4 +1,3 @@
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 <script src="//fgnass.github.io/spin.js/spin.min.js"></script>
   
   <script>
@@ -24,10 +23,9 @@
                          ";domain=.mayday.us;path=/");
     });
   </script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-  <script src="https://pledge.mayday.us/static/pledge.js"></script>
+  <script src="/js/pledge.js"></script>
   <script src="https://checkout.stripe.com/checkout.js"></script>
-<div id="pledgecol-sidebar" ng-controller="PledgeController">
+<div id="pledgecol-sidebar" >
   <div class="pledgepage panel panel-default" >
     <div class="panel-heading">
       <h3 class="panel-title">
@@ -35,14 +33,14 @@
       </h3><!-- ./panel-title !-->
     </div><!-- ./panel-heading !-->
     <div class="panel-body">
-      <form role="form" method="POST" ng-submit="ctrl.pledge()">
-        <div class="form-group col-sm-12"><label class="control-label">Email</label><input type="email" required placeholder="smith@example.com" ng-model="ctrl.form.email" class="form-control input-lg"></div>
-        <div class="form-group col-sm-12"><label class="control-label">Phone Number <span class="label label-default">Optional</span></label><input type="tel" placeholder="(212) 867-5309" ng-model="ctrl.form.phone" class="form-control input-lg"></div>
-        <div class="form-group col-sm-12"><label class="control-label">Occupation</label><input type="text" required placeholder="Gardener, Railroad Worker, etc" ng-model="ctrl.form.occupation" class="form-control input-lg"></div>
-        <div class="form-group col-sm-12"><label class="control-label">Employer</label><input type="text" required placeholder="Nintendo, UPS, Self, etc" ng-model="ctrl.form.employer" class="form-control input-lg"></div>
+      <form id="pledgeForm" role="form" method="POST" action="javascript:;">
+        <div class="form-group col-sm-12"><label class="control-label">Email</label><input type="email" required placeholder="smith@example.com" class="form-control input-lg" id="email_input" /></div>
+        <div class="form-group col-sm-12"><label class="control-label">Phone Number <span class="label label-default">Optional</span></label><input type="tel" placeholder="(212) 867-5309" class="form-control input-lg" id="phone_input" /></div>
+        <div class="form-group col-sm-12"><label class="control-label">Occupation</label><input type="text" required placeholder="Gardener, Railroad Worker, etc"  class="form-control input-lg" id="occupation_input"/></div>
+        <div class="form-group col-sm-12"><label class="control-label">Employer</label><input type="text" required placeholder="Nintendo, UPS, Self, etc" class="form-control input-lg" id="employer_input" /></div>
         <div class="form-group col-sm-12">
           <label class="control-label">Who to Fund?</label>
-          <select ng-model="ctrl.form.target" class="form-control input-lg">
+          <select  class="form-control input-lg" id="targeting_input">
             <option>Whatever Helps</option>
             <option>Democrats Only</option>
             <option>Republicans Only</option>
@@ -50,16 +48,18 @@
         </div>
         <div class="form-group col-sm-12">
           <label class="control-label">How Much to Fund ($)?</label>
-          <input type="number" required min="1" placeholder="25, 50, 5000" ng-model="ctrl.form.amount" class="form-control input-lg">
+          <input type="number" required min="1" placeholder="25, 50, 5000" class="form-control input-lg" id="amount_input">
         </div>
         <div id="donation-type" class="form-group col-sm-12">
-          <div class="checkbox"><label><input type="checkbox" ng-model="ctrl.form.unconditional"> I want my donation to be used to support MAYDAY.US, even if the goal has not been met by July 4th.</label></div>
-          <div class="checkbox"><label><input type="checkbox" ng-model="ctrl.form.subscribe" checked> Want to know how we're using the money? Sign up for emails from us.</label></div>
+          <div class="checkbox"><label><input type="checkbox" id="directDonate_input"> I want my donation to be used to support MAYDAY.US, even if the goal has not been met by July 4th.</label></div>
+          <div class="checkbox"><label><input type="checkbox" id="emailSignupInput" checked> Want to know how we're using the money? Sign up for emails from us.</label></div>
+        </div>
+        <div id="formError" class="alert alert-danger" style="display:none">
         </div>
         <div class="form-group col-sm-12">
-          <button ng-disabled="ctrl.loading" class="btn">
-            <div ng-show="ctrl.loading" class="spinner"></div>
-            <span ng-hide="ctrl.loading">Pledge</span>
+          <button id="pledgeButton" class="btn">
+            <div style="display:none" class="spinner"></div>
+            <span class='pledgeText'>Pledge Now</span>
           </button>
         </div>
       </form>
