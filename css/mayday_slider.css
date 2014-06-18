@@ -25,9 +25,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #aaf; }
-a:hover   { color: #fff; text-decoration: underline; }
-a:visited { color: #aaf; }
+a         { color: #FFFF66; }
+a:hover   { color: #FFFF66; text-decoration: underline; }
+a:visited { color: #FFFF66; }
 
 .inner {
   position: relative;
