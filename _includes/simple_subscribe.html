@@ -13,6 +13,7 @@
         </div>
 
         <input type="hidden" name="source" id="sourceElement" value="{% if page.mailchimpSource %}{{ page.mailchimpSource }}{% else %}subscribe{% endif %}"/>
+        <input type="hidden" name="redirect" value="https://mayday.us/thankyouforRSVP" />
 
         <div ng-show="! ctrl.spinning" class="row" >
            <span class="input-group-btn">
