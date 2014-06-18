@@ -3,6 +3,9 @@
 //
 // NOTE: This could be made more efficient by caching the result (and then
 // killing the cache on URL changes, but we only call it once, so meh.
+
+var PLEDGE_URL = 'https://pledgedev.mayday.us';
+
 var getUrlParams = function() {
   var match,
   pl     = /\+/g,  // Regex for replacing addition symbol with a space
@@ -123,12 +126,12 @@ var createPledge = function(name, payment) {
   
   $.ajax({
       type: 'POST',
-      url: 'https://pledge.mayday.us/r/pledge',
+      url: PLEDGE_URL + '/r/pledge',
       data: JSON.stringify (data),
       contentType: "application/json",
       dataType: 'json',
       success: function(data) {
-        location.href = 'https://pledge.mayday.us' + data.receipt_url;       
+        location.href = PLEDGE_URL + data.receipt_url;       
       },
       error: function(data) {
         setLoading(false);
@@ -151,7 +154,7 @@ $(document).ready(function() {
 
   $('#pledgeButton').on('click', pledge);
 
-  $.get('https://pledge.mayday.us/r/payment_config').done(function(config) {
+  $.get(PLEDGE_URL + '/r/payment_config').done(function(config) {
       paymentConfig = config;
       stripeHandler = StripeCheckout.configure({
       key: config.stripePublicKey,
