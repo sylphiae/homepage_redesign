@@ -106,7 +106,7 @@ var createPledge = function(name, payment) {
     pledgeType = 'CONDITIONAL';
   }
   
-  $.post('https://pledge.mayday.us/r/pledge', {
+  var data = {
     email: $('#email_input').val(),
     phone: $('#phone_input').val(),
     name: name,
@@ -119,18 +119,26 @@ var createPledge = function(name, payment) {
     pledgeType: pledgeType,
     team: urlParams['team'] || readCookie("last_team_key") || '',
     payment: payment
-  }).done(function(data) {
-    location.href = 'https://pledge.mayday.us' + data.receipt_url;
-    $('#formError').hide();          
-  }).fail(function(data) {
-    setLoading(false);
-
-    if ('paymentError' in data) {
-      showError("We're having trouble charging your card: " + data.paymentError);
-    } else {
-      $('#formError').text('Oops, something went wrong. Try again in a few minutes');
-      $('#formError').show();      
-    }
+  };
+  
+  $.ajax({
+      type: 'POST',
+      url: 'https://pledge.mayday.us/r/pledge',
+      data: JSON.stringify (data),
+      contentType: "application/json",
+      dataType: 'json',
+      success: function(data) {
+        location.href = 'https://pledge.mayday.us' + data.receipt_url;       
+      },
+      error: function(data) {
+        setLoading(false);
+        if ('paymentError' in data) {
+          showError("We're having trouble charging your card: " + data.paymentError);
+        } else {
+          $('#formError').text('Oops, something went wrong. Try again in a few minutes');
+          $('#formError').show();      
+        }
+      },
   });
 };
   
