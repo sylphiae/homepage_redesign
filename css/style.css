@@ -776,3 +776,8 @@ display:inline;
   font-weight: 700;
   border-radius: 2px;  
 }
+
+.videoEmbed {
+  max-width:640px; 
+  max-height:360px; 
+}
