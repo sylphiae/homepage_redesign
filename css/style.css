@@ -269,6 +269,14 @@ h1#page_title {
 
 /*END Fancy Progress Bar Stuff*/
 
+#index a {
+  color:white;
+  text-decoration:underline;
+}
+#index a:hover {
+  color:#AAAAFF;
+  text-decoration:underline;
+}
 
 #subscribe label {
   padding-top: 15px;
