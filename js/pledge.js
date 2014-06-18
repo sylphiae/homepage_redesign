@@ -141,9 +141,7 @@ $(document).ready(function() {
         
   $('#email_input').val(passedEmail);
 
-  $('#pledgeButton').on('click', function() {
-    $('#pledgeForm').submit();
-  });
+  $('#pledgeButton').on('click', pledge);
 
   $.get('https://pledge.mayday.us/r/payment_config').done(function(config) {
       paymentConfig = config;
