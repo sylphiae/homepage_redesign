@@ -742,3 +742,10 @@ display:inline;
 #pledgecol-sidebar form button:hover {
   background: #db6365;
 }
+
+.subscribeButton {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 2px;  
+}
