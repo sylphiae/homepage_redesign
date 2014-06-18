@@ -29,7 +29,14 @@ a         { color: #00a; }
 a:hover   { color: #000; }
 a:visited { color: #a0a; }
 
-
+#index a {
+  color:white;
+  text-decoration:underline;
+}
+#index a:hover {
+  color:#AAAAFF;
+  text-decoration:underline;
+}
 
 .inner {
   position: relative;
