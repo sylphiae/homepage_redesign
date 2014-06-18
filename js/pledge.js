@@ -70,7 +70,7 @@ var pledge = function() {
   if (validateForm()) {
     var cents = getAmountCents();
     stripeHandler.open({
-      email: $('#amount_input').val(),
+      email: $('#email_input').val(),
       amount: cents
     });        
   }
