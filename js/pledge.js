@@ -4,7 +4,7 @@
 // NOTE: This could be made more efficient by caching the result (and then
 // killing the cache on URL changes, but we only call it once, so meh.
 
-var PLEDGE_URL = 'https://pledgedev.mayday.us';
+var PLEDGE_URL = 'https://pledge.mayday.us';
 
 var getUrlParams = function() {
   var match,
