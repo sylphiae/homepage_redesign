@@ -12,27 +12,6 @@
           </div>
         </div>
 
-        <div class="row">
-           <div class="input-group input-group-lg">
-		     <label>First Name</label>
-            <input type="text" name="first_name" class="form-control">
-          </div>
-        </div>
-
-        <div class="row">
-           <div class="input-group input-group-lg">
-		     <label>Last Name</label>
-            <input type="text" name="last_name" class="form-control">
-          </div>
-        </div>
-
-        <div class="row">
-           <div class="input-group input-group-lg">
-		     <label>Zipcode</label>
-            <input type="text" name="zipcode" class="form-control">
-          </div>
-        </div>
-
         <input type="hidden" name="source" id="sourceElement" value="{% if page.mailchimpSource %}{{ page.mailchimpSource }}{% else %}subscribe{% endif %}"/>
 
         <div ng-show="! ctrl.spinning" class="row" >
