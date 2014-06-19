@@ -61,7 +61,9 @@ $(document).ready(function() {
 	//Functionality for closing out error boxes
 	
 	$( ".error-close" ).click(function() {
-	  $(this).closest('li').fadeOut( 300 );
+    var boxToClose = $(this).closest('li');
+	  boxToClose.fadeOut( 300 );
+    setTimeout(function(){boxToClose.fadeIn( 300 );}, 3000);
 	});
 	
 	//Fixed 'pledge' bar
