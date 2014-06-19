@@ -69,7 +69,7 @@ $(document).ready(function() {
 	$(window).scroll(function() {    
 	    var scroll = $(window).scrollTop();
 	
-	    if (scroll >= 700) {
+	    if (scroll >= 600) {
 	        $(".cta").addClass("fix");
 	    } else {
 	        $(".cta").removeClass("fix");
