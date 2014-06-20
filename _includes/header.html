@@ -1,6 +1,10 @@
 <!--Menu & Logo-->
     <div class="full-width" id="header">
-    <h3><a href="/">MAYDAY<span>.US</span></a></h3>
+      {% if page.headerType == 'goodfight' %}
+        <img src='/images/mayday-goodfightheader-v1p2.png' id='goodfightHeader'>
+      {% else %}
+        <h3><a href="/">MAYDAY<span>.US</span></a></h3>
+      {% endif %}
     <div class="topmenu_entire">
 
      <a href="/">Home</A>

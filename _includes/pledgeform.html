@@ -45,6 +45,19 @@
             <option>Republicans Only</option>
           </select>
         </div>
+        {% if page.includeSurvey %}
+          <div class="form-group col-sm-12">
+            <label class="control-label">What tactics to use?</label>
+            <select  class="form-control input-lg" id="survey_input">
+              <option>Digital voter registration ads to grow the electorate</option>
+              <option>Video trackers to force candidate transparency</option>
+              <option>No robocalls</option>
+              <option>State-of-the-art digital canvassing and field tools</option>
+              <option>No negative ads</option>
+              <option>Whatever helps us win</option>            
+            </select>
+          </div>
+        {% endif %}
         <div class="form-group col-sm-12">
           <label class="control-label">How Much to Pledge ($)?</label>
           <input type="number" required min="1" placeholder="25, 100, 5000" class="form-control input-lg" id="amount_input">
