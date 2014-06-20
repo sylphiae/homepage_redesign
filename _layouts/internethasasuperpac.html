@@ -15,7 +15,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="/css/normalize.css">
-        <link rel="stylesheet" href="/css/ihasp.css?1">
+        <link rel="stylesheet" href="/css/ihasp.css?2">
         <link rel="stylesheet" href="/css/webfonts.css">
         <link rel="stylesheet" href="/css/tooltipster.css">
         <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
@@ -40,6 +40,15 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+          <div id="fb-root"></div>
+          <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=707150349352654&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+          
         <div class="scrollblock out">
 	        <div class="out bg">
 		        <div class="background blink">
@@ -74,6 +83,20 @@
 			        			<iframe src='//www.youtube.com/embed/ZoZ-tJiwBvc' frameborder='0' allowfullscreen></iframe>
 			        		</div>
 		        		</div>
+
+                <div class="social">
+		        			<div class="share fb">
+		        				<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+		        			</div>
+		        			<div class="share tw">
+		        				<a href="https://twitter.com/share" class="twitter-share-button" data-via="MayOneUS" data-hashtags="mayday">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		        			</div>
+		        			<div class="share reddit">
+		        				<a href="http://www.reddit.com/submit" onclick="window.location = 'http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="http://www.reddit.com/static/spreddit7.gif" alt="submit to reddit" border="0" /> </a>
+		        			</div>
+		        		</div>
+                
 			        	<h3>Big money has broken America's democracy. And it will take the Internet down with it.</h3>
 			        	<p>Democracy is America's operating system. If it doesn't work, nothing else will. Through a series of court decisions and a steady weakening of campaign finance laws that's given us things like Super PACs<a class="tooltip superpacs"></a>, big money has exposed a major vulnerability in American democracy, which has allowed a steady stream of threats and challenges to a free and open internet. These threats aren't isolated. They are systemic. They are a natural outcome of a root problem: the money problem. </p>
 		        	</div>
