@@ -429,8 +429,31 @@ h1#page_title {
 
 /*Subpages*/
 
+#embed .subpage-content {
+  text-align:center;
+  font-size:125%;
+}
 
-#about .subpage-content img{
+#embed .subpage-content pre {
+  text-align:left;
+}
+
+#embed .subpage-content img {
+  border: 1px solid black;
+  padding: 1px;
+}
+
+#embed hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc); 
+}
+
+#about .subpage-content img {
   float:left;
   width:150px;
   border:solid #ccc 2px;
@@ -451,7 +474,6 @@ h1#page_title {
    color:black;
    font-size:14px;
    padding:30px 30px 50px;
-   text-align:left;
    line-height: 1.61em;
 }
 
@@ -477,7 +499,6 @@ h1#page_title {
    font-size:14px;
    padding: 10px 40px 40px;
    margin-top: 40px;
-   text-align:left;
    background: #EEE;
 }
 
