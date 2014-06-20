@@ -44,15 +44,16 @@ h2 {
 	width: 790px;
 }
 
+
 .button {
-	font: normal 23px/50px 'Questrial', Arial, sans-serif;
+	font: 700 29px/50px 'Questrial', Arial, sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #3f4651;
 	letter-spacing: 1px;
 	display: inline-block;
 	border: 2px solid #3f4651;
-	background: #fdfdfb no-repeat 100% 50%;
+	background: #6CFF7E no-repeat 100% 50%;
 	height: 50px;
 	padding: 0 30px;
 	border-radius: 30px;
@@ -61,6 +62,10 @@ h2 {
 	-moz-user-select: none;    
 	-ms-user-select: none;      
 	user-select: none;
+}
+.button:hover {
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(94, 255, 107);
 }
 .button.arrow {
 	padding-right: 54px;
@@ -160,8 +165,8 @@ h2 {
 	border-width: 1px 0;
 	line-height: 76px;
 	font-size: 22px;
-	white-space: nowrap;
 }
+
 	#breadcrumbs li {
 		display: inline-block;
 		background: url(../images/star.png) no-repeat 100% 50%;
@@ -193,10 +198,12 @@ h2 {
 	text-align: center;
 	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAGCAYAAAACEPQxAAAAHUlEQVQImWM4Y2z8n+GMsfF/hv///0MJMcc4CAEA8s8Pw3YWtQgAAAAASUVORK5CYII=) repeat-x 0 0;
 }
-	#about-mayday .goals {
+#about-mayday .goals {
 		margin-top: 66px;
 		font-size: 14px;
+		margin-bottom: 40px;
 	}
+
 		#about-mayday .goals dl {
 			float: left;
 			width: 47%;
@@ -246,11 +253,11 @@ h2 {
 		margin-bottom: .8em;
 	}
 			
-#help-us {
-	padding: 54px 0 130px;
-	text-align: center;
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAGCAYAAAACEPQxAAAAHUlEQVQImWM4Y2z8n+GMsfF/hv///0MJMcc4CAEA8s8Pw3YWtQgAAAAASUVORK5CYII=) repeat-x 0 0;
-}
+  #help-us {
+  	padding: 54px 0 100px;
+  	text-align: center;
+  	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAGCAYAAAACEPQxAAAAHUlEQVQImWM4Y2z8n+GMsfF/hv///0MJMcc4CAEA8s8Pw3YWtQgAAAAASUVORK5CYII=) repeat-x 0 0;
+  }
 
 /* Responsive stuff
 ======================================================================== */
@@ -343,3 +350,40 @@ h2 {
 		}
 }
 
+
+
+.readmore { 
+	display: block;
+	margin: auto;
+
+}
+
+#footer {
+	text-align: center
+}
+
+#footer .footer_nav {
+	clear: both;
+	height: 50px;
+	text-align: center;
+}
+
+#footer .disclaimer {
+	margin: 30px auto 50px;
+	display: inline-block;
+	border: 1px solid #999;
+	color: #999;
+	padding: 15px;
+}
+
+#footer .copyright {
+	padding: 0 0 50px;
+	font-size: 14px;
+	color: #999;
+}
+
+#footer .footer_nav a {
+	padding: 0 15px;
+	color: #666;
+	font-size: 16px;
+}
