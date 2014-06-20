@@ -126,6 +126,10 @@ var createPledge = function(name, payment) {
     payment: payment
   };
   
+  if($("#survey_input").length) {    
+    data['surveyResult'] = $('#survey_input').val();
+  }
+  
   $.ajax({
       type: 'POST',
       url: PLEDGE_URL + '/r/pledge',
