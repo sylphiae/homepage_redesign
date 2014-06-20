@@ -438,6 +438,11 @@ h1#page_title {
   text-align:left;
 }
 
+#embed .subpage-content img {
+  border: 1px solid black;
+  padding: 1px;
+}
+
 #about .subpage-content img {
   float:left;
   width:150px;
