@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Questrial" />
     
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//cdn.optimizely.com/js/210578001.js"></script>  
   <script src="/js/v8.js"></script>
 
 	<link rel="stylesheet" href="/css/reset.css" />
@@ -31,8 +32,10 @@
 
    ga('create', 'UA-50367295-1', 'mayday.us');
    ga('require', 'displayfeatures');
+   window.optimizely = window.optimizely || [];
+   window.optimizely.push("activateUniversalAnalytics");
    ga('send', 'pageview');
-
+   
   </script>
 </head>
 
@@ -67,6 +70,8 @@
 	<ul id="breadcrumbs" class="nav">
 		<li><a href="#about-mayday">About the Mayday PAC</a></li>
 		<li><a href="#fixing-democracy">Fixing Democracy</a></li>
+    <li><a href="#help-us">How to help</a></li>
+    <li><a href="https://mayday.us/videos">To Share</a></li>
     <li><a href="#">Log in</a></li>
     	</ul>
 	
