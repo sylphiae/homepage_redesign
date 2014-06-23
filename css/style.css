@@ -726,7 +726,6 @@ display:inline;
 
 #pledgecol-sidebar .panel {
   margin: 40px 0;
-  margin-left:20px;
   border: 1px solid #5990a9;
   border-radius: 0;
 }
@@ -805,8 +804,13 @@ display:inline;
 }
 
 #goodfightHeader {
-   width:80%; 
-   max-width:625px; 
-   margin: 0 auto;
-   display: block;
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+  display: block;
+  padding: 30px 0 20px;
+}
+
+#rules {
+  padding:10px;
 }
