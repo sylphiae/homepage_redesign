@@ -726,7 +726,6 @@ display:inline;
 
 #pledgecol-sidebar .panel {
   margin: 40px 0;
-  margin-left:20px;
   border: 1px solid #5990a9;
   border-radius: 0;
 }
@@ -809,4 +808,8 @@ display:inline;
    max-width:625px; 
    margin: 0 auto;
    display: block;
+}
+
+#rules {
+  padding:10px;
 }
