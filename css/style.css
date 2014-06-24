@@ -816,15 +816,16 @@ display:inline;
 }
 
 #goodfightEmbed {
-  position: relative; 
-  padding-bottom: 29.25%; 
-  height: 0; 
-  overflow: hidden; 
-  width: 100%;
+  margin:0 auto;
+  width: 50%;
+  min-width:330px;
 }
 
-@media (max-width: 600px) {
-  #goodfightEmbed {
-    padding-bottom: 59.25%; 
-  }
+#goodfightEmbed iframe {
+  border: none; 
+  height:250px;
+  margin:0 0;
+  width:100%;
+  min-width:330px;
 }
+
