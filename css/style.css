@@ -814,3 +814,17 @@ display:inline;
 #rules {
   padding:10px;
 }
+
+#goodfightEmbed {
+  position: relative; 
+  padding-bottom: 29.25%; 
+  height: 0; 
+  overflow: hidden; 
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  #goodfightEmbed {
+    padding-bottom: 59.25%; 
+  }
+}
