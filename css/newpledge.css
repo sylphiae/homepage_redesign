@@ -155,9 +155,16 @@ li.step.active {
 	#pledgeBox{
 		width: 100%;
 		height: auto;
+		margin: auto;
 	}
+	
+}
+@media (max-width: 500px){
+
 	.jumbotron{
-		padding: 15px;
+		padding: 0;
+		height: auto;
+		background: #204659;
 	}
 }
 .step-2-container{
