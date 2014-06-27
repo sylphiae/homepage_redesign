@@ -6,6 +6,7 @@
   <script src="//fgnass.github.io/spin.js/spin.min.js"></script>
 
   <script>
+	PLEDGE_URL = "//pledgedev.mayday.us";
 	function step2(amount){
 		$(".step-1-container").hide("slow");
 		$("#step-1").removeClass("active");
@@ -44,7 +45,7 @@
                          ";domain=.mayday.us;path=/");
     });
   </script>
-  <script src="https://pledgedev.mayday.us/static/pledge.js"></script>
+  <script src="https://pledge.mayday.us/static/pledge.js"></script>
   <script src="https://checkout.stripe.com/checkout.js"></script>
   <body id="{{page.cssid}}">
     {{ content }}
