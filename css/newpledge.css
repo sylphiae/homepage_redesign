@@ -122,15 +122,19 @@ li.step.active {
 }
 .step-1-container{
 	width: 80%;
-	margin: auto;
+	margin: 20px auto;
+	
+}
+.step-2-container{
+	margin: 20px auto;
 }
 .ammount-button{
 	background-color: rgb(41, 128, 185);
 	box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px 0px inset;
-	border-radius: 10px;
+	border-radius: 5px;
 	color: #fff;
 	display: inline-block;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
 	height: 40px;
 	padding: 5px;
@@ -139,6 +143,10 @@ li.step.active {
 	vertical-align:middle;
 	text-shadow: rgb(136, 136, 136) 0px 1px 0px;
 	width: 28%;;
+}
+
+#pledgeButton.ammount-button:hover{
+	color: #fff;
 }
 .ammount-button:hover{
 	box-shadow: none;
