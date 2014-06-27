@@ -142,7 +142,8 @@ li.step.active {
 	text-align: center;
 	vertical-align:middle;
 	text-shadow: rgb(136, 136, 136) 0px 1px 0px;
-	width: 28%;;
+	width: 28%;
+	cursor: pointer;
 }
 
 #pledgeButton.ammount-button:hover{
