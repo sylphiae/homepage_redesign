@@ -9,7 +9,12 @@
 	<meta name="description" content="Help us reduce the influence of money in politics and pledge today!" />
 
 	<meta name="viewport" content="width=860" />
-
+  <meta property="og:url" content="https://mayday.us{{ page.url }}"/>
+  <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}
+https://mayday.us/images/share_preview.jpg{% endif %}"/>
+  <meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% else %}MAYDAY: Democracy needs an upgrade. Act now.{% endif %}"/>
+  <meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% else %}Money has corrupted politics. We’re kickstarting a political experiment big enough to win a Congress committed to fundamental reform -- Join us!{% endif %}"/>
+  
 	<!--[if IE]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
