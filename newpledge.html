@@ -11,8 +11,8 @@ cssid: newpledge
 	<div class="jumbotron">
 	  <div id="pledgeBox">
 		<div class="info">
-			<h2>Stand With Us</h2>
-			<p>The Mayday Political Action Comittee is crowdsourcing the money it needs to get a Congress committed to fundamental reform by 2016. This is our first essential step.</p>
+			<h2>Help End Big Money Politics</h2>
+			<p>Help us reduce the influence of money in politics and elect a Congress committed to fundamental reform by 2016</p>
 		</div>
 		
 		<div class="stepContainer">
@@ -25,14 +25,14 @@ cssid: newpledge
 		</div>
 		
 		<div class="step-1-container">
-			<div class="ammount-button" onclick="step2(5);">5$</div>
-			<div class="ammount-button" onclick="step2(10);">10$</div>
-			<div class="ammount-button" onclick="step2(25);">25$</div>
-			<div class="ammount-button" onclick="step2(50);">50$</div>
-			<div class="ammount-button" onclick="step2(100);">100$</div>
-			<div class="ammount-button" onclick="step2(250);">250$</div>
-			<div class="ammount-button" onclick="step2(500);">500$</div>
-			<div class="ammount-button" onclick="step2(1000);">1000$</div>
+			<div class="ammount-button" onclick="step2(10);">$10</div>
+			<div class="ammount-button" onclick="step2(25);">$25</div>
+			<div class="ammount-button" onclick="step2(50);">$50</div>
+			<div class="ammount-button" onclick="step2(100);">$100</div>
+			<div class="ammount-button" onclick="step2(250);">$250</div>
+			<div class="ammount-button" onclick="step2(500);">$500</div>
+			<div class="ammount-button" onclick="step2(1000);">$1000</div>
+			<div class="ammount-button" onclick="step2(2500);">$2500</div>
 			<div class="ammount-button" onclick="step2(-1);">Other</div>
 			
 		</div>
@@ -75,7 +75,7 @@ cssid: newpledge
 		        <div id="formError" class="alert alert-danger" style="display:none">
 		        </div>
 		        <div class="form-group col-sm-6">
-		          <button id="pledgeButton" class="btn">
+		          <button id="pledgeButton" style="width:100%;" class="btn ammount-button">
 		            <div style="display:none" class="spinner"></div>
 		            <span class='pledgeText'>Pledge Now</span>
 		          </button>
@@ -100,3 +100,4 @@ cssid: newpledge
     </div>
 	</div>
 	
+{% include footer.html %}

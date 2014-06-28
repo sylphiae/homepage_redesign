@@ -32,13 +32,16 @@ body{
 	margin-top: 70px;
 }
 
+#newpledge .footer{
+	background: #204659;
+}
+
 #pledgeBox{
 	background-color: rgb(255, 255, 255);
 	color: rgb(82, 84, 87);
 	display: inline-block;
 	height: auto;
 	min-height: 550px;
-	max-width: 480px;
 	padding-top: 30px;
 	position: relative;
 	vertical-align: top;
@@ -52,6 +55,8 @@ body{
 
 #pledgeBox .info h2{
 	margin: 0;
+	font-size: 25px;
+	
 	color: #004788;
 }
 #pledgeBox .info p{
@@ -122,15 +127,19 @@ li.step.active {
 }
 .step-1-container{
 	width: 80%;
-	margin: auto;
+	margin: 20px auto;
+	
+}
+.step-2-container{
+	margin: 20px auto;
 }
 .ammount-button{
 	background-color: rgb(41, 128, 185);
 	box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 0px 0px inset;
-	border-radius: 10px;
+	border-radius: 5px;
 	color: #fff;
 	display: inline-block;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
 	height: 40px;
 	padding: 5px;
@@ -138,7 +147,12 @@ li.step.active {
 	text-align: center;
 	vertical-align:middle;
 	text-shadow: rgb(136, 136, 136) 0px 1px 0px;
-	width: 28%;;
+	width: 28%;
+	cursor: pointer;
+}
+
+#pledgeButton.ammount-button:hover{
+	color: #fff;
 }
 .ammount-button:hover{
 	box-shadow: none;
@@ -147,11 +161,19 @@ li.step.active {
 	#pledgeBox{
 		width: 100%;
 		height: auto;
+		margin: auto;
 	}
+	
+}
+@media (max-width: 500px){
+
 	.jumbotron{
-		padding: 15px;
+		padding: 0;
+		height: auto;
+		background: #204659;
 	}
 }
 .step-2-container{
 display:none;
 }
+
