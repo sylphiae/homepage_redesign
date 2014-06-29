@@ -157,6 +157,10 @@ li.step.active {
 .ammount-button:hover{
 	box-shadow: none;
 }
+
+#paypalArea {
+  display:none;
+}
 @media (max-width: 600px){
 	#pledgeBox{
 		width: 100%;
