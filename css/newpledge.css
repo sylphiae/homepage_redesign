@@ -158,9 +158,6 @@ li.step.active {
 	box-shadow: none;
 }
 
-#paypalArea {
-  display:none;
-}
 @media (max-width: 600px){
 	#pledgeBox{
 		width: 100%;
