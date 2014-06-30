@@ -198,8 +198,9 @@ h2 {
 		#subnav li {
 			display: inline-block;
 			background: url(../images/star.png) no-repeat 100% 50%;
-			padding-right: 4%;
-			margin-right: 2%;
+      padding-right: 3%;
+      margin-right: 1%;
+      font-size: 95%;
 		}
 		#subnav li:last-child {
 			background: none;
@@ -449,6 +450,10 @@ h2 {
 		font-size: 35px;
 	}
 
+  .button {
+  	font: 400 18px/35px 'Questrial', Arial, sans-serif;
+  }
+  
 	.wrap,
 	#help-us .colls {
 		width: 94%;
