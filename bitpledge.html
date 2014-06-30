@@ -12,8 +12,10 @@ pledge_url: //pledgedev.mayday.us
 	<div class="jumbotron">
 	  <div id="pledgeBox">
 		<div class="info">
+		<img style="float:left; padding-right:10px;" src="/images/bitcoin_sign.png">
 			<h2>Help End Big Money Politics</h2>
 			<p>Help us reduce the influence of money in politics and elect a Congress committed to fundamental reform by 2016</p>
+		
 		</div>
 		
 		<div class="stepContainer">
@@ -29,9 +31,15 @@ pledge_url: //pledgedev.mayday.us
 			<div class="ammount-button" onclick="step2(10);">$10</div>
 			<div class="ammount-button" onclick="step2(25);">$25</div>
 			<div class="ammount-button" onclick="step2(50);">$50</div>
+			<div class="ammount-button" onclick="step2(75);">$75</div>
 			<div class="ammount-button" onclick="step2(100);">$100</div>
 			<div class="ammount-button" onclick="step2(-1);">Other</div>
+<div style="clear: both;"></div>
+			<div style="margin:20px auto;" id="btc-quote"></div>
+				<script type="text/javascript" src="//cdn-gh.firebase.com/btcquote/embed.js"></script>
 		</div>
+
+
 		
 		<div class="step-2-container">
 			  <form id="pledgeForm" role="form" method="POST" onsubmit="step3();" action="javascript:;">
@@ -97,6 +105,14 @@ pledge_url: //pledgedev.mayday.us
 		</ul>
 		<p>MayDay PAC must use its best efforts to obtain and report the name, address, occupation, and employer of individual contributors.</p>
 		<p>Contributions are not tax deductible.</p>
+
+
+<H2>Bitcoin-specific Information:</H2>
+		<ul>
+			<li>Bitcoin donations are not pledges, and cannot be refunded.</li>
+			<li>As per the <a href="https://makeyourlaws.org/fec/bitcoin">Make Your Laws PAC FEC hearing, we can only accept $100 worth of bitcoin from any one individual.</a> However, you are allowed to donate $100 worth of Bitcoin and continue to donate or pledge an unlimited amount of funds to us via our main pledge page.</li>
+		</ul>
+
 		<p><a href="//mayday.us/privacy-policy">Our Privacy Policy</a></p>
     </div>
 	</div>
