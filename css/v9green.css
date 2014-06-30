@@ -194,12 +194,12 @@ h2 {
 		right: 0;
 		z-index: 666;
 	}
-
+  
 		#subnav li {
 			display: inline-block;
 			background: url(../images/star.png) no-repeat 100% 50%;
-			padding-right: 41px;
-			margin-right: 24px;
+			padding-right: 4%;
+			margin-right: 2%;
 		}
 		#subnav li:last-child {
 			background: none;
