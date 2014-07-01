@@ -142,11 +142,7 @@ $(document).ready(function() {
 	  document.getElementById("currentBar").style.width= Math.min(100, percent) + '%';  
 
 	var totalRaisedRounded = totalMillions.toFixed(1);
-<<<<<<< HEAD
 	var complete_total_message = '$' + totalRaisedRounded + 'M';
-=======
-	var complete_total_message = totalRaisedRounded + 'M';
->>>>>>> 0cbbac268a6a3d71fac3be43d0272b1f77c2f0c2
 	setText("currentNumber", complete_total_message);
 
 	}
