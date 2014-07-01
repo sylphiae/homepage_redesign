@@ -309,7 +309,7 @@ h1, h2, h3, h4, h5, h6 {
 	display:inline-block;
 }
 
-.top .pledges .thermo .bar .number span {
+.top .pledges .thermo .bar .number .label {
 	font-size:0.25em;
 	letter-spacing:0.2em;
 	text-transform:uppercase;
@@ -322,7 +322,7 @@ h1, h2, h3, h4, h5, h6 {
 	color:#00b3f9;
 }
 
-.top .pledges .thermo .bar.current .number span {
+.top .pledges .thermo .bar.current .number .label {
 	color:#fff;
 }
 
