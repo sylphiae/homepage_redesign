@@ -1,7 +1,5 @@
-<div class='wrap clearfix'>
-  <p>Up to June 27, we've received more than 22,700 donations from across the nation. Scroll down to see the amounts people like you have donated. Click to see where the donations come from.</p>
-</div>
-<div class='wrap graph clearfix'>
+<h2>Up to June 27, we've received more than 22,700 donations from across the nation. Scroll down to see the amounts people like you have donated. Click to see where the donations come from.</h2>
+<div class='graph clearfix'>
   <div class='histogram'></div>
 </div>
 <style>
@@ -11,22 +9,21 @@
   }
   .histogram {
     font-size:14px;
-    font-weight:bold;
     font-family:'Questrial',Arial,sans-serif;
   }
   .states {
     border-collapse:inherit;
     position:absolute;
-    margin-top:-3620px;
-    left:900px;
-    width:100px;
+    top:150px;
+    left:580px;
+    width:140px;
     padding:0 25px 25px;
     border:1px solid #537288;
   }
   .states.fixed {
     position:fixed;
-    margin-top:auto;
-    top:4px;
+    top:10px;
+    left:626px;
   }
   .category {
     cursor:pointer;
@@ -54,6 +51,8 @@
     shape-rendering: crispEdges;
   }*/
 </style>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
 <script>
 var margin = {top:20, right:20, bottom:30, left:60},
   width = 790 - margin.left - margin.right,
@@ -71,7 +70,7 @@ function getValue(collection){
     .values()
     .value();
 }
-d3.csv('data/pledges.csv',function(error,data){
+d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // ----------------------
   // format data
   // ----------------------
@@ -135,7 +134,7 @@ d3.csv('data/pledges.csv',function(error,data){
       table.attr('class','states')
     };
 
-    var title = '<h3>'+ object.categoryCount + ' Donations of $' + object.category + '</h3>',
+    var title = '<h4><b>'+ object.categoryCount + '</b> Donations of <b>$' + object.category + '</b></h4>',
       html = '';
 
     object.states.forEach(function(o){
@@ -158,7 +157,7 @@ d3.csv('data/pledges.csv',function(error,data){
 
   bar.append('rect')
     .attr('class','bar')
-    .attr('width',function(d){return d.categoryCount/11;})
+    .attr('width',function(d){return d.categoryCount/15 + 2;})
     .attr('height',barHeight-6)
     .on('click',function(d){
       clearSelection();
@@ -192,7 +191,7 @@ d3.csv('data/pledges.csv',function(error,data){
 
   bar.append('text')
     .attr('class','countedValue')
-    .attr('x',function(d){return d.categoryCount/11+10;})
+    .attr('x',function(d){return d.categoryCount/15 + 20;})
     .attr('y',barHeight/2)
     .attr('dy', '.35em')
     .text(function(d){return d.categoryCount;})
