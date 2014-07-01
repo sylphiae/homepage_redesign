@@ -71,7 +71,7 @@ $(document).ready(function() {
 	$(window).scroll(function() {    
 	    var scroll = $(window).scrollTop();
 	
-	    if (scroll >= 600) {
+	    if (scroll >= 1000) {
 	        $(".cta").addClass("fix");
 	    } else {
 	        $(".cta").removeClass("fix");
@@ -105,6 +105,96 @@ $(document).ready(function() {
         interactive: true,
         speed:200
     });
+    
+    
+    //Functionality for clickable vid gallery
+    
+    $(".vid-link").on("click", function(event) {
+		event.preventDefault();
+		$(".big-vid .vid-contain iframe").prop("src", $(event.currentTarget).attr("href"));
+		$('html,body').animate({
+			scrollTop: $('.vid-contain').offset().top - 80
+		}, 800);
+		$( ".vid-link" ).removeClass( "active" );
+		$( this ).addClass( "active" );
+	});
+	
+	
+	
+	//Updating the thermometer with live data
+	
+	function setText(el, val) {
+	  el = document.getElementById(el);
+	  if (el.textContent !== undefined)
+	    el.textContent = val;
+	  else
+	    el.innerText = val;
+	}
+    
+	function totalRaisedCB(totalRaisedCents) {
+	  var totalRaised = (totalRaisedCents / 100) - 1000000;
+	  var complete_total = (totalRaisedCents / 100);
+	  var percent = Math.floor(totalRaised / 50000);
+	  if (percent > 100) {
+	    percent = 100
+	  }
+	  document.getElementById("currentBar").style.width= Math.min(100, percent) + '%';  
+
+	var totalRaisedRounded = Math.round(totalRaised);
+	var complete_total_message = '<span>Raised so far:</span>$' + totalRaisedRounded + 'M';
+	setText("currentNumber", complete_total_message);
+
+	}
+	
+	jQuery.getJSON('https://pledge.mayday.us/r/total',
+	   function(data) {
+	     totalRaisedCB(data.totalCents);
+	   });
+	   
+	function ready(fn) {
+	  if (document.addEventListener) {
+	    document.addEventListener('DOMContentLoaded', fn);
+	  } else {
+	    document.attachEvent('onreadystatechange', function() {
+	      if (document.readyState === 'interactive')
+	        fn();
+	    });
+	  }
+	}
+	
+	
+	
+	//Setting the deadline countdown dynamically
+	
+	var deadline = new Date(Date.UTC(2014,06,05,05,00,00,00)).getTime();
+
+	var days;
+	var daysRounded;
+	
+	var days_display = document.getElementById("days_display");
+	
+	setInterval(function () {
+	
+	  // Calculate
+	  var current_date = new Date().getTime();
+	  var seconds_remaining = (deadline - current_date) / 1000;
+	
+	  days = parseInt(seconds_remaining / 86400);
+	  daysRounded = days + 1;
+	  seconds_remaining = seconds_remaining % 86400;
+	
+	  // Account for the deadline
+	  if (seconds_remaining <= 0) {
+	    days = '00';
+	  }
+	
+	  // Render
+	  setText("days_display", daysRounded);
+	
+	}, 10);
+	
+
+	
     
     
     
