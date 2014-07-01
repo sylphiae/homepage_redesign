@@ -44,12 +44,11 @@
   .bar.hover {
     fill:#537288;
   }
-  /*.axis path,
-  .axis line {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges;
-  }*/
+  @media (min-width: 768px){
+    .states.fixed {
+      left:680px;
+    }
+  }
 </style>
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
@@ -242,7 +241,9 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   //   .attr('height',function(d){return height-y(d.value);});
 });
 $(window).scroll(function(){
-  if ($(window).scrollTop() >= $('svg').offset().top) {
+  var listHeight = $('.states').height();
+
+  if ($(window).scrollTop() >= $('svg').offset().top && listHeight < $(window).height() - 100) {
     $('.states').addClass('fixed');
   } else {
     $('.states').removeClass('fixed');
