@@ -3,6 +3,7 @@ layout: newpledge
 title: MAYDAY.US - A Crowdfunded, Kickstarted SuperPAC to end all SuperPACs
 omit_title_suffix: true
 cssid: newpledge
+pledge_url: //pledge.mayday.us
 ---
 
 	<div id="pledgeTopBar">
@@ -11,12 +12,14 @@ cssid: newpledge
 	<div class="jumbotron">
 	  <div id="pledgeBox">
 		<div class="info">
+		<img style="float:left; padding-right:10px;" src="/images/bitcoin_sign.png">
 			<h2>Help End Big Money Politics</h2>
 			<p>Help us reduce the influence of money in politics and elect a Congress committed to fundamental reform by 2016</p>
+		
 		</div>
 		
 		<div class="stepContainer">
-			<h3>Pledge In Two Minutes Or Less</h3>
+			<h3>Next</h3>
 			<ul class="steps">
 				<li id="step-1" class="step active">Amount<span>1</span></li>
 				<li id="step-2" class="step">Info<span>2</span></li>
@@ -28,16 +31,15 @@ cssid: newpledge
 			<div class="ammount-button" onclick="step2(10);">$10</div>
 			<div class="ammount-button" onclick="step2(25);">$25</div>
 			<div class="ammount-button" onclick="step2(50);">$50</div>
+			<div class="ammount-button" onclick="step2(75);">$75</div>
 			<div class="ammount-button" onclick="step2(100);">$100</div>
-			<div class="ammount-button" onclick="step2(250);">$250</div>
-			<div class="ammount-button" onclick="step2(500);">$500</div>
-			<div class="ammount-button" onclick="step2(1000);">$1000</div>
-			<div class="ammount-button" onclick="step2(2500);">$2500</div>
 			<div class="ammount-button" onclick="step2(-1);">Other</div>
-			<div style="clear:both;"></div>
-			<HR />
-			<div style="margin:10px 0px;"><strong>Or:</strong><a href="https://mayday.us/bitcoin/"><img width="150px" src="/images/donate-with-bitcoin.png"></a></div>
+<div style="clear: both;"></div>
+			<div style="margin:20px auto;" id="btc-quote"></div>
+				<script type="text/javascript" src="//cdn-gh.firebase.com/btcquote/embed.js"></script>
 		</div>
+
+
 		
 		<div class="step-2-container">
 			  <form id="pledgeForm" role="form" method="POST" onsubmit="step3();" action="javascript:;">
@@ -71,31 +73,22 @@ cssid: newpledge
 		          <input type="number" required min="1" placeholder="25, 100, 5000" class="form-control input-lg" id="amount_input">
 		        </div>
 		        <div id="donation-type" class="form-group col-sm-6">
-		          <div class="checkbox"><label><input type="checkbox" id="directDonate_input"> I want my donation to be used to support MAYDAY.US, even if the goal has not been met by July 4th.</label></div>
+		          <div class="checkbox" style="display:none"><label><input type="checkbox" id="directDonate_input" checked> I want my donation to be used to support MAYDAY.US, even if the goal has not been met by July 4th.</label></div>
 		          <div class="checkbox"><label><input type="checkbox" id="emailSignupInput" checked> Want to know how we're using the money? Sign up for emails from us.</label></div>
 		        </div>
 		        <div id="formError" class="alert alert-danger" style="display:none">
 		        </div>
 
-
-              
-		        <div class="form-group col-sm-6">
-		          <button id="pledgeButton" style="width:100%;" class="btn ammount-button">
-		            <div style="display:none" class="spinner"></div>
-		            <span class='pledgeText'>Pledge Now</span>
-		          </button>
-		        </div>
-		        <div class="form-group col-sm-12" id="paypalArea">
-              <p>If we don't meet our target, you don't pay. We'll charge your card now, 
-              but if we fail to meet our $5M goal by July 4th, your pledge will be refunded.</p>
-              
-              <p>Some supporters prefer to donate regardless of whether we
-              meet our goal or not. If you choose that option above, we'll do
-              our best to make your donation count no matter what happens.</p>
-              
-              <p>We now also accept PayPal for non-refundable donations:</p>
-              <a href="javascript:;" id='paypalButton'><img alt="Pledge with Paypal" src="/images/paypal.png"/></a>
+		        <div class="form-group col-sm-12">
+              <p>Bitcoin donations are not pledges, and cannot be refunded.</p>
             </div>
+              
+		        <div class="form-group col-sm-12">
+		          <button id="bitcoinButton" style="width:100%;" class="btn ammount-button">
+		            <div style="display:none" class="spinner"></div>
+		            <span class='pledgeText'>Next</span>
+		          </button>
+		        </div>		        
 		      </form>
 			
 		</div>
@@ -112,6 +105,14 @@ cssid: newpledge
 		</ul>
 		<p>MayDay PAC must use its best efforts to obtain and report the name, address, occupation, and employer of individual contributors.</p>
 		<p>Contributions are not tax deductible.</p>
+
+
+<H2>Bitcoin-specific Information:</H2>
+		<ul>
+			<li>Bitcoin donations are not pledges, and cannot be refunded.</li>
+			<li>As per the <a href="https://makeyourlaws.org/fec/bitcoin">Make Your Laws PAC FEC hearing, we can only accept $100 worth of bitcoin from any one individual.</a> However, you are allowed to donate $100 worth of Bitcoin and continue to donate or pledge an unlimited amount of funds to us via our main pledge page.</li>
+		</ul>
+
 		<p><a href="//mayday.us/privacy-policy">Our Privacy Policy</a></p>
     </div>
 	</div>
