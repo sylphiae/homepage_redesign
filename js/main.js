@@ -133,6 +133,7 @@ $(document).ready(function() {
     
 	function totalRaisedCB(totalRaisedCents) {
 	  var totalRaised = (totalRaisedCents / 100) - 1000000;
+	  var totalMillions = totalRaised / 1000000;
 	  var complete_total = (totalRaisedCents / 100);
 	  var percent = Math.floor(totalRaised / 50000);
 	  if (percent > 100) {
@@ -140,8 +141,8 @@ $(document).ready(function() {
 	  }
 	  document.getElementById("currentBar").style.width= Math.min(100, percent) + '%';  
 
-	var totalRaisedRounded = Math.round(totalRaised);
-	var complete_total_message = '<span>Raised so far:</span>$' + totalRaisedRounded + 'M';
+	var totalRaisedRounded = totalMillions.toFixed(1);
+	var complete_total_message = '$' + totalRaisedRounded + 'M';
 	setText("currentNumber", complete_total_message);
 
 	}
