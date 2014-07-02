@@ -4,7 +4,10 @@
 // NOTE: This could be made more efficient by caching the result (and then
 // killing the cache on URL changes, but we only call it once, so meh.
 
-var PLEDGE_URL = 'https://pledge.mayday.us';
+
+// ******************************************************************************
+//   BE CAREFUL WITH THIS FILE. IT IS INCLUDED IN teams and website repositories
+// ******************************************************************************
 
 var getUrlParams = function() {
   var match,
@@ -48,55 +51,115 @@ var validateForm = function() {
     var occ = $('#occupation_input').val() || null;
     var emp = $('#employer_input').val() || null;
     var amount = $('#amount_input').val() || null;
-  
-  
-    if (!occ) {
+
+
+    if (!email) {
+      showError( "Please enter email");
+      return false;
+    } else if (!validateEmail(email)) {
+      showError("Please enter a valid email");
+      return false;
+    } else if (!occ) {
       showError( "Please enter occupation");
       return false;
     } else if (!emp) {
       showError( "Please enter employer");
       return false;
-    } else if (!email) {
-      showError("Sorry, we are having trouble accepting pledges right now.  Please come back in 10 minutes"); 
+    } else if (!amount) {
+      showError( "Please enter an amount");
       return false;
-    } else if (!validateEmail(email)) {
-      showError("Please enter a valid email");
-      return false;
-    } else if (amount && amount < 1) {
+    } else if (amount < 1) {
       showError( "Please enter an amount of $1 or more");
       return false;
-    } 
+    }
     return true;
 };
 
+var validateBitcoinForm = function() {
+  var amount = $('#amount_input').val() || null;
+  var firstName = $('#first_name_input').val() || null;  
+  var lastName = $('#last_name_input').val() || null;  
+  var address = $('#address_input').val() || null;
+  var city = $('#city_input').val() || null;
+  var state = $('#state_input').val() || null;
+  var zip = $('#zip_input').val() || null;
+    
+  if (amount > 100) {
+    showError( "Thank you for your generosity, but we are only able to accept Bitcoin donations of $100 or less");
+    return false;
+  } else if ($("#requiredConfirmation").is(':checked') == false ) {
+    showError( "We are only able to accept donations from US citizens or green card holders, and you may only donate your own bitcoin.");
+    return false;
+  } else if (!firstName) {
+    showError( "Please enter your first name");
+    return false;
+  } else if (!lastName) {
+    showError( "Please enter your last name");
+    return false;
+  } else if (!address) {
+    showError( "Please enter your address");
+    return false;
+  } else if (!city) {
+    showError( "Please enter your address");
+    return false;
+  } else if (!state) {
+    showError( "Please enter your state");
+    return false;
+  } else if (!zip) {
+    showError( "Please enter your zip code");
+    return false;
+  } else {  
+    return true;
+  }
+}
+
+var bitcoinPledge = function() {
+    if (validateForm() && validateBitcoinForm()) {
+        var amount = $('#amount_input').val() || null;
+
+        setLoading(true);
+        createPledge("Bitcoin", { BITCOIN: {} });
+    }
+    return false;
+};
+
+var paypalPledge = function() {
+    if (validateForm()) {
+        setLoading(true);
+        createPledge("Paypal", { PAYPAL: { step : 'start' } });
+    }
+    return false;
+};
 var pledge = function() {
   if (validateForm()) {
     var cents = getAmountCents();
     stripeHandler.open({
       email: $('#email_input').val(),
       amount: cents
-    });        
+    });
   }
 };
 
 var showError = function(errorText) {
   $('#formError').text(errorText);
-  $('#formError').show();  
+  $('#formError').show();
 }
 
 var setLoading = function(loading) {
   if (loading) {
     $('#pledgeButton .pledgeText').hide();
-    $('#pledgeButton').off('click');
+    $('#pledgeButton').off('click');  
     $('#pledgeButton .spinner').show();
+    $('#paypalButton').hide();
   } else {
     $('#pledgeButton .pledgeText').show();
-    $('#pledgeButton').on('click', pledge);  
-    $('#pledgeButton .spinner').hide();    
+    $('#pledgeButton').on('click', pledge);      
+    $('#pledgeButton .spinner').hide();
+    $('#paypalButton').show();
   }
 }
 
-var onTokenRecv = function(token, args) {  
+var onTokenRecv = function(token, args) {
   setLoading(true);
   createPledge(args.billing_name, { STRIPE: { token: token.id } });
 };
@@ -104,11 +167,36 @@ var onTokenRecv = function(token, args) {
 var createPledge = function(name, payment) {
   var urlParams = getUrlParams();
   var pledgeType = null;
+  var request_url = null;
 
-  if($("#directDonate_input").is(':checked')) {
+  if ('STRIPE' in payment) {
+      request_url = PLEDGE_URL + '/r/pledge';
+  }
+
+  if ('PAYPAL' in payment) {
+      request_url = PLEDGE_URL + '/r/paypal_start';
+  }
+
+  if ('BITCOIN' in payment) {
+      request_url = PLEDGE_URL + '/r/bitcoin_start';
+  }
+  // ALL PAYPAL PAYMENTS AND BITCOIN PAYMENTS ARE DONATIONS
+  if($("#directDonate_input").is(':checked') || ('PAYPAL' in payment) || ('BITCOIN' in payment) ) {
     pledgeType = 'DONATION';
   } else {
     pledgeType = 'CONDITIONAL';
+  }
+
+  var firstName = $('#first_name_input').val() || null;  
+  var lastName = $('#last_name_input').val() || null;  
+  var address = $('#address_input').val() || null;
+  var city = $('#city_input').val() || null;
+  var state = $('#state_input').val() || null;
+  var zip = $('#zip_input').val() || null;
+  
+  if (($("#requiredConfirmation").is(':checked') == false ) && ('BITCOIN' in payment) ) {
+    console.log('Trying to pay with BITCOIN without a confirmation') 
+    return;
   }
   
   var data = {
@@ -126,18 +214,48 @@ var createPledge = function(name, payment) {
     payment: payment
   };
   
-  if($("#survey_input").length) {    
-    data['surveyResult'] = $('#survey_input').val();
+  if ($("#requiredConfirmation").is(':checked')) {
+    data['bitcoinConfirm'] = true;
+  }  
+  
+  if (firstName) {
+    data['firstName'] = firstName;
+  }
+
+  if (lastName) {
+    data['lastName'] = lastName;
+  }
+
+  if (address) {
+    data['address'] = address;
+  }
+
+  if (zip) {
+    data['zip'] = zip;
+  }
+
+  if (city) {
+    data['city'] = city;
+  }
+
+  if (state) {
+    data['state'] = state;
   }
   
   $.ajax({
       type: 'POST',
-      url: PLEDGE_URL + '/r/pledge',
-      data: JSON.stringify (data),
+      url: request_url,
+      data: JSON.stringify(data),
       contentType: "application/json",
       dataType: 'json',
       success: function(data) {
-        location.href = PLEDGE_URL + data.receipt_url;       
+        if ('paypal_url' in data) {
+          location.href = data.paypal_url
+        } else if ('bitpay_url' in data) {
+          location.href = data.bitpay_url
+        } else {
+          location.href = PLEDGE_URL + data.receipt_url;
+        }
       },
       error: function(data) {
         setLoading(false);
@@ -145,25 +263,29 @@ var createPledge = function(name, payment) {
           showError("We're having trouble charging your card: " + data.paymentError);
         } else {
           $('#formError').text('Oops, something went wrong. Try again in a few minutes');
-          $('#formError').show();      
+          $('#formError').show();
         }
       },
   });
 };
-  
+
 $(document).ready(function() {
-  var urlParams = getUrlParams(); 
+  var urlParams = getUrlParams();
   var passedEmail = urlParams['email'] || '';
   var header = urlParams['header'] || '';
-        
+
   $('#email_input').val(passedEmail);
 
   $('#pledgeButton').on('click', pledge);
 
-  $.get(PLEDGE_URL + '/r/payment_config').done(function(config) {
-      paymentConfig = config;
+  $('#paypalButton').on('click', paypalPledge);
+  
+  $('#bitcoinButton').on('click', bitcoinPledge);
+  
+  $.get(PLEDGE_URL + '/r/payment_config').done(function(pConf) {
+      paymentConfig = pConf;
       stripeHandler = StripeCheckout.configure({
-      key: config.stripePublicKey,
+      key: paymentConfig.stripePublicKey,
       name: 'MAYDAY.US',
       panelLabel: 'Pledge',
       billingAddress: true,
