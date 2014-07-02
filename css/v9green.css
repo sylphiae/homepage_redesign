@@ -93,7 +93,7 @@ h2 {
 /* Site styles
 ======================================================================== */
 #header {
-	padding: 18px 0 17px;
+	padding: 18px 0 12px;
 	border-bottom: 1px solid #ddd;
 	background-color: #fff;
 }
@@ -101,7 +101,7 @@ h2 {
 		width: 1050px;
 	}
 		#header .logo {
-			background-image: url(../images/logoV8.png);
+			background-image: url(../images/logo-9.svg);
 			width: 230px;
 			height: 26px;
 		}
