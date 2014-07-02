@@ -108,12 +108,15 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   var dollars = data.map(function(d){return parseInt(d.dollars)}),
       dollarCounts = _.countBy(dollars);
 
+
   var dollarsFormatted = getKey(dollarCounts).map(function(d,i){
       return {
         category:d,
         categoryCount:parseInt(getValue(dollarCounts)[i])
       };
   });
+
+  dollarsFormatted = _.filter(dollarsFormatted,function(o){return o.category != 'NaN';});
 
   //add states information associated with each count
   var statesPerCategory = dollarsFormatted.forEach(function(d){
