@@ -53,9 +53,8 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
 <script>
-var margin = {top:20, right:20, bottom:30, left:60},
-  width = 790 - margin.left - margin.right,
-  height = 480 - margin.top - margin.bottom,
+var margin = {top:20, right:60, bottom:30, left:60},
+  width = 500 - margin.left - margin.right,
   barHeight = 22;
 
 function getKey(collection){
@@ -69,6 +68,7 @@ function getValue(collection){
     .values()
     .value();
 }
+
 d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // ----------------------
   // format data
@@ -109,11 +109,68 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
     });
   });
 
+  // define height based on the size of the dataset
+  var height = barHeight * dollarsSorted.length;
+
   var svg = d3.select('.histogram').append('svg')
     .attr('width',width + margin.left + margin.right)
-    .attr("height", barHeight * dollarsSorted.length)
+    .attr("height", height)
   .append('g')
     .attr('transform','translate(' + margin.left + ',' + margin.top + ')');
+
+  // cal width
+  var x = d3.scale.linear()
+      .range([0, width])
+      .domain([0, d3.max(dollarsSorted, function(d){return d.categoryCount;})]);
+
+  // How many bars?
+  var y = d3.scale.ordinal()
+    .rangeRoundBands([0, height], .1)
+    .domain(d3.range(dollarsSorted.length));
+
+  // bind data
+  var bar = svg.selectAll('.bar')
+    .data(dollarsSorted)
+  .enter().append('g')
+    .attr('transform', function(d, i) { return 'translate(0,' + y(i) + ')'; });
+
+  // generate bars
+  bar.append('rect')
+    .attr('class','bar')
+    .attr('width',function(d){return x(d.categoryCount)+2;}) // plus 2 to give small counts a visible width
+    .attr('height',y.rangeBand())
+    .on('click',function(d){
+      clearSelection();
+
+      d3.select(this).classed({'hover':true,'clicked':true});
+      d3.select(this.parentNode.childNodes[1]).classed({'hover':true});
+
+      addTable(d);
+    });
+
+  bar.append('text')
+    .attr('class','category')
+    .attr('x', '-60')
+    .attr('y', y.rangeBand()-8)
+    .attr('dy', '.35em')
+    .text(function(d) {
+        return '$' + d.category;
+    })
+    .on('click',function(d){
+      clearSelection();
+
+      d3.select(this).classed({'hover':true});
+      d3.select(this.parentNode.childNodes[0]).classed({'hover':true});
+
+      addTable(d);
+    });
+
+  bar.append('text')
+    .attr('class','categoryCount')
+    .attr('x',function(d) { return x(d.categoryCount) + 10; })
+    .attr('y',y.rangeBand()-8)
+    .attr('dy','.35em')
+    .text(function(d){return d.categoryCount;});
 
   // ----------------------
   // bar chart - vertical
@@ -145,101 +202,8 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
     table.html(title + html);
   }
 
-  var x = d3.scale.linear()
-    .range([0,width])
-    .domain([0,d3.max(dollarsSorted,function(d){return d.value;})]);
-
-  var bar = svg.selectAll('.bar')
-    .data(dollarsSorted)
-  .enter().append('g')
-    .attr('transform',function(d,i){ return 'translate(0,'+ i* barHeight+')';});
-
-  bar.append('rect')
-    .attr('class','bar')
-    .attr('width',function(d){return d.categoryCount/15 + 2;})
-    .attr('height',barHeight-6)
-    .on('click',function(d){
-      clearSelection();
-
-      d3.select(this).classed({'hover':true,'clicked':true});
-      d3.select(this.parentNode.childNodes[1]).classed({'hover':true});
-
-      addTable(d);
-    });
-
-  bar.append('text')
-    .attr('class','category')
-    .attr('x', '-60')
-    .attr('y', barHeight/2)
-    .attr('dy', '.35em')
-    .text(function(d) {
-      if (d.category === 'NaN') {
-        return 'N/A'
-      } else {
-        return '$' + d.category;
-      }
-    })
-    .on('click',function(d){
-      clearSelection();
-
-      d3.select(this).classed({'hover':true});
-      d3.select(this.parentNode.childNodes[0]).classed({'hover':true});
-
-      addTable(d);
-    });
-
-  bar.append('text')
-    .attr('class','countedValue')
-    .attr('x',function(d){return d.categoryCount/15 + 20;})
-    .attr('y',barHeight/2)
-    .attr('dy', '.35em')
-    .text(function(d){return d.categoryCount;})
-  // select the first instance
-
-  // ----------------------
-  // bar chart - horizontal
-  // ----------------------
-
-  // var x = d3.scale.ordinal() // treat the $ as categories
-  //   .rangeRoundBands([0, width], .1)
-  //   .domain(d3.map(dollarsSorted,function(d){return d.key;}));
-  //
-  // var y = d3.scale.linear()
-  //   .range([height,0])
-  //   .domain([0,d3.max(dollarsSorted,function(d){return d.value;})]);
-  //
-  // var xAxis = d3.svg.axis()
-  //   .scale(x)
-  //   .orient('bottom');
-  //
-  // var yAxis = d3.svg.axis()
-  //   .scale(y)
-  //   .orient('left');
-
-  // svg.append('g')
-  //   .attr('class','x axis')
-  //   .attr('transform','translate(0,' + height + ')')
-  //   .call(xAxis);
-  //
-  // svg.append('g')
-  //   .attr('class','y axis')
-  //   .call(yAxis)
-  // .append('text')
-  //   .attr('transform','rotate(-90)')
-  //   .attr('y',6)
-  //   .attr('dy','0.71em')
-  //   .style('text-anchor','end')
-  //   .text('Count of Donation Amount');
-  //
-  // svg.selectAll('.bar')
-  //   .data(dollarsSorted)
-  // .enter().append('rect')
-  //   .attr('class','bar')
-  //   .attr('x',function(d){return x(d.key);})
-  //   .attr('width',x.rangeBand())
-  //   .attr('y',function(d){return y(d.value);})
-  //   .attr('height',function(d){return height-y(d.value);});
 });
+
 $(window).scroll(function(){
   var listHeight = $('.states').height();
 
@@ -249,4 +213,5 @@ $(window).scroll(function(){
     $('.states').removeClass('fixed');
   }
 });
+
 </script>
