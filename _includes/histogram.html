@@ -22,6 +22,7 @@
   }
   p {
     font-size:12px;
+    margin:10px 0;
     font-weight:bold;
   }
   .toggle:first-child {
@@ -50,16 +51,17 @@
   .states {
     border-collapse:inherit;
     position:absolute;
-    top:150px;
-    left:580px;
-    width:140px;
-    padding:0 25px 25px;
+    top:625px;
+    left:625px;
+    width:120px;
+    padding:0 10px 10px;
     border:1px solid #537288;
+    font-size:12px;
   }
   .states.fixed {
     position:fixed;
     top:10px;
-    left:626px;
+    left:676px;
   }
   .category {
     cursor:pointer;
@@ -228,7 +230,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
       table.attr('class','states')
     };
 
-    var title = '<h4><b>'+ object.categoryCount + '</b> Donations of <b>$' + object.category + '</b></h4>',
+    var title = '<p>'+ object.categoryCount + ' Donations of $' + object.category + '</p>',
       html = '';
 
     object.states.forEach(function(o){
