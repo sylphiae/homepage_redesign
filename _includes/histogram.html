@@ -53,7 +53,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
 <script>
-var margin = {top:20, right:60, bottom:30, left:60},
+var margin = {right:60, left:60},
   width = 500 - margin.left - margin.right,
   barHeight = 22;
 
@@ -83,13 +83,8 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
       };
   });
 
-  //sort dollar counts in descending order
-  var dollarsSorted = _.sortBy(dollarsFormatted,function(d){
-    return -d.categoryCount;
-  });
-
   //add states information associated with each count
-  var statesPerCategory = dollarsSorted.forEach(function(d){
+  var statesPerCategory = dollarsFormatted.forEach(function(d){
     var associated = _.where(data,{dollars:d.category});
 
     var states = _.chain(associated)
@@ -110,28 +105,29 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   });
 
   // define height based on the size of the dataset
-  var height = barHeight * dollarsSorted.length;
+  var height = barHeight * dollarsFormatted.length;
 
   var svg = d3.select('.histogram').append('svg')
     .attr('width',width + margin.left + margin.right)
-    .attr("height", height)
+    .attr("height", height )
   .append('g')
-    .attr('transform','translate(' + margin.left + ',' + margin.top + ')');
+    .attr('transform','translate(' + margin.left + ',-60)');
 
   // cal width
   var x = d3.scale.linear()
       .range([0, width])
-      .domain([0, d3.max(dollarsSorted, function(d){return d.categoryCount;})]);
+      .domain([0, d3.max(dollarsFormatted,function(d){return d.categoryCount;})]);
 
   // How many bars?
   var y = d3.scale.ordinal()
     .rangeRoundBands([0, height], .1)
-    .domain(d3.range(dollarsSorted.length));
+    .domain(d3.range(dollarsFormatted.length));
 
   // bind data
   var bar = svg.selectAll('.bar')
-    .data(dollarsSorted)
+    .data(dollarsFormatted)
   .enter().append('g')
+    .attr('class','barGroup')
     .attr('transform', function(d, i) { return 'translate(0,' + y(i) + ')'; });
 
   // generate bars
@@ -172,8 +168,10 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
     .attr('dy','.35em')
     .text(function(d){return d.categoryCount;});
 
+  d3.select("input").on("change", change);
+
   // ----------------------
-  // bar chart - vertical
+  // events
   // ----------------------
   function clearSelection(){
     d3.select('.states').remove();
@@ -200,6 +198,23 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
     });
 
     table.html(title + html);
+  }
+
+  function change(){
+
+    var index = d3.range(dollarsFormatted.length),
+        indexSorted = _.sortBy(index,function(i){return -dollarsFormatted[i].categoryCount;});
+
+    var transition = svg.transition().duration(750);
+
+    if (this.checked) {
+      y.domain(indexSorted);
+    } else {
+      y.domain(index);
+    }
+
+    transition.selectAll('.barGroup')
+      .attr('transform', function(d, i) { return 'translate(0,' + y(i) + ')'; });
   }
 
 });
