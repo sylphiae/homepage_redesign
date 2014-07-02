@@ -52,6 +52,15 @@
 </head>
 
 <body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=536274183102717&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
 	<header id="header">
 		<div class="wrap clearfix">
 			<blockquote>electing a Congress committed to fundamental reform by 2016</blockquote>
@@ -105,9 +114,7 @@
 					<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 				</div>
-				<div class="share-facebook">
-					<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fmayday.us%2F&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
-				</div>
+          <div class="fb-like" data-href="https://www.facebook.com/MAYDAYdotUS" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 			</div>
 		</div>
 	</section>
