@@ -283,7 +283,9 @@ $(document).ready(function() {
   $('#bitcoinButton').on('click', bitcoinPledge);
   
   $.get(PLEDGE_URL + '/r/payment_config').done(function(pConf) {
+    
       paymentConfig = pConf;
+      console.log(pConf);
       stripeHandler = StripeCheckout.configure({
       key: paymentConfig.stripePublicKey,
       name: 'MAYDAY.US',
