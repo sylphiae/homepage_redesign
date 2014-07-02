@@ -183,7 +183,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
       clearSelection();
 
       d3.select(this).classed({'hover':true,'clicked':true});
-      d3.select(this.parentNode.childNodes[1]).classed({'hover':true});
+      d3.select(this.parentNode.childNodes[1]).classed({'hover':true}); // text left
 
       addTable(d);
     });
@@ -200,7 +200,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
       clearSelection();
 
       d3.select(this).classed({'hover':true});
-      d3.select(this.parentNode.childNodes[0]).classed({'hover':true});
+      d3.select(this.parentNode.childNodes[0]).classed({'hover':true}); // rect
 
       addTable(d);
     });
@@ -217,6 +217,8 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // ----------------------
   // events
   // ----------------------
+  var listHeight = $('.states').height();
+
   function clearSelection(){
     d3.select('.states').remove();
     d3.selectAll('rect').classed({'hover':false});
@@ -224,7 +226,10 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   };
 
   function addTable(object){
+
     var table = d3.select('.histogram').append('table');
+    var title = '<p>'+ object.categoryCount + ' Donations of $' + object.category + '</p>',
+        html = '';
 
     if ($(window).scrollTop() >= $('svg').offset().top && listHeight < $(window).height() - 100) {
       table.attr('class','states fixed')
@@ -232,10 +237,8 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
       table.attr('class','states')
     };
 
-    var title = '<p>'+ object.categoryCount + ' Donations of $' + object.category + '</p>',
-        html = '';
-
     object.states.forEach(function(o){
+      name = (o.state.length > 0) ? o.state : 'N/A';
       html += '<tr><td>' + name  + '</td><td>' +
               o.stateCount + '</td></tr>';
     });
@@ -245,13 +248,13 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
 
   function change(){
 
+    var transition = svg.transition().duration(750);
+
     if (this.id === 'category') {
       y.domain(index);
     } else {
       y.domain(indexSorted);
     }
-
-    var transition = svg.transition().duration(750);
 
     transition.selectAll('.barGroup')
       .attr('transform', function(d, i) { return 'translate(0,' + y(i) + ')'; });
@@ -271,8 +274,6 @@ $('.toggle').on('click',function(e){
 });
 
 $(window).scroll(function(){
-  var listHeight = $('.states').height();
-
   if ($(window).scrollTop() >= $('svg').offset().top && listHeight < $(window).height() - 100) {
     $('.states').addClass('fixed');
   } else {
@@ -283,7 +284,7 @@ $(window).scroll(function(){
 // ----------------------
 // set up map
 // ----------------------
-var map = L.mapbox.map('map', 'devseed.ilinehc9',{
+L.mapbox.map('map', 'devseed.ilinehc9',{
   minZoom:3,
   maxZoom:12
 }).setView([40,-98],4);
