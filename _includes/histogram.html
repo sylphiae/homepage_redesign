@@ -121,7 +121,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
 
   dollarsFormatted = _.filter(dollarsFormatted,function(o){return o.category != 'NaN';});
 
-  //add states information associated with each count
+  //add states associated with each count
   var statesPerCategory = dollarsFormatted.forEach(function(d){
     var associated = _.where(data,{dollars:d.category});
 
@@ -146,7 +146,9 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   var index = d3.range(dollarsFormatted.length),
       indexSorted = _.sortBy(index,function(i){return -dollarsFormatted[i].categoryCount;});
 
-  // define height based on the size of the dataset
+  // ----------------------
+  // set up graph
+  // ----------------------
   var height = barHeight * dollarsFormatted.length;
 
   var svg = d3.select('.histogram').append('svg')
@@ -224,17 +226,16 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   function addTable(object){
     var table = d3.select('.histogram').append('table');
 
-    if ($(window).scrollTop() >= $('svg').offset().top) {
+    if ($(window).scrollTop() >= $('svg').offset().top && listHeight < $(window).height() - 100) {
       table.attr('class','states fixed')
     } else {
       table.attr('class','states')
     };
 
     var title = '<p>'+ object.categoryCount + ' Donations of $' + object.category + '</p>',
-      html = '';
+        html = '';
 
     object.states.forEach(function(o){
-      name = (o.state.length > 0) ? o.state : 'N/A';
       html += '<tr><td>' + name  + '</td><td>' +
               o.stateCount + '</td></tr>';
     });
@@ -258,7 +259,9 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
 
 });
 
+// ----------------------
 // page interaction
+// ----------------------
 $('#count').addClass('active');
 
 $('.toggle').on('click',function(e){
@@ -277,7 +280,9 @@ $(window).scroll(function(){
   }
 });
 
+// ----------------------
 // set up map
+// ----------------------
 var map = L.mapbox.map('map', 'devseed.ilinehc9',{
   minZoom:3,
   maxZoom:12
