@@ -286,15 +286,17 @@ $(document).ready(function() {
     
       paymentConfig = pConf;
       console.log(pConf);
-      stripeHandler = StripeCheckout.configure({
-      key: paymentConfig.stripePublicKey,
-      name: 'MAYDAY.US',
-      panelLabel: 'Pledge',
-      billingAddress: true,
-      image: PLEDGE_URL + '/static/flag.jpg',
-      token: function(token, args) {
-        onTokenRecv(token, args);
-      }
-    });
+      stripeConfig = {
+        key: paymentConfig.stripePublicKey,
+        name: 'MAYDAY.US',
+        panelLabel: 'Pledge',
+        billingAddress: true,
+        image: PLEDGE_URL + '/static/flag.jpg',
+        token: function(token, args) {
+          onTokenRecv(token, args);
+        }
+      };
+    console.log(stripeConfig);
+    stripeHandler = StripeCheckout.configure(stripeConfig);
   });
 });
