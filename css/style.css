@@ -829,3 +829,51 @@ display:inline;
   min-width:330px;
 }
 
+#pledgeindependence .subpage-content h1, #pledgeindependence .subpage-content h2  {
+	font-weight: bold;
+}
+
+#pledgeindependence .subpage-content h1 {
+	font-size: 4.5em;
+	line-height: 1.1;
+	margin-top:20px;
+}
+
+#pledgeindependence .subpage-content h2 {
+	font-size: 3em;
+	line-height: 1.1;
+}
+
+#pledgeindependence .subpage-content h3 {
+	font-size: 2em;
+	line-height: 1.1;
+	margin:-50px 0 30px;
+	font-style:italic;
+	color:#999;
+}
+
+#pledgeindependence .subpage-content .share-btn {
+	font-weight:bold;
+	padding:3px 7px;
+	color:#fff;
+	background-color:#006FF4;
+	transition:opacity 0.2s ease;
+	margin:0 2px;
+}
+
+#pledgeindependence .subpage-content .share-btn:hover {
+	opacity:0.8;
+	text-decoration:none;
+}
+
+#pledgeindependence .subpage-content .lead-in {
+	color:#999;
+	margin:-10px 0 20px;
+}
+
+#pledgeindependence .subpage-content p .twitter-share-button {
+	position: relative;
+	top: 4px;
+	left: 5px;
+}
+
