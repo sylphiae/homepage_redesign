@@ -834,9 +834,10 @@ display:inline;
 }
 
 #pledgeindependence .subpage-content h1 {
-	font-size: 4.5em;
+	font-size: 4.2em;
 	line-height: 1.1;
 	margin-top:20px;
+	letter-spacing: -0.025em;
 }
 
 #pledgeindependence .subpage-content h2 {
