@@ -4,7 +4,6 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/css/newpledge.css?2" />
   <script src="//cdn.optimizely.com/js/210578001.js"></script>
   <script src="//fgnass.github.io/spin.js/spin.min.js"></script>    
-  <script src="https://code.jquery.com/jquery-migrate-1.2.1.js"></script>
 
   <script>
 	PLEDGE_URL = "{% if page.pledge_url %}{{ page.pledge_url }}{% else %}//pledge.mayday.us{% endif %}";
@@ -44,17 +43,6 @@
       document.cookie = ("last_team_key={{team.key()}};" +
                          "expires=" + date.toGMTString() +
                          ";domain=.mayday.us;path=/");
-
-     if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-       var verStr = $.browser.version;
-       var ffVersion = verStr.split('.')[0];
-       console.log("detected version: " + ffVersion);
-       if (ffVersion < 17) {
-         $('#pledgeBox .info').after('<div class="alert-danger row">Sorry, we are not supporting older Firefox versions at the moment.  Working on a fix.  Please try another browser for now.</div>');
-       } else {
-         console.log('Firefox version was OK: ' + ffVersion);
-       }
-     } 
     });
   </script>
   <script src="https:{% if page.pledge_url %}{{ page.pledge_url }}{% else %}//pledge.mayday.us{% endif %}/static/pledge.js"></script>
