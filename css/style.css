@@ -877,3 +877,25 @@ display:inline;
 	left: 5px;
 }
 
+@media (max-width: 700px) {
+  
+	#pledgeindependence .subpage-content h1 span {
+		display: block;
+	}
+  
+}
+
+@media (max-width: 500px) {
+  
+    #pledgeindependence .subpage-content h1 {
+		font-size: 3em;
+		line-height: 1;
+	}
+	
+	#pledgeindependence .subpage-content h3 {
+		font-size: 1.75em;
+		margin-top: -35px;
+	}
+  
+}
+
