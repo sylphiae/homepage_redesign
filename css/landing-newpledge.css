@@ -1,5 +1,5 @@
 body{
-	background: #204659;
+	background: #fff;
 }
 #pledgeTopBar{
 	height: 70px;
@@ -142,12 +142,11 @@ li.step.active {
 	font-size: 20px;
 	font-weight: bold;
 	height: 40px;
-	padding: 5px;
+	padding: 5px 10px;
 	margin: 20px 5px 0px 5px;
 	text-align: center;
 	vertical-align:middle;
 	text-shadow: rgb(136, 136, 136) 0px 1px 0px;
-	width: 28%;
 	cursor: pointer;
 }
 
@@ -156,6 +155,24 @@ li.step.active {
 }
 .ammount-button:hover{
 	box-shadow: none;
+}
+
+#pledgecol-sidebar .panel {
+	display: inline-block;
+}
+
+.rules {
+	margin: 0 10px 40px;
+	border: 1px solid #5990a9;
+	padding:0 20px 30px;
+}
+
+.rules ul {
+	padding-left: 20px;
+}
+
+.step-2-container .form-group {
+	width: 100%;
 }
 
 @media (max-width: 600px){
@@ -172,12 +189,6 @@ li.step.active {
 		padding: 0;
 		height: auto;
 		background: #204659;
-	}
-	.step-1-container .ammount-button{
-		width: 30%;
-		margin: 20px 2px 0px 2px;
-		font-size: 18px;
-		
 	}
 }
 .step-2-container{
