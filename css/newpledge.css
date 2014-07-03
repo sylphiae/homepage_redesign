@@ -173,6 +173,12 @@ li.step.active {
 		height: auto;
 		background: #204659;
 	}
+	.step-1-container .ammount-button{
+		width: 30%;
+		margin: 20px 2px 0px 2px;
+		font-size: 18px;
+		
+	}
 }
 .step-2-container{
 display:none;
