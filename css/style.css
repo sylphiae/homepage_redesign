@@ -829,7 +829,7 @@ display:inline;
   min-width:330px;
 }
 
-#pledgeindependence .subpage-content h1, #pledgeindependence .subpage-content h2  {
+#pledgeindependence .subpage-content h1, #pledgeindependence .subpage-content h2, #pledgeindependence .subpage-content h4  {
 	font-weight: bold;
 }
 
@@ -851,6 +851,11 @@ display:inline;
 	margin:-50px 0 30px;
 	font-style:italic;
 	color:#999;
+}
+
+#pledgeindependence .subpage-content h4 {
+	font-size: 1.7em;
+	padding-bottom: 8px;
 }
 
 #pledgeindependence .subpage-content .share-btn {
@@ -876,6 +881,18 @@ display:inline;
 	position: relative;
 	top: 4px;
 	left: 5px;
+}
+
+#pledgeindependence .prof-pic img {
+	max-width:200px;
+	border:5px solid #eee;
+}
+
+#pledgeindependence .cover-photo img {
+	width:100%;
+	max-width:600px;
+	height:auto;
+	border:5px solid #eee;
 }
 
 @media (max-width: 700px) {
