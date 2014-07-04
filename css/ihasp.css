@@ -294,7 +294,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .top .pledges .thermo .current {
 	border-bottom:5px solid #00b3f9;
-	width:49%;
+	width:99%;
 }
 
 .top .pledges .thermo .bar .number {
@@ -320,6 +320,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .top .pledges .thermo .bar.current .number {
 	color:#00b3f9;
+	text-align: right;
+	right: 40px;
 }
 
 .top .pledges .thermo .bar.current .number .label {
