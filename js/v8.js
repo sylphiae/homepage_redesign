@@ -38,5 +38,12 @@ $(document).ready(function () {
   if (days_left == 1) {
    days_left_message = '' + days_left + ' day left';
   }
-  $('#daysLeft').text(days_left_message);
+  
+  var hours_left = Math.ceil((date_its_over - Date.now())/(1000*60*60));
+  var hours_left_message = '' + hours_left + ' hours left';
+  if (hours_left == 1) {
+   hours_left_message = '' + hours_left + ' hour left';
+  }
+    
+  $('#daysLeft').text(hours_left_message);
 });
