@@ -6,7 +6,7 @@ author: Lessig
 comments: true
 ---
 
-# You did it. Amazingly, dramatically, beautifully, you did it. 
+## You did it. Amazingly, dramatically, beautifully, you did it. 
  
 I won’t say I knew you would. I wasn’t that smart. And I won’t even say this crowdfunding idea was mine. It wasn’t. But when I heard it, I knew it was right, and that we had to do it. 
  
