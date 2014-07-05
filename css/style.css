@@ -1,46 +1,31 @@
 /* Header */
 
 #header {
-  background: #204659 url('../images/header_short.jpg') no-repeat center top;
-  padding-bottom: 15px;
+  padding: 18px 0 12px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
 }
-#header h3 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 3.5em;
-  margin: 0;
-  padding: 0 0 0;
-  height: 158px;
-  line-height: 158px;
-}
-#header h3 span {
-  font-weight: normal;
-}
-#header h3 a {
-  color: #fff;
-}
-#header h3 a:hover {
-  text-decoration: none;
-}
-.topmenu_entire {
-  text-align: center;
-}
-.topmenu_entire a {
-  font-weight: bold;
-  display: inline-block;
-  color: #fff;
-  color: rgba(255,255,255,.8);
-  padding: 0 1px 1px;
-  margin: 10px 10px 0;
-  font-size: 1.1em;
-  border-bottom: 2px solid rgba(255,255,255,.33);;
-}
-.topmenu_entire a:hover {
-  text-decoration: none;
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
+  #header .wrap {
+    width: 1050px;
+  }
+    #header .logo {
+      background-image: url(../images/logo-9.svg);
+      width: 225px;
+      height: 30px;
+    }
+    #header blockquote {
+      float: right;
+      font-style: italic;
+      font-size: 15px;
+      margin: 3px 6px 0 0;
+      color: #313945;
+    }
+    #header blockquote:before {
+      content: "“";
+    }
+    #header blockquote:after {
+      content: "”";
+    }
 /*Hero Text Row*/
 h1#page_title {
   font-size: 2em;
@@ -827,93 +812,5 @@ display:inline;
   margin:0 0;
   width:100%;
   min-width:330px;
-}
-
-#pledgeindependence .subpage-content h1, #pledgeindependence .subpage-content h2, #pledgeindependence .subpage-content h4  {
-	font-weight: bold;
-}
-
-#pledgeindependence .subpage-content h1 {
-	font-size: 4.2em;
-	line-height: 1.1;
-	margin-top:20px;
-	letter-spacing: -0.025em;
-}
-
-#pledgeindependence .subpage-content h2 {
-	font-size: 3em;
-	line-height: 1.1;
-}
-
-#pledgeindependence .subpage-content h3 {
-	font-size: 2em;
-	line-height: 1.1;
-	margin:-50px 0 30px;
-	font-style:italic;
-	color:#999;
-}
-
-#pledgeindependence .subpage-content h4 {
-	font-size: 1.7em;
-	padding-bottom: 8px;
-}
-
-#pledgeindependence .subpage-content .share-btn {
-	font-weight:bold;
-	padding:3px 7px;
-	color:#fff;
-	background-color:#006FF4;
-	transition:opacity 0.2s ease;
-	margin:0 2px;
-}
-
-#pledgeindependence .subpage-content .share-btn:hover {
-	opacity:0.8;
-	text-decoration:none;
-}
-
-#pledgeindependence .subpage-content .lead-in {
-	color:#999;
-	margin:-10px 0 20px;
-}
-
-#pledgeindependence .subpage-content p .twitter-share-button {
-	position: relative;
-	top: 4px;
-	left: 5px;
-}
-
-#pledgeindependence .prof-pic img {
-	max-width:200px;
-	border:5px solid #eee;
-}
-
-#pledgeindependence .cover-photo img {
-	width:100%;
-	max-width:600px;
-	height:auto;
-	border:5px solid #eee;
-}
-
-@media (max-width: 700px) {
-  
-	#pledgeindependence .subpage-content h1 span {
-		display: block;
-	}
-  
-}
-
-@media (max-width: 500px) {
-  
-    #pledgeindependence .subpage-content h1 {
-		font-size: 3em;
-		line-height: 1;
-	}
-	
-	#pledgeindependence .subpage-content h3 {
-		font-size: 1.75em;
-		margin-top: -35px;
-	}
-  
 }
 
