@@ -19,7 +19,7 @@ function setText(el, val) {
 }
 
 function totalRaisedCB(totalRaisedCents) {
-  var totalRaised = (totalRaisedCents / 100) - 1000000;
+  var totalRaised = (totalRaisedCents / 100);
   var complete_total = (totalRaisedCents / 100);
   var percent = Math.floor(totalRaised / 50000);
   if (percent > 100) {
