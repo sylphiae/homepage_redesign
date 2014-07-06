@@ -11,7 +11,7 @@ function addCommas(nStr) {
 }
 
 function updateTotal(totalCents) {
-  var totalRaised = (totalCents / 100);
+  var totalRaised = (totalCents / 100) + 1000000;
   totalRaised = Math.round(totalRaised);  
   $('#totalAmount').text('$' + addCommas(totalRaised));
 }
