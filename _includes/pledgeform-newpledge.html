@@ -1,6 +1,33 @@
 <script src="//fgnass.github.io/spin.js/spin.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script src="https:{% if page.pledge_url %}{{ page.pledge_url }}{% else %}//pledge.mayday.us{% endif %}/static/pledge.js"></script>
+{% if page.disable-pledge-sidebar == null %}
+<link rel="stylesheet" href="{{ site.baseurl }}/css/landing-newpledge.css?3" />
+{% else %}
+<link rel="stylesheet" href="{{ site.baseurl }}/css/newpledge.css?3" />
+{% endif %}
   
-  <script>
+<script>
+    PLEDGE_URL = "{% if page.pledge_url %}{{ page.pledge_url }}{% else %}//pledge.mayday.us{% endif %}";
+
+    function step2(amount){
+	$(".step-1-container").hide("slow");
+	$("#step-1").removeClass("active");
+	$("#step-2").addClass("active");
+	//$("#pledgeBox").animate({height: "auto"}, 500);
+	if( amount > 0 ) {
+		$("#amount_input").val(amount);
+		$("#amount_input").parent().hide();
+	}
+	$(".step-2-container").show("slow");
+    }
+
+    function step3(){
+	$("#step-2").removeClass("active");
+	$("#step-3").addClass("active");
+    }
+
     function addCommas(nStr) {
       nStr += '';
       x = nStr.split('.');
@@ -20,12 +47,25 @@
       document.cookie = ("last_team_key={{team.key()}};" +
                          "expires=" + date.toGMTString() +
                          ";domain=.mayday.us;path=/");
+
+     if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+       var verStr = $.browser.version;
+       var ffVersion = verStr.split('.')[0];
+       console.log("detected version: " + ffVersion);
+       if (ffVersion < 17) {
+         $('#pledgeBox .info').after('<div class="alert-danger row">Sorry, we are not supporting older Firefox versions at the moment.  Working on a fix.  Please try another browser for now.</div>');
+       } else {
+         console.log('Firefox version was OK: ' + ffVersion);
+       }
+     } 
     });
   </script>
-  <script src="/js/pledge.js?8"></script>
-  <script src="https://checkout.stripe.com/checkout.js"></script>
+
+
+{% if page.disable-pledge-sidebar == null %}
 <div id="pledgecol-sidebar" >
   <div class="pledgepage panel panel-default" >
+{% endif %}
   
   	<div class="stepContainer">
 		<h3>Donate In Two Minutes Or Less</h3>
@@ -105,21 +145,8 @@
 			
 	</div>
   
-  
+{% if page.disable-pledge-sidebar == null %}
   </div> <!-- end .panel-default -->
-  
-  <div class="rules">
-	<h2>Contribution Rules:</h2>
-	<p>In order to contribute, all of the following statements must be true:</p>
-	<ul>
-		<li>I am a United States citizen or a permanent resident alien.</li>
-		<li>This contribution is made from my own funds, and funds are not being provided to me by another person or entity for the purpose of making this contribution.</li>
-		<li>I am making this contribution with my own personal credit card and not with a corporate or business credit card or a card issued to another person.</li>
-		<li>I am at least eighteen years old.</li>
-		<li>I am not a foreign national (permanent resident aliens excepted), federal contractor, national bank, or corporation chartered by an act of Congress</li>
-	</ul>
-	<p>MayDay PAC must use its best efforts to obtain and report the name, address, occupation, and employer of individual contributors.</p>
-	<p>Contributions are not tax deductible.</p>
-	<p><a href="//mayday.us/privacy-policy">Our Privacy Policy</a></p>
-  </div>
 </div>
+{% endif %}
+

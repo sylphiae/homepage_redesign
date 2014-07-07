@@ -4,7 +4,10 @@
 <div class="container">
 	 <div class="row">
           <div class="subpage-content col-md-8">{{content | markdownify}}</div>
-          <div class="col-md-4">{% include pledgeform-newpledge.html %}</div>
+          <div class="col-md-4">
+            {% include pledgeform-newpledge.html %}
+            {% include pledge-rules.html %}
+          </div>
       </div>
   
 </div>
