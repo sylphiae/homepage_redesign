@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../js/carouselengine/initcarousel-1.css?8hw837rgh9w8g">
 	<!-- // amazingcarousel -->
 
-	<script src="../js/v8.js?2"></script>
+	<script src="../js/v8.js?5"></script>
 
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -52,9 +52,18 @@
 </head>
 
 <body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=536274183102717&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
 	<header id="header">
 		<div class="wrap clearfix">
-			<blockquote>supporting a Congress committed to fundamental reform by 2016</blockquote>
+			<blockquote>electing a Congress committed to fundamental reform by 2016</blockquote>
 			<a href="/" title="Mayday PAC" class="logo ir">MAYDAY PAC</a>
 		</div>
 	</header>
@@ -68,7 +77,7 @@
 			</div>
 			<div class="pull-right aside nav">
 				<dl>
-					<dt>19500+</dt>
+					<dt id="numPledges">23000+</dt>
 					<dd>pledges</dd>
 				</dl>
 				<dl>
@@ -77,10 +86,12 @@
 				</dl>
 				<dl class="last">
 					<dt id='daysLeft'>14</dt>
-					<dd>days remaining to pledge</dd>
+					<dd>time remaining to pledge</dd>
 				</dl>
 
+				<p class="why-deadline">... as long as it's 4th of July somewhere in the Union (THANK YOU, Hawaii!)</p>
 				<p class="why-deadline"><a href="#running-time">Why the deadline?</a></p>
+
 			</div>
 		</div>
 	</div>
@@ -89,8 +100,8 @@
 		<ul id="subnav" class="nav">
 			<li><a href="#about-mayday">About</a></li>
 			<li><a href="#fixing-democracy">Fixing Democracy</a></li>
-			<li><a href="#help-us">Our Supporters</a></li>
-			<li><a href="#help-us">How to help</a></li>
+			<li><a href="#supporters">Our Supporters</a></li>
+			<li><a href="#help-us">How to Help</a></li>
 			<li><a href="https://my.mayday.us/login">Your Pledge Page</a></li>
 		</ul>
 	</section>
@@ -105,9 +116,7 @@
 					<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 				</div>
-				<div class="share-facebook">
-					<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fmayday.us%2F&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
-				</div>
+          <div class="fb-like" data-href="https://www.facebook.com/MAYDAYdotUS" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 			</div>
 		</div>
 	</section>
@@ -139,9 +148,8 @@
 				<dl>
 					<dd class="circle border-xxl"></dd>
 					<dt>$5Million</dt>
-					<dd>Now, we’ve set an even more ambitious goal. Starting June 4, we’re aiming to raise a total of $5 million, in increments of $1 million, by July 4. Each million dollar milestone will unlock another million dollar goal, until we reach $5 million.</dd>
+					<dd>Now, we’ve set an even more ambitious goal. Starting June 4, we’re aiming to raise a total of $5 million by July 4.  And if we meet that goal, we'll get it matched, for a total of $12 million raised.  That will allow us to execute the first part of <a href="/the-plan">our plan</a> to  elect a congress committed to fundamental reform by 2016.</dd>
 				</dl>
-
 			</div>
 		</div>
 	</section>
@@ -149,10 +157,11 @@
 	<section id="fixing-democracy">
 		<div class="wrap">
 			<h3 class="title-caption">Fixing democracy</h3>
-			<h2>Wealthy funders are holding our democracy hostage.  We want to pay the ransom and get it back.</h2>
+			<h2>The funders of campaigns are holding our democracy hostage.  We want to pay the ransom and get it back.</h2>
 			<p>We need a team of legislators in Congress who will champion the public policies necessary to fix our broken government, starting by ending the stranglehold of big money on our political system.
 			<p>For 2014, our goal is to create a $12 million fund. With that money, we will make fundamental reform the key issue in five congressional races. And win.</p>
 			<p>Then we’ll apply what we learn to 2016 — when we’ll run a much much bigger campaign in many more districts for this one purpose:  to win a Congress committed to fundamental reform.</p>
+			<p>You can read about <a href="/the-plan">our plan in more detail</a>.</p>
 			<div class="btn-group">
 				<a href="/newpledge" class="button arrow">Pledge Now</a>
 			</div>
@@ -246,7 +255,7 @@
 			<div class="coll share">
 				<h4>Share</h4>
 				<ul>
-					<li><a href="https://twitter.com/home?status=Help%20us%20celebrate%20a%20true%20Independence%20Day!%20Pledge%20what%20you%20can.%20Let's%20declare%20independence%20from%20a%20broken%20political%20system!%20https://mayday.us" class="twitter">Twitter</a></li>
+					<li><a href="https://twitter.com/home?status=Help%20us%20celebrate%20a%20true%20Independence%20Day!%20Pledge%20what%20you%20can.%20Declare%20independence%20from%20a%20broken%20political%20system!%20https://mayday.us" class="twitter">Twitter</a></li>
 					<li><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us/" class="facebook">Facebook</a></li>
 					<li><a href="mailto:?subject=Help Reduce the influence of money in politics. &body=The Mayday Political Action Committee is crowdsourcing the money it needs to get a Congress committed to fundamental reform by 2016. This is our first essential step.  Will you join me by going to https://mayday.us?" class="email">Email</a></li>
 				</ul>
@@ -264,6 +273,7 @@
 			<li><a href="/videos">Videos</a></li>
 			<li><a href="/media">Press</a></li>
 			<li><a href="/ways">Ways to Help</a></li>
+			<li><a href="/embed">Get My Social Buttons</a></li>
 			<li><a href="/faq">FAQ</a></li>
 			<li><a href="/the-plan">Plan Details</a></li>
 			<li><a href="/your-donations">Your Donations</a></li>

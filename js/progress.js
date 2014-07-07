@@ -27,7 +27,7 @@ var days_left_message = '18 Days Early';
 function totalRaisedCB(data) {
   var GOAL = 5000000;
   var totalRaised = Math.round(data.totalCents / 100);
-  var alreadyBanked = 1000000;
+  var alreadyBanked = 0;
   var progress = totalRaised-alreadyBanked;
   // todo: this needs to change when we make it past 2million
   var percent = Math.floor(progress * 100/ GOAL);

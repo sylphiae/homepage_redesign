@@ -1,0 +1,152 @@
+<script src="//fgnass.github.io/spin.js/spin.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script src="https:{% if page.pledge_url %}{{ page.pledge_url }}{% else %}//pledge.mayday.us{% endif %}/static/pledge.js"></script>
+{% if page.disable-pledge-sidebar == null %}
+<link rel="stylesheet" href="{{ site.baseurl }}/css/landing-newpledge.css?3" />
+{% else %}
+<link rel="stylesheet" href="{{ site.baseurl }}/css/newpledge.css?3" />
+{% endif %}
+  
+<script>
+    PLEDGE_URL = "{% if page.pledge_url %}{{ page.pledge_url }}{% else %}//pledge.mayday.us{% endif %}";
+
+    function step2(amount){
+	$(".step-1-container").hide("slow");
+	$("#step-1").removeClass("active");
+	$("#step-2").addClass("active");
+	//$("#pledgeBox").animate({height: "auto"}, 500);
+	if( amount > 0 ) {
+		$("#amount_input").val(amount);
+		$("#amount_input").parent().hide();
+	}
+	$(".step-2-container").show("slow");
+    }
+
+    function step3(){
+	$("#step-2").removeClass("active");
+	$("#step-3").addClass("active");
+    }
+
+    function addCommas(nStr) {
+      nStr += '';
+      x = nStr.split('.');
+      x1 = x[0];
+      x2 = x.length > 1 ? '.' + x[1] : '';
+      var rgx = /(\d+)(\d{3})/;
+      while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+      }
+      return x1 + x2;
+    }
+    var ALREADY_BANKED = 1000000;
+    var GOAL_DOLLARS = 5000000;
+    $(function() {
+      var date = new Date();
+      date.setTime(date.getTime()+(24*60*60*1000));
+      document.cookie = ("last_team_key={{team.key()}};" +
+                         "expires=" + date.toGMTString() +
+                         ";domain=.mayday.us;path=/");
+
+     if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+       var verStr = $.browser.version;
+       var ffVersion = verStr.split('.')[0];
+       console.log("detected version: " + ffVersion);
+       if (ffVersion < 17) {
+         $('#pledgeBox .info').after('<div class="alert-danger row">Sorry, we are not supporting older Firefox versions at the moment.  Working on a fix.  Please try another browser for now.</div>');
+       } else {
+         console.log('Firefox version was OK: ' + ffVersion);
+       }
+     } 
+    });
+  </script>
+
+
+{% if page.disable-pledge-sidebar == null %}
+<div id="pledgecol-sidebar" >
+  <div class="pledgepage panel panel-default" >
+{% endif %}
+  
+  	<div class="stepContainer">
+		<h3>Donate In Two Minutes Or Less</h3>
+		<ul class="steps">
+			<li id="step-1" class="step active">Amount<span>1</span></li>
+			<li id="step-2" class="step">Info<span>2</span></li>
+			<li id="step-3" class="step">Payment<span>3</span></li>		
+		</ul>
+	</div>
+	
+	<div class="step-1-container">
+		<div class="ammount-button" onclick="step2(10);">$10</div>
+		<div class="ammount-button" onclick="step2(25);">$25</div>
+		<div class="ammount-button" onclick="step2(50);">$50</div>
+		<div class="ammount-button" onclick="step2(100);">$100</div>
+		<div class="ammount-button" onclick="step2(250);">$250</div>
+		<div class="ammount-button" onclick="step2(500);">$500</div>
+		<div class="ammount-button" onclick="step2(1000);">$1000</div>
+		<div class="ammount-button" onclick="step2(2500);">$2500</div>
+		<div class="ammount-button" onclick="step2(-1);">Other</div>
+		<div style="clear:both;"></div>
+		<HR />
+		<div style="margin:10px 0px;"><strong>Or:</strong><a href="https://mayday.us/bitcoin/"><img width="150px" src="/images/donate-with-bitcoin.png"></a></div>
+	</div>
+	
+	<div class="step-2-container">
+		  <form id="pledgeForm" role="form" method="POST" onsubmit="step3();" action="javascript:;">
+	        <div class="form-group col-sm-6"><label class="control-label">Email</label><input type="email" required placeholder="smith@example.com" class="form-control input-lg" id="email_input" /></div>
+	        <div class="form-group col-sm-6"><label class="control-label">Phone Number <span class="label label-default">Optional</span></label><input type="tel" placeholder="(212) 867-5309" class="form-control input-lg" id="phone_input" /></div>
+	        <div class="form-group col-sm-6"><label class="control-label">Occupation</label><input type="text" required placeholder="Gardener, Railroad Worker, etc"  class="form-control input-lg" id="occupation_input"/></div>
+	        <div class="form-group col-sm-6"><label class="control-label">Employer</label><input type="text" required placeholder="Nintendo, UPS, Self, etc" class="form-control input-lg" id="employer_input" /></div>
+	        <div class="form-group col-sm-6">
+	          <label class="control-label">Who to Fund?</label>
+	          <select  class="form-control input-lg" id="targeting_input">
+	            <option>Whatever Helps</option>
+	            <option>Democrats Only</option>
+	            <option>Republicans Only</option>
+	          </select>
+	        </div>
+	        {% if page.includeSurvey %}
+	          <div class="form-group col-sm-6">
+	            <label class="control-label">What tactics to use?</label>
+	            <select  class="form-control input-lg" id="survey_input">
+	              <option>Digital voter registration ads to grow the electorate</option>
+	              <option>Video trackers to force candidate transparency</option>
+	              <option>No robocalls</option>
+	              <option>State-of-the-art digital canvassing and field tools</option>
+	              <option>No negative ads</option>
+	              <option>Whatever helps us win</option>            
+	            </select>
+	          </div>
+	        {% endif %}
+	        <div class="form-group col-sm-6">
+	          <label class="control-label">How Much to Donate ($)?</label>
+	          <input type="number" required min="1" placeholder="25, 100, 5000" class="form-control input-lg" id="amount_input">
+	        </div>
+	        <div id="donation-type" class="form-group col-sm-6">
+	          <div class="checkbox" style="display:none"><label><input type="checkbox" id="directDonate_input" checked> I want my donation to be used to support MAYDAY.US, even if the goal has not been met by July 4th.</label></div>
+	          <div class="checkbox"><label><input type="checkbox" id="emailSignupInput" checked> Want to know how we're using the money? Sign up for emails from us.</label></div>
+	        </div>
+	        <div id="formError" class="alert alert-danger" style="display:none">
+	        </div>
+	
+	
+	      
+	        <div class="form-group col-sm-6">
+	          <button id="pledgeButton" style="width:100%;" class="btn ammount-button">
+	            <div style="display:none" class="spinner"></div>
+	            <span class='pledgeText'>Donate Now</span>
+	          </button>
+	        </div>
+	        <div class="form-group col-sm-12" id="paypalArea">
+	      <p>We also accept PayPal:</p>
+	      <a href="javascript:;" id='paypalButton'><img alt="Donate with Paypal" src="/images/paypal.png"/></a>
+	    </div>
+      </form>
+			
+	</div>
+  
+{% if page.disable-pledge-sidebar == null %}
+  </div> <!-- end .panel-default -->
+</div>
+{% endif %}
+
