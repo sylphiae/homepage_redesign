@@ -125,6 +125,19 @@ li.step.active {
 	font-size: 14px; 
 	font-weight: normal;
 }
+
+#rules h2{
+	font-size: 25px; 
+}
+
+#rules ul{
+	font-size: 14px; 
+}
+
+#rules.ul li{
+	font-size: 12px; 
+}
+
 .step-1-container{
 	width: 80%;
 	margin: 20px auto;
