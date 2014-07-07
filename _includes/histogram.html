@@ -88,10 +88,6 @@
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
 <script>
-var margin = {right:60, left:60},
-  width = 500 - margin.left - margin.right,
-  barHeight = 22;
-
 function getKey(collection){
   return _.chain(collection)
     .keys()
@@ -110,7 +106,6 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // ----------------------
   var dollars = data.map(function(d){return parseInt(d.dollars)}),
       dollarCounts = _.countBy(dollars);
-
 
   var dollarsFormatted = getKey(dollarCounts).map(function(d,i){
       return {
@@ -149,7 +144,10 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // ----------------------
   // set up graph
   // ----------------------
-  var height = barHeight * dollarsFormatted.length;
+  var margin = {right:60, left:60},
+    width = 500 - margin.left - margin.right,
+    barHeight = 22,
+    height = barHeight * dollarsFormatted.length;
 
   var svg = d3.select('.histogram').append('svg')
     .attr('width',width + margin.left + margin.right)
