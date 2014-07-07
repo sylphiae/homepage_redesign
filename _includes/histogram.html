@@ -91,6 +91,8 @@
 function getKey(collection){
   return _.chain(collection)
     .keys()
+    .filter(function(str){return str != 'NaN'})
+    .sortBy(function(str){return parseInt(str);})
     .value();
 }
 
@@ -113,8 +115,6 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
         categoryCount:parseInt(getValue(dollarCounts)[i])
       };
   });
-
-  dollarsFormatted = _.filter(dollarsFormatted,function(o){return o.category != 'NaN';});
 
   //add states associated with each count
   var statesPerCategory = dollarsFormatted.forEach(function(d){
