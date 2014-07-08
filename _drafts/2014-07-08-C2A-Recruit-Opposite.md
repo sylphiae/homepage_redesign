@@ -69,7 +69,7 @@ I love this, because only a small number of people with a specialized knowledge 
 
 > Lessig pitched wealthy donors in the tech community last week on the utility of restricting corporate political speech, saying their political agenda would be much easier to advance if opposing forces were restricted from influencing the political process.
 
-There are so many things wrong with this sentence. (sigh). "The utility of restricting corporate political speech" is wrong - no model legislation over at reform.to would restrict corporate political speech - or any political speech - in any form. Volunteers even put turned the reforms into a *cartoon*, so there's no excuse for not understanding the concept. 
+There are so many things wrong with this sentence. (sigh). "The utility of restricting corporate political speech" is wrong - no model legislation over at [reform.to](http://reform.to) would restrict corporate political speech - or any political speech - in any form. Volunteers even [turned the idea behind the reforms into a *cartoon*](https://www.youtube.com/watch?v=OCnRxgfV5ps), so there's no excuse for not understanding the concept. 
 
 "their political agenda would be much easier to advance if opposing forces were restricted from influencing the political process."
 
@@ -105,15 +105,19 @@ The Center for American Freedom [doesn't disclose its donors.](http://dyn.politi
 
 As stupid as this article was - and it was a doozy - the problem is that there are some who will read it, never having heard of the Mayday PAC, Lessig, or anything else and come to the conclusion that we're all *evil, evil people* trying to do *evil things.* Possibly involving goats and chanting. 
 
-And having gone over the numbers, there is a really real fear that we do seem to be over-represented by Democrats than by Republicans. I think that's just a matter of demographics - we're primarily an Internet-based organization, and that skews younger - but if this is truly going to be a cross-partisan movement, it can't just be us up here at the top who "acts conspicuously non-partisan" by *diabolically* inviting conservatives to join in the organization. 
+This is a serious problem.  Because the truth is that in order to win, this *should not be,* *can not be,* a partisan issue. Even if the smear itself is ridiculous it shows that the best way for opponents of reform to win is simply to divide us.  To make it seem like this is something that "only the left" wants. If this becomes a left vs. right issue, then we have to fight people who should be our allies in this fight... and it will become yet another quagmire in American politics.  
 
-We need to do this from the grassroots as well. And that's what I want you to do. If you want to get involved, what you can do right now is convince someone who holds the *opposite* political view that you do that campaign finance reform is the First Issue. Democrats, go to Republicans. Republicans, go to Democrats. Libertarians, go to... I don't know, what's at the other corner of that weird diamond shaped diagram you pass around? 
+And having gone over the numbers, there is a real fear that we do seem to be over-represented by Democrats than by Republicans. I think that's just a matter of demographics - we're primarily an Internet-based organization, and that skews younger - but if this is truly going to be a cross-partisan movement, it can't just be us up here at the top who "acts conspicuously non-partisan" by *diabolically* inviting conservatives to join in the organization. 
+
+We need to do this from the grassroots as well. It's not enough for us at the top to *say* we're non-partisan. I want you - all of you out there - to *make* this a non-partisan movement. Starting at the grassroots.  With you. 
+
+The biggest thing you can do *right now* to help advance campaign finance reofm is to convince someone who holds the *opposite* political view that you do that campaign finance reform is the First Issue. Democrats, go to Republicans. Republicans, go to Democrats. Libertarians, go to... I don't know, what's at the other corner of that weird diamond shaped diagram you pass around? 
 
 ![xkcd](http://imgs.xkcd.com/comics/nolan_chart.png)
 
 Go to them. Get them to see how this blocks them as much as they block you. 
 
-And if you want, tell the story in the Mayday PAC Subreddit at "[maydaypac.reddit.com](http://reddit.com/maydaypac)" - and learn from each other's victories and failures. 
+And if you want, tell your story of how it all turned out in the Mayday PAC Subreddit at "[maydaypac.reddit.com](http://reddit.com/maydaypac)" - and learn from each other's victories and failures. 
 
 
 
