@@ -741,3 +741,24 @@ display:inline;
 #preheader button:hover {
 	background: #44c no-repeat 100% 50%;
 }
+
+lilbutton {
+		font: 400 16px 'Questrial', Arial, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	letter-spacing: 1px;
+	display: inline;
+	background: #88c no-repeat 100% 50%;
+	height: 22px;
+	padding: 0 5px;
+	border:0px;
+	border-radius: 10px;
+	overflow: hidden;
+	
+	-webkit-user-select: none;  
+	-moz-user-select: none;    
+	-ms-user-select: none;      
+	user-select: none;
+  
+}

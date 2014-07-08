@@ -32,7 +32,18 @@ og_description: Engage with MAYDAY
       <h4>Before the meeting begins, you can use the comments section below to ask questions.</h4>
       <P>We'll start off the interview with the highest voted questions submitted in the comments.</P>
       <P>We will also continue to take live questions from the audience during the event. </P>
+         <form action="https://pledge.mayday.us/r/subscribe" method="post">Subscribe to our e-mail list for updates: 
+          <input type="hidden" name="redirect" value="https://mayday.us/subscribe/" />
+          <input type="hidden" name="source" value="landing" />
+          <input name="email" type="text" placeholder="yourname@email.com" />
+          <button class="lilbutton" type="submit" value="subscribe" title="Submit Email" onSubmit="_gaq.push(['_trackEvent', 'Form', 'Submit', 'Front Page Email']);">Subscribe
+          </button>
+        </form>
     </div>  
+
+
+
+
      {% include discus_code.html %}
 
 {% endcapture %}
