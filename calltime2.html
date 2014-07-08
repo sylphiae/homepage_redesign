@@ -8,7 +8,7 @@ og_description: Engage with MAYDAY
 ---
 
 {% capture content %}
-
+<script src="https://www.google.com/moderator/static/moderator-embed-api.js" type="text/javascript"></script>
   <div class="page-header">
     <h1>Engage with the livestream </h1>
   </div>
@@ -22,13 +22,14 @@ og_description: Engage with MAYDAY
 
       !-->
       <h3>Next Call Time at 9 p.m. EST, Thursday, July 10.<h3>
-      <h4>Before the meeting begins, you can use the Disqus comments section below to ask questions. </h4>
+      <h4>Before the meeting begins, you can use Google Moderator below to ask questions. </h4>
       
-            <div class="mp">
-        <div class="mpframe">
-          <iframe width="640" height="530" id="mpframe" src="http://www.google.com/moderator/#16/e=2139fc" frameborder="0"></iframe>
-        </div>
-      </div>
+<div id=”moderator-embed-target”></div>
+<script type="text/javascript">
+MODERATOR_embed("https://www.google.com/moderator/#16/e=2139fc", "moderator-embed-target");
+</script>
+
+
 
 
 {% endcapture %}
