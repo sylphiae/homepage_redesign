@@ -34,7 +34,7 @@ You know. *Journalism.*
 
 ### When someone accuses you of being in a conspiracy with a mysterious organization, you can't prove that you're not in a conspiracy or that the organization doesn't exist, because if the organization did exist, and the conspiracy was there, that's exactly what we *would* say, wouldn't it? 
 
-[!aliens](http://i.imgur.com/pa5a8c5.jpg)
+![aliens](http://i.imgur.com/pa5a8c5.jpg)
 
 In this case, I have no "free-con" clue what the "free-beacon" is talking about with "ties to dark money outfits." I wish they would have e-mailed, or called us for a response, to verify the story. 
 
@@ -46,7 +46,7 @@ See, this is not just a smear job, it's an *incompetent* smear job. A *pro* woul
 
 If you read further down the article, there is a laughable, Rube Goldberg-esque attempt to tie us to a "shadowy dark money" outfit. See, Lessig advises the (non-partisan) Fund for the Republic. Fund for the Republic is tied to (the non-partisan) United Republic. United Republic acquired the group Lessig formed, the (non-partisan) Rootstrikers. Fund for the Republic hired a number of Republicans to it's board (because it's non-partisan) but "hiring Republicans" was *also*, supposedly a strategy that happened to be used (partisan) Democracy Alliance network. 
 
-[!conspiracy](http://i.imgur.com/DhhTztW.jpg)
+![conspiracy](http://i.imgur.com/DhhTztW.jpg)
 
 Having been slaving my brains out over Excel Spreadsheets, trying to get our first round, second round, checks, paypal, bitcoin, etc., all counted and correct before we file our report with the FEC and release vital stats to the Republic, I can tell you:
 
@@ -99,7 +99,7 @@ The Center for American Freedom [doesn't disclose its donors.](http://dyn.politi
 
 **That's right. The people implying we're secretly funded by a partisan dark-money SuperPAC... are secretly funded by a partisan dark-money SuperPAC.** 
 
-[!The Evilest Thing](http://i.imgur.com/s2zg1qc.jpg)
+![The Evilest Thing](http://i.imgur.com/s2zg1qc.jpg)
 
 ### Which brings me to this Call To Action:
 
@@ -109,7 +109,7 @@ And having gone over the numbers, there is a really real fear that we do seem to
 
 We need to do this from the grassroots as well. And that's what I want you to do. If you want to get involved, what you can do right now is convince someone who holds the *opposite* political view that you do that campaign finance reform is the First Issue. Democrats, go to Republicans. Republicans, go to Democrats. Libertarians, go to... I don't know, what's at the other corner of that weird diamond shaped diagram you pass around? 
 
-[!xkcd](http://imgs.xkcd.com/comics/nolan_chart.png)
+![xkcd](http://imgs.xkcd.com/comics/nolan_chart.png)
 
 Go to them. Get them to see how this blocks them as much as they block you. 
 
