@@ -55,7 +55,7 @@ Having been slaving my brains out over Excel Spreadsheets, trying to get our fir
 3. We have received no funds from United Republic.
 4. We have received no funds from Rootstrikers.
 
-So, there's a profound lack of money involved in this "tie to dark money."" 
+So, there's a profound lack of money involved in this "tie to dark money." 
 
 Anyway, just about every other sentence in the article is false. Like this one:
 
