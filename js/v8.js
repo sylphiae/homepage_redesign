@@ -27,7 +27,7 @@ $(document).ready(function () {
                
   jQuery.getJSON('https://pledge.mayday.us/r/num_pledges',
               function(data) {
-                $('#numPledges').text(data.count);
+                $('#numPledges').text(addCommas(data.count));
               });  
 
   // javascript is so awesome. this is how you write June 1st. Cause June is the
