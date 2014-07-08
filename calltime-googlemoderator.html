@@ -25,8 +25,15 @@ og_description: Engage with MAYDAY
       <h4>Before the meeting begins, you can use Google Moderator below to ask questions. </h4>
       <P>Submit questions now and we'll start off the interview with the best questions you've submitted.</P>
     </div>  
-     {% include discus_code.html %}
+      <div id="moderator-embed-target"></div>
+
+<script type="text/javascript">
+MODERATOR_embed("https://www.google.com/moderator/#16/e=217bd9", "moderator-embed-target");
+</script>
+
+
+
 
 {% endcapture %}
 
-{% include pledgeSubpage-newpledge.html %}
+{% include noSidebar-calltime.html %}
