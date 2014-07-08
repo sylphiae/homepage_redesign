@@ -44,16 +44,16 @@ Oh my god. What if we do have ties to dark money and *even we don't even know!* 
 
 See, this is not just a smear job, it's an *incompetent* smear job. A *pro* would have called us and gotten us to say something that they could quote out of context; because "that was taken out of context" sounds like a lame excuse, even if it is true! 
 
-If you read further down the article, there is a laughable, Rube Goldberg-esque attempt to tie us to a "shadowy dark money" outfit. See, Lessig advises the (non-partisan) Fund for the Republic. Fund for the Republic is tied to (the non-partisan) United Republic. United Republic aquired the group Lessig formed, the (non-partisan) Rootstrikers. Fund for the Republic hired a number of Republicans to it's board (because it's non-partisan) but "hiring Republicans" was *also*, supposedly a strategy that happened to be used (partisan) Democracy Alliance network. 
+If you read further down the article, there is a laughable, Rube Goldberg-esque attempt to tie us to a "shadowy dark money" outfit. See, Lessig advises the (non-partisan) Fund for the Republic. Fund for the Republic is tied to (the non-partisan) United Republic. United Republic acquired the group Lessig formed, the (non-partisan) Rootstrikers. Fund for the Republic hired a number of Republicans to it's board (because it's non-partisan) but "hiring Republicans" was *also*, supposedly a strategy that happened to be used (partisan) Democracy Alliance network. 
 
 [!conspiracy](http://i.imgur.com/DhhTztW.jpg)
 
 Having been slaving my brains out over Excel Spreadsheets, trying to get our first round, second round, checks, paypal, bitcoin, etc., all counted and correct before we file our report with the FEC and release vital stats to the Republic, I can tell you:
 
-1. We have recieved no funds from the Democracy Alliance Network. 
-2. We have recieved no funds from Fund for the Republic.
-3. We have recieved no funds from United Republic.
-4. We have recieved no funds from Rootstrikers.
+1. We have received no funds from the Democracy Alliance Network. 
+2. We have received no funds from Fund for the Republic.
+3. We have received no funds from United Republic.
+4. We have received no funds from Rootstrikers.
 
 So, there's a profound lack of money involved in this "tie to dark money."" 
 
@@ -77,7 +77,7 @@ Again - this isn't about restricting anyone's speech. It's just about providing 
 
 Though, to be fair, "their political agenda would be easier to advance" is true. Because with real reform, *everyone's* political agenda would be easier to advance! Everyone, on the left, right, center, whether you consider yourself conservative, liberal, progressive, libertarian, whether you're one of the 1% or the 99%, or you think that the President is secretly controlled by alien lizardmen... or you're an alien lizardman trying to control the President... it doesn't matter. 
 
-*All* political agendas right now are blocked because Congress is spending 30-70% of their time fundraising. They don't even have *time* to pursue sinister agendas! Or as Kevin Spacey put it, the Congress in "House of Cards," despite being a wretched hive of scum and villany, *actually gets stuff done.* That's how bad things have gotten - sociopathy and conniving would be considered an *improvement.* 
+*All* political agendas right now are blocked because Congress is spending 30-70% of their time fundraising. They don't even have *time* to pursue sinister agendas! Or as Kevin Spacey put it, the Congress in "House of Cards," despite being a wretched hive of scum and villainy, *actually gets stuff done.* That's how bad things have gotten - sociopathy and conniving would be considered an *improvement.* 
 
 ### This is where it gets good...
 
@@ -114,6 +114,7 @@ We need to do this from the grassroots as well. And that's what I want you to do
 Go to them. Get them to see how this blocks them as much as they block you. 
 
 And if you want, tell the story in the Mayday PAC Subreddit at "[maydaypac.reddit.com](http://reddit.com/maydaypac)" - and learn from each other's victories and failures. 
+
 
 
 
