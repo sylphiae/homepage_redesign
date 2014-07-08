@@ -708,3 +708,36 @@ display:inline;
 			margin-top: 55px;
 		}
 }
+
+#preheader {
+	font: 400 16px 'Merriweather', Georgia, "Times New Roman", Times, serif;
+	text-transform: smallcaps;
+	text-decoration: none;
+	color: #008;
+	display: inline;
+
+}
+
+#preheader button {
+		font: 400 16px 'Questrial', Arial, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	letter-spacing: 1px;
+	display: inline;
+	background: #88c no-repeat 100% 50%;
+	height: 22px;
+	padding: 0 5px;
+	border:0px;
+	border-radius: 10px;
+	overflow: hidden;
+	
+	-webkit-user-select: none;  
+	-moz-user-select: none;    
+	-ms-user-select: none;      
+	user-select: none;
+  
+}
+#preheader button:hover {
+	background: #44c no-repeat 100% 50%;
+}
