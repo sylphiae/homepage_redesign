@@ -742,7 +742,7 @@ display:inline;
 	background: #44c no-repeat 100% 50%;
 }
 
-lilbutton {
+.lilbutton {
 		font: 400 16px 'Questrial', Arial, sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
