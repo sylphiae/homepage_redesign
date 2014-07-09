@@ -88,13 +88,11 @@
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
 <script>
-var margin = {right:60, left:60},
-  width = 500 - margin.left - margin.right,
-  barHeight = 22;
-
 function getKey(collection){
   return _.chain(collection)
     .keys()
+    .filter(function(str){return str != 'NaN'})
+    .sortBy(function(str){return parseInt(str);})
     .value();
 }
 
@@ -111,7 +109,6 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   var dollars = data.map(function(d){return parseInt(d.dollars)}),
       dollarCounts = _.countBy(dollars);
 
-
   var dollarsFormatted = getKey(dollarCounts).map(function(d,i){
       return {
         category:d,
@@ -119,9 +116,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
       };
   });
 
-  dollarsFormatted = _.filter(dollarsFormatted,function(o){return o.category != 'NaN';});
-
-  //add states information associated with each count
+  //add states associated with each count
   var statesPerCategory = dollarsFormatted.forEach(function(d){
     var associated = _.where(data,{dollars:d.category});
 
@@ -146,8 +141,13 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   var index = d3.range(dollarsFormatted.length),
       indexSorted = _.sortBy(index,function(i){return -dollarsFormatted[i].categoryCount;});
 
-  // define height based on the size of the dataset
-  var height = barHeight * dollarsFormatted.length;
+  // ----------------------
+  // set up graph
+  // ----------------------
+  var margin = {right:60, left:60},
+    width = 500 - margin.left - margin.right,
+    barHeight = 22,
+    height = barHeight * dollarsFormatted.length;
 
   var svg = d3.select('.histogram').append('svg')
     .attr('width',width + margin.left + margin.right)
@@ -181,7 +181,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
       clearSelection();
 
       d3.select(this).classed({'hover':true,'clicked':true});
-      d3.select(this.parentNode.childNodes[1]).classed({'hover':true});
+      d3.select(this.parentNode.childNodes[1]).classed({'hover':true}); // text left
 
       addTable(d);
     });
@@ -198,7 +198,7 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
       clearSelection();
 
       d3.select(this).classed({'hover':true});
-      d3.select(this.parentNode.childNodes[0]).classed({'hover':true});
+      d3.select(this.parentNode.childNodes[0]).classed({'hover':true}); // rect
 
       addTable(d);
     });
@@ -215,6 +215,8 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   // ----------------------
   // events
   // ----------------------
+  var listHeight = $('.states').height();
+
   function clearSelection(){
     d3.select('.states').remove();
     d3.selectAll('rect').classed({'hover':false});
@@ -222,16 +224,16 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
   };
 
   function addTable(object){
-    var table = d3.select('.histogram').append('table');
 
-    if ($(window).scrollTop() >= $('svg').offset().top) {
+    var table = d3.select('.histogram').append('table');
+    var title = '<p>'+ object.categoryCount + ' Donations of $' + object.category + '</p>',
+        html = '';
+
+    if ($(window).scrollTop() >= $('svg').offset().top && listHeight < $(window).height() - 100) {
       table.attr('class','states fixed')
     } else {
       table.attr('class','states')
     };
-
-    var title = '<p>'+ object.categoryCount + ' Donations of $' + object.category + '</p>',
-      html = '';
 
     object.states.forEach(function(o){
       name = (o.state.length > 0) ? o.state : 'N/A';
@@ -244,13 +246,13 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
 
   function change(){
 
+    var transition = svg.transition().duration(750);
+
     if (this.id === 'category') {
       y.domain(index);
     } else {
       y.domain(indexSorted);
     }
-
-    var transition = svg.transition().duration(750);
 
     transition.selectAll('.barGroup')
       .attr('transform', function(d, i) { return 'translate(0,' + y(i) + ')'; });
@@ -258,7 +260,9 @@ d3.csv('{{site.baseurl}}/data/pledges.csv',function(error,data){
 
 });
 
+// ----------------------
 // page interaction
+// ----------------------
 $('#count').addClass('active');
 
 $('.toggle').on('click',function(e){
@@ -268,8 +272,6 @@ $('.toggle').on('click',function(e){
 });
 
 $(window).scroll(function(){
-  var listHeight = $('.states').height();
-
   if ($(window).scrollTop() >= $('svg').offset().top && listHeight < $(window).height() - 100) {
     $('.states').addClass('fixed');
   } else {
@@ -277,8 +279,10 @@ $(window).scroll(function(){
   }
 });
 
+// ----------------------
 // set up map
-var map = L.mapbox.map('map', 'devseed.ilinehc9',{
+// ----------------------
+L.mapbox.map('map', 'devseed.ilinehc9',{
   minZoom:3,
   maxZoom:12
 }).setView([40,-98],4);
