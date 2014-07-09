@@ -743,17 +743,17 @@ display:inline;
 }
 
 .lilbutton {
-		font: 400 16px 'Questrial', Arial, sans-serif;
+		font: 400 22px 'Questrial', Arial, sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #fff;
 	letter-spacing: 1px;
 	display: inline;
 	background: #2980b9 no-repeat 100% 50%;
-	height: 22px;
+	height: 40px;
 	padding: 0 5px;
 	border:0px;
-	border-radius: 10px;
+	border-radius: 2px;
 	overflow: hidden;
 	
 	-webkit-user-select: none;  
